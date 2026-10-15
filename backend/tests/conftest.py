@@ -14,7 +14,9 @@ os.environ["JEV_API_KEY"] = ""  # Jev is faked per test (tests/fakes.py FakeJev)
 for _role in ("ORCHESTRATOR", "WORKER", "EXTRACT"):
     os.environ[f"MODEL_{_role}"] = ""  # the default (claude-haiku-5-5) unless a test sets one
 os.environ.setdefault("COMPANIES_CSV", str(_tmp / "missing.csv"))  # use the mock universe
+os.environ["EXTRA_MEMOS"] = "0"  # runs write only the #1 memo in tests (deals #2..#5 are background work)
 os.environ["MODAL_DISABLED"] = "1"  # never call Modal from tests; test_modal_client.py fakes it
+os.environ["PAGE_WARM"] = "0"  # no background page warming in tests
 os.environ["INVESTOR_INDEX_JSON"] = str(_tmp / "missing_index.json")  # "can't tell" -> 404 backtest
 os.environ["INVESTORS_JSON"] = str(_tmp / "missing_investors.json")
 
@@ -27,3 +29,12 @@ def client():
 
     with TestClient(app) as c:
         yield c
+
+
+@pytest.fixture(autouse=True)
+def _fresh_page_cache():
+    from app import page_cache
+
+    page_cache.clear()
+    yield
+    page_cache.clear()

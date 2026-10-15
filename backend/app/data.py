@@ -234,7 +234,8 @@ def portfolio(fund_id: str) -> PortfolioResponse:
         for col in page.columns:
             for it in col.items + col.rest:
                 apply_enrichment(it.company, enr.get(it.company.id))
-    return page
+    from .portfolio_health import regroup
+    return regroup(page)
 
 
 def _latest_read(fund_id: str) -> Optional[dict]:
@@ -324,9 +325,14 @@ def memos(fund_id: str) -> MemosResponse:
     found = _all_memos(fund_id)
     if not found and fund_id != demo_fund_id():
         return MemosResponse(items=[])
+    try:  # only memos for companies still on the current deals list (a newer run may have dropped one)
+        current = {d.company.id for d in _page(fund_id, "deals", DealsResponse).items}
+    except NoData:
+        current = set()
     items = [MemoSummary(id=m.id, company=m.company, title=m.title, fit=m.fit,
-                         created_at=m.created_at, decision=m.decision) for m in found.values()]
-    items.sort(key=lambda s: s.created_at, reverse=True)
+                         created_at=m.created_at, decision=m.decision) for m in found.values()
+             if not current or m.company.id in current]
+    items.sort(key=lambda s: (s.fit, s.created_at), reverse=True)
     return MemosResponse(items=items)
 
 

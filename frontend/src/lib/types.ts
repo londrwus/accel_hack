@@ -11,7 +11,7 @@
 export type SignalKind = "timing" | "strength" | "info" | "risk";
 
 /** at_risk = "Needs attention", watch = "Likely to raise soon", good = "Doing well", exited = "Exited" */
-export type Health = "good" | "watch" | "at_risk" | "exited";
+export type Health = "good" | "watch" | "at_risk" | "exited" | "unknown";
 
 export type DealStatus = "new" | "under_review" | "passed";
 
@@ -551,4 +551,10 @@ export interface QuestionItem {
 /** GET /api/funds/{fund_id}/questions, oldest first. */
 export interface QuestionsResponse {
   items: QuestionItem[];
+}
+
+/** GET /api/companies/{id}/similar */
+export interface SimilarResponse {
+  similar: SimilarCompany[];
+  similar_source: string;
 }

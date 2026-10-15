@@ -78,4 +78,5 @@ export const HEALTH: Record<Health, { label: string; tone: BadgeTone; dot: strin
   watch: { label: "Likely to raise soon", tone: "gold", dot: "bg-predicted" },
   good: { label: "Doing well", tone: "sage", dot: "bg-accent" },
   exited: { label: "Exited", tone: "grey", dot: "bg-competitor" },
+  unknown: { label: "Unknown", tone: "grey", dot: "bg-muted" },
 };

@@ -48,5 +48,9 @@ def build(fund_id: str, reader: ReaderResult, market: MarketResult) -> tuple[Por
                          likely_to_raise=sum(i.health == "watch" for i in items),
                          need_attention=sum(i.health == "at_risk" for i in items),
                          new_signals_this_week=len(market.portfolio_news))
-    health = {i.company.id: {"name": i.company.name, "health": i.health} for i in items}
-    return PortfolioResponse(fund_id=fund_id, kpis=kpis, columns=columns), health
+    from ..portfolio_health import regroup
+    page = regroup(PortfolioResponse(fund_id=fund_id, kpis=kpis, columns=columns),
+                   frozenset(p.company.id for p in reader.portfolio if p.exited))
+    health = {i.company.id: {"name": i.company.name, "health": i.health}
+              for col in page.columns for i in col.items + col.rest}
+    return page, health

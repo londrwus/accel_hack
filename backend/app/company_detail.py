@@ -21,6 +21,7 @@ from typing import Any, Optional
 
 from . import config, data, modal_client, store
 from .models import (
+    SimilarResponse,
     Company,
     CompanyDetail,
     CompanyScore,
@@ -41,7 +42,7 @@ log = logging.getLogger("bellwether.detail")
 JUDGE_PART = "Fits the thesis (judge)"
 _CSV_COLS = ("row_id", "id", "name", "website", "domain", "summary", "problem", "business_model", "customers",
              "market", "stage_label", "stage_reported", "funding_amount", "funding_currency", "funding_amount_usd",
-             "funding_date", "first_funding_date", "last_funding_date", "n_rounds", "market_scope", "market_size",
+             "funding_date", "first_funding_date", "last_funding_date", "n_rounds", "site_status", "market_scope", "market_size",
              "market_cagr", "market_year", "market_source", "investors")
 
 
@@ -50,17 +51,28 @@ _CSV_COLS = ("row_id", "id", "name", "website", "domain", "summary", "problem", 
 # ---------------------------------------------------------------------------
 
 
-@lru_cache(maxsize=512)
-def csv_record(company_id: str, row_id: Optional[int]) -> Optional[dict]:
+@lru_cache(maxsize=1)
+def _csv_index() -> tuple[dict[str, dict], dict[int, dict]]:
+    """Every CSV row (only the columns the page shows), indexed by id and row_id. Built once."""
+    by_id: dict[str, dict] = {}
+    by_row: dict[int, dict] = {}
     path = config.companies_csv()
     if not path.exists():
-        return None
+        return by_id, by_row
     with path.open(encoding="utf-8-sig", newline="") as f:
         for rec in csv.DictReader(f):
-            rid = (rec.get("row_id") or "").strip()
-            if rec.get("id") == company_id or (row_id is not None and rid.isdigit() and int(rid) == row_id):
-                return {c: (rec.get(c) or "").strip() for c in _CSV_COLS}
-    return None
+            r = {c: (rec.get(c) or "").strip() for c in _CSV_COLS}
+            if r.get("id"):
+                by_id.setdefault(r["id"], r)
+            if r.get("row_id", "").isdigit():
+                by_row.setdefault(int(r["row_id"]), r)
+    return by_id, by_row
+
+
+def csv_record(company_id: str, row_id: Optional[int]) -> Optional[dict]:
+    by_id, by_row = _csv_index()
+    rec = by_id.get(company_id) or (by_row.get(row_id) if row_id is not None else None)
+    return dict(rec) if rec else None
 
 
 def _int(v: Any) -> Optional[int]:
@@ -309,7 +321,16 @@ async def _similar(company: Company, in_dataset: bool, fund_id: str) -> tuple[li
     return out[:6], ("Bellwether model" if r.real else "Word match (model offline)")
 
 
-async def detail(company_id: str, fund_id: str) -> Optional[CompanyDetail]:
+async def similar(company_id: str, fund_id: str) -> Optional[SimilarResponse]:
+    company = await asyncio.to_thread(data.company, company_id, fund_id)
+    if company is None:
+        return None
+    rec = await asyncio.to_thread(csv_record, company.id, company.row_id) if data.csv_available() else None
+    items, source = await _similar(company, rec is not None, fund_id)
+    return SimilarResponse(similar=items, similar_source=source)
+
+
+async def detail(company_id: str, fund_id: str, with_similar: bool = True) -> Optional[CompanyDetail]:
     company = await asyncio.to_thread(data.company, company_id, fund_id)
     if company is None:
         return None
@@ -319,7 +340,10 @@ async def detail(company_id: str, fund_id: str) -> Optional[CompanyDetail]:
     deal = data.deal_item(fund_id, company.id)
     port = _portfolio_item(fund_id, company.id)
     score_task = asyncio.to_thread(build_score, fund_id, company, deal)
-    score, (similar, similar_source) = await asyncio.gather(score_task, _similar(company, rec is not None, fund_id))
+    if with_similar:
+        score, (similar, similar_source) = await asyncio.gather(score_task, _similar(company, rec is not None, fund_id))
+    else:
+        score, similar, similar_source = await score_task, [], ""
 
     fund = data.get_fund(fund_id)
     d = CompanyDetail(company=company, fund_id=fund_id, fund_name=fund.name, in_dataset=rec is not None,

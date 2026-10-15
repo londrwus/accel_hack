@@ -1,3 +1,4 @@
+import { SkeletonRows } from "@/components/Skeleton";
 import type { ReactNode } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { motion, MotionConfig } from "motion/react";
@@ -8,7 +9,7 @@ import { Chip, SourceChip } from "@/components/Chip";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import { SignalChip } from "@/components/SignalChip";
 import { BarLegend, SegmentedBar } from "@/components/DataCard";
-import { ApiError, getCompanyDetail } from "@/lib/api";
+import { ApiError, getCompanyDetail, getCompanySimilar } from "@/lib/api";
 import { useApi } from "@/lib/useApi";
 import { useActiveFundId } from "@/lib/fund";
 import { cn } from "@/lib/utils";
@@ -22,6 +23,7 @@ const HEALTH_LABEL: Record<Health, { label: string; tone: "danger" | "gold" | "s
   watch: { label: "Likely to raise soon", tone: "gold" },
   good: { label: "Doing well", tone: "sage" },
   exited: { label: "Exited", tone: "grey" },
+  unknown: { label: "Unknown", tone: "grey" },
 };
 
 /** Hairline card with a quiet title, like the rest of the platform. */
@@ -346,28 +348,7 @@ function Body({ d, fundId }: { d: CompanyDetail; fundId: string }) {
       <div className="flex min-w-0 flex-1 flex-col gap-[16px]">
         <ScoreCard score={d.score} fundName={d.fund_name} fundId={fundId} />
 
-        <Section title="Companies like this" aside={d.similar_source || undefined}>
-          {d.similar.length ? (
-            <div className="flex flex-col">
-              {d.similar.map((s) => (
-                <Link
-                  key={s.company.id}
-                  to={`/companies/${encodeURIComponent(s.company.id)}?fund=${fundId}`}
-                  className="-mx-[8px] flex items-center gap-[10px] rounded-[10px] p-[8px] transition-colors hover:bg-[#1A181708]"
-                >
-                  <CompanyLogo name={s.company.name} logo={s.company.logo} size={28} radius={7} />
-                  <div className="flex min-w-0 flex-1 flex-col">
-                    <span className="truncate text-[13px] font-medium text-ink">{s.company.name}</span>
-                    <span className="truncate text-[12px] text-subtle">{s.company.one_liner}</span>
-                  </div>
-                  <span className="shrink-0 text-[12px] text-subtle">{s.company.sector}</span>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <Empty>We couldn't find similar companies right now.</Empty>
-          )}
-        </Section>
+        <SimilarSection d={d} fundId={fundId} />
 
         <Section title="Data sources">
           {d.sources.length ? (
@@ -388,6 +369,41 @@ function Body({ d, fundId }: { d: CompanyDetail; fundId: string }) {
   );
 }
 
+/** "Companies like this": loaded after the page shows (the model call can take a few seconds). */
+function SimilarSection({ d, fundId }: { d: CompanyDetail; fundId: string }) {
+  const { data, loading } = useApi(
+    () => (d.similar.length ? Promise.resolve({ similar: d.similar, similar_source: d.similar_source }) : getCompanySimilar(d.company.id, fundId)),
+    [d.company.id, fundId],
+  );
+  const similar = data?.similar ?? [];
+  return (
+    <Section title="Companies like this" aside={data?.similar_source || undefined}>
+      {loading ? (
+        <SkeletonRows rows={4} label="Finding companies like this" />
+      ) : similar.length ? (
+        <div className="flex flex-col">
+          {similar.map((s) => (
+            <Link
+              key={s.company.id}
+              to={`/companies/${encodeURIComponent(s.company.id)}?fund=${fundId}`}
+              className="-mx-[8px] flex items-center gap-[10px] rounded-[10px] p-[8px] transition-colors hover:bg-[#1A181708]"
+            >
+              <CompanyLogo name={s.company.name} logo={s.company.logo} size={28} radius={7} />
+              <div className="flex min-w-0 flex-1 flex-col">
+                <span className="truncate text-[13px] font-medium text-ink">{s.company.name}</span>
+                <span className="truncate text-[12px] text-subtle">{s.company.one_liner}</span>
+              </div>
+              <span className="shrink-0 text-[12px] text-subtle">{s.company.sector}</span>
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <Empty>We couldn't find similar companies right now.</Empty>
+      )}
+    </Section>
+  );
+}
+
 /** /companies/:id: everything about one company and how it scored for the current fund. */
 export default function Company() {
   const { id = "" } = useParams();
@@ -405,7 +421,7 @@ export default function Company() {
       ) : (
         <div className="flex min-h-0 flex-1 flex-col gap-[12px] p-[24px] text-[14px] text-muted">
           {loading
-            ? "Loading the company…"
+            ? <SkeletonRows rows={7} label="Loading the company" />
             : notFound
               ? "We couldn't find that company."
               : `Couldn't load the company. ${error?.message ?? ""}`}

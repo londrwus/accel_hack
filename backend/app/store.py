@@ -374,3 +374,25 @@ def list_questions(fund_id: str, limit: int = 100) -> list[dict]:
         rows = c.execute("SELECT * FROM questions WHERE fund_id = ? ORDER BY asked_at, rowid LIMIT ?",
                          (fund_id, limit)).fetchall()
     return [_q_row(r) for r in rows]
+
+
+# ---------------------------------------------------------------------------
+# Writes clear the rendered-page cache (app.page_cache)
+# ---------------------------------------------------------------------------
+
+
+def _invalidating(fn):
+    import functools
+
+    @functools.wraps(fn)
+    def wrapper(*a, **kw):
+        try:
+            return fn(*a, **kw)
+        finally:
+            from . import page_cache
+            page_cache.clear()
+    return wrapper
+
+
+for _name in ("set_memory", "delete_fund_data", "add_feedback", "set_watch", "create_run"):
+    globals()[_name] = _invalidating(globals()[_name])

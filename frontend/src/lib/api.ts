@@ -10,6 +10,7 @@ import type {
   Backtest,
   Company,
   CompanyDetail,
+  SimilarResponse,
   DealStatus,
   DealsResponse,
   Feedback,
@@ -141,7 +142,53 @@ function buildUrl(path: string, query?: Query): string {
   return url.toString();
 }
 
+// GET responses kept in memory: a fresh entry (prefetched or just loaded) is reused, and parallel requests for the
+// same URL share one fetch. Pages also keep their last data (useApi) so revisits show instantly.
+const FRESH_MS = 15_000;
+const CACHEABLE = /^\/api\/((fund|funds|deals|portfolio|map|memos|universe|backtest)$|memos\/|companies\/)/;
+const getCache = new Map<string, { at: number; promise: Promise<unknown> }>();
+
+/** Drop every cached GET (after a run, feedback or watch change). */
+export function clearApiCache(): void {
+  getCache.clear();
+}
+
 async function http<T>(method: "GET" | "POST", path: string, opts: { query?: Query; body?: unknown } = {}): Promise<T> {
+  if (method !== "GET") {
+    getCache.clear();
+    return rawHttp<T>(method, path, opts);
+  }
+  if (!CACHEABLE.test(path)) return rawHttp<T>(method, path, opts);
+  const url = buildUrl(path, opts.query);
+  const hit = getCache.get(url);
+  if (hit && Date.now() - hit.at < FRESH_MS) return hit.promise as Promise<T>;
+  const promise = rawHttp<T>(method, path, opts);
+  getCache.set(url, { at: Date.now(), promise });
+  promise.catch(() => getCache.get(url)?.promise === promise && getCache.delete(url));
+  return promise;
+}
+
+/** Warm the GET cache for a page or company (on hover/focus, or after the app loads). Errors are ignored. */
+export function prefetch(path: string, query?: Query): void {
+  if (USE_MOCKS) return;
+  http("GET", path, { query }).catch(() => undefined);
+}
+
+export function prefetchCompany(id: string, fundId?: string): void {
+  prefetch(`/api/companies/${encodeURIComponent(id)}/detail`, { fund_id: fundId });
+}
+
+/** The main pages' data for a fund, fetched in the background once the app has loaded. */
+export function prefetchPages(fundId?: string): void {
+  const q = { fund_id: fundId };
+  prefetch("/api/deals", { ...q, sort: "fit" });
+  prefetch("/api/portfolio", q);
+  prefetch("/api/map", { ...q, view: "portfolio" });
+  prefetch("/api/memos", q);
+  prefetch("/api/universe", { ...q, page: 1, page_size: 50 });
+}
+
+async function rawHttp<T>(method: "GET" | "POST", path: string, opts: { query?: Query; body?: unknown } = {}): Promise<T> {
   const res = await fetch(buildUrl(path, opts.query), {
     method,
     headers: opts.body !== undefined ? { "Content-Type": "application/json" } : undefined,
@@ -441,6 +488,15 @@ export async function getCompanyDetail(id: string, fundId?: string): Promise<Com
     };
   }
   return http<CompanyDetail>("GET", `/api/companies/${encodeURIComponent(id)}/detail`, { query: { fund_id: fundId } });
+}
+
+/** GET /api/companies/{id}/similar: "Companies like this", loaded after the page shows. */
+export async function getCompanySimilar(id: string, fundId?: string): Promise<SimilarResponse> {
+  if (USE_MOCKS) {
+    const d = await getCompanyDetail(id, fundId);
+    return { similar: d.similar, similar_source: d.similar_source };
+  }
+  return http<SimilarResponse>("GET", `/api/companies/${encodeURIComponent(id)}/similar`, { query: { fund_id: fundId } });
 }
 
 /** Logo paths the backend serves ("/api/logos/...") become absolute URLs on the API host. */

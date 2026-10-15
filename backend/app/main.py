@@ -6,6 +6,7 @@ Run: python -m uv run uvicorn app.main:app --port 8000   (from backend/)
 from __future__ import annotations
 
 import asyncio
+import os
 import logging
 from contextlib import asynccontextmanager
 from typing import Optional
@@ -13,10 +14,11 @@ from typing import Optional
 from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.responses import FileResponse, JSONResponse, Response, StreamingResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from . import company_detail, config, data, logo_fill, modal_client, runs, store, map_views
+from . import company_detail, config, data, logo_fill, modal_client, page_cache, runs, store, map_views
 from .tools import logos
 from .models import (
     AskCreated,
@@ -38,6 +40,7 @@ from .models import (
     RunCreate,
     RunCreated,
     RunState,
+    SimilarResponse,
     UniverseResponse,
     WatchRequest,
     WatchResponse,
@@ -59,6 +62,55 @@ def _preload_live() -> None:
         log.exception("preloading the live agents failed")
 
 
+WARM_FUNDS = ("accel", "localglobe")
+
+
+async def _warm(fid: str) -> None:
+    """Render every page of a fund into page_cache (the demo funds are warm before anyone opens them)."""
+    async def step(name, fn):
+        try:
+            r = fn()
+            if asyncio.iscoroutine(r):
+                await r
+        except Exception as e:  # a page with no data yet is fine
+            log.debug("warm %s %s: %s", fid, name, e)
+
+    await step("funds", lambda: asyncio.to_thread(get_funds))
+    await step("fund", lambda: asyncio.to_thread(get_fund, fid))
+    await step("deals", lambda: asyncio.to_thread(get_deals, fid, None, None, "fit"))
+    for st in ("new", "under_review", "passed"):
+        await step("deals", lambda st=st: asyncio.to_thread(get_deals, fid, st, None, "fit"))
+    await step("portfolio", lambda: asyncio.to_thread(get_portfolio, fid))
+    await step("memos", lambda: asyncio.to_thread(get_memos, fid))
+    for view in ("portfolio", "theme", "new", "competition"):
+        await step("map", lambda view=view: get_map(fid, None, view, None, None, None, None, 10))
+    await step("universe", lambda: get_universe(None, 1, 50, None, None, None, None, fid, None))
+    await step("backtest", lambda: get_backtest(fid))
+    ids: list[str] = []
+    try:
+        ids += [m.id for m in data.memos(fid).items]
+        for mid in ids:
+            await step("memo", lambda mid=mid: asyncio.to_thread(get_memo, mid, fid))
+        ids += [i.company.id for i in data.deals(fid).items]
+        ids += [i.company.id for col in data.portfolio(fid).columns for i in col.items]
+    except Exception:
+        pass
+    for cid in dict.fromkeys(ids):
+        await step("detail", lambda cid=cid: get_company_detail(cid, fid))
+
+
+async def _warm_loop() -> None:
+    """Warm the demo funds at startup, and again whenever a write has cleared the cache."""
+    await asyncio.to_thread(lambda: (data.csv_available() and data._csv_rows(), company_detail._csv_index()))
+    while True:
+        for fid in WARM_FUNDS:
+            if page_cache.get(("portfolio", fid)) is None:
+                t = asyncio.get_running_loop().time()
+                await _warm(fid)
+                log.info("warmed %s pages in %.1fs", fid, asyncio.get_running_loop().time() - t)
+        await asyncio.sleep(20)
+
+
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     store.init_db()
@@ -68,15 +120,26 @@ async def lifespan(_app: FastAPI):
     logo_fill.prewarm()
     if config.live_ready():  # load the agent code and the dataset now, not during the first live run (~8s)
         asyncio.get_running_loop().run_in_executor(None, _preload_live)
+    warmer = asyncio.create_task(_warm_loop() if os.environ.get("PAGE_WARM", "1") != "0" else asyncio.sleep(0))
     watcher = asyncio.create_task(runs.watch_loop())
     log.info("Bellwether API ready. DEMO_MODE=%s, live agents %s.", config.demo_mode(),
              "on" if config.live_ready() else "off")
     yield
     watcher.cancel()
+    warmer.cancel()
     await runs.stop_all()
 
 
 app = FastAPI(title="Bellwether API", version="0.1.0", lifespan=lifespan)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+
+def _json(body: bytes) -> Response:
+    return Response(content=body, media_type="application/json")
+
+
+def _cached(key, build) -> Response:
+    return _json(page_cache.render(key, build))
 app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS,
                    allow_origin_regex=config.CORS_ORIGIN_REGEX or None, allow_credentials=True,
                    allow_methods=["*"], allow_headers=["*"])
@@ -163,12 +226,16 @@ def _watch_status(fund_id: str) -> WatchStatus:
 @app.get("/api/funds", response_model=FundsResponse)
 def get_funds() -> FundsResponse:
     """Every fund you can switch to: the demo fund, funds you cover, funds with runs or results."""
-    return FundsResponse(items=data.list_funds())
+    return _cached(("funds",), lambda: FundsResponse(items=data.list_funds()))
 
 
 @app.get("/api/fund", response_model=FundResponse)
 def get_fund(fund_id: Optional[str] = None) -> FundResponse:
     fid = _fund(fund_id)
+    return _cached(("fund", fid), lambda: _fund_page(fid))
+
+
+def _fund_page(fid: str) -> FundResponse:
     try:
         new_deals = data.deals(fid).counts.new
     except data.NoData:
@@ -183,12 +250,15 @@ def get_fund(fund_id: Optional[str] = None) -> FundResponse:
 def get_deals(fund_id: Optional[str] = None,
               status: Optional[str] = Query(None, pattern="^(new|under_review|passed)$"),
               sector: Optional[str] = None, sort: Optional[str] = "fit") -> DealsResponse:
-    return logo_fill.fill(data.deals(_fund(fund_id), status=status, sector=sector, sort=sort))
+    fid = _fund(fund_id)
+    return _cached(("deals", fid, status, sector, sort),
+                   lambda: logo_fill.fill(data.deals(fid, status=status, sector=sector, sort=sort)))
 
 
 @app.get("/api/portfolio", response_model=PortfolioResponse)
 def get_portfolio(fund_id: Optional[str] = None) -> PortfolioResponse:
-    return logo_fill.fill(data.portfolio(_fund(fund_id)))
+    fid = _fund(fund_id)
+    return _cached(("portfolio", fid), lambda: logo_fill.fill(data.portfolio(fid)))
 
 
 @app.get("/api/map", response_model=MapResponse)
@@ -196,22 +266,32 @@ async def get_map(fund_id: Optional[str] = None, fund: Optional[str] = None,
                   view: str = Query("portfolio", pattern="^(portfolio|theme|new|competition)$"),
                   center: Optional[str] = None, sector: Optional[str] = None, country: Optional[str] = None,
                   stage: Optional[str] = None, limit: int = Query(10, ge=1, le=50)) -> MapResponse:
-    return logo_fill.fill(await map_views.build(_fund(fund_id or fund), view=view, center=center or None,
-                                                sector=sector or None, country=country or None,
-                                                stage=stage or None, limit=limit))
+    fid = _fund(fund_id or fund)
+    key = ("map", fid, view, center or None, sector or None, country or None, stage or None, limit)
+    body = page_cache.get(key)
+    if body is None:
+        page = logo_fill.fill(await map_views.build(fid, view=view, center=center or None, sector=sector or None,
+                                                    country=country or None, stage=stage or None, limit=limit))
+        body = page_cache.put(key, page.model_dump_json().encode())
+    return _json(body)
 
 
 @app.get("/api/memos", response_model=MemosResponse)
 def get_memos(fund_id: Optional[str] = None) -> MemosResponse:
-    return logo_fill.fill(data.memos(_fund(fund_id)))
+    fid = _fund(fund_id)
+    return _cached(("memos", fid), lambda: logo_fill.fill(data.memos(fid)))
 
 
 @app.get("/api/memos/{memo_id}", response_model=Memo)
 def get_memo(memo_id: str, fund_id: Optional[str] = None) -> Memo:
-    memo = data.memo(_fund(fund_id), memo_id)
-    if memo is None:
-        raise HTTPException(404, "There's no memo for this company yet.")
-    return logo_fill.fill(memo)
+    fid = _fund(fund_id)
+
+    def build() -> Memo:
+        memo = data.memo(fid, memo_id)
+        if memo is None:
+            raise HTTPException(404, "There's no memo for this company yet.")
+        return logo_fill.fill(memo)
+    return _cached(("memo", fid, memo_id), build)
 
 
 @app.get("/api/universe", response_model=UniverseResponse)
@@ -220,6 +300,12 @@ async def get_universe(q: Optional[str] = None, page: int = Query(1, ge=1),
                        country: Optional[str] = None, stage: Optional[str] = None,
                        founded: Optional[int] = None, fund_id: Optional[str] = None,
                        sort: Optional[str] = Query(None, pattern="^(fit|name|founded|funding)$")) -> UniverseResponse:
+    fid = _fund(fund_id)
+    if not (q and q.strip()):
+        return _cached(("universe", fid, page, page_size, sector, country, stage, founded, sort),
+                       lambda: logo_fill.fill(data.universe(fid, q=q, page=page, page_size=page_size, sector=sector,
+                                                            country=country, stage=stage, founded=founded,
+                                                            sort=sort)))
     ranked = None
     if q and q.strip() and data.csv_available():  # search by meaning when the model is up; words otherwise
         ranked = await modal_client.search_ids(q, k=min(200, max(100, page * page_size)))
@@ -232,10 +318,14 @@ async def get_universe(q: Optional[str] = None, page: int = Query(1, ge=1),
 async def get_backtest(fund_id: Optional[str] = None) -> Backtest:
     """The saved file, else "not enough history" when the dataset has too few dated deals, else a Modal
     backtest (started once, picked up by a later request if it runs long), else 404. Never mock numbers."""
-    r = await modal_client.backtest(_fund(fund_id))
-    if r.value is None:
-        raise HTTPException(404, "No backtest yet for this fund")
-    return Backtest.model_validate(r.value)
+    fid = _fund(fund_id)
+    body = page_cache.get(("backtest", fid))
+    if body is None:
+        r = await modal_client.backtest(fid)
+        if r.value is None:
+            raise HTTPException(404, "No backtest yet for this fund")
+        body = page_cache.put(("backtest", fid), Backtest.model_validate(r.value).model_dump_json().encode())
+    return _json(body)
 
 
 @app.get("/api/companies/{company_id}", response_model=Company)
@@ -249,10 +339,31 @@ def get_company(company_id: str, fund_id: Optional[str] = None) -> Company:
 @app.get("/api/companies/{company_id}/detail", response_model=CompanyDetail)
 async def get_company_detail(company_id: str, fund_id: Optional[str] = None) -> CompanyDetail:
     """Everything about one company and how it scored for this fund (the /companies/:id page)."""
-    d = await company_detail.detail(company_id, _fund(fund_id))
-    if d is None:
-        raise HTTPException(404, "We couldn't find that company.")
-    return logo_fill.fill(d)
+    fid = _fund(fund_id)
+    key = ("detail", fid, company_id)
+    body = page_cache.get(key)
+    if body is None:
+        d = await company_detail.detail(company_id, fid, with_similar=False)
+        if d is None:
+            raise HTTPException(404, "We couldn't find that company.")
+        body = page_cache.put(key, logo_fill.fill(d).model_dump_json().encode())
+    return _json(body)
+
+
+@app.get("/api/companies/{company_id}/similar", response_model=SimilarResponse)
+async def get_company_similar(company_id: str, fund_id: Optional[str] = None) -> Response:
+    """Companies like this one (Modal model, ~3s cap, word-match fallback). Loaded after the page shows."""
+    fid = _fund(fund_id)
+    key = ("similar", fid, company_id)
+    body = page_cache.get(key)
+    if body is None:
+        r = await company_detail.similar(company_id, fid)
+        if r is None:
+            raise HTTPException(404, "We couldn't find that company.")
+        body = logo_fill.fill(r).model_dump_json().encode()
+        if r.similar:
+            body = page_cache.put(key, body)
+    return _json(body)
 
 
 _IMG_HEADERS = {"Cache-Control": "public, max-age=86400"}
@@ -318,6 +429,39 @@ async def run_events(run_id: str, request: Request,
     return StreamingResponse(body(), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no",
                                       "Connection": "keep-alive"})
+
+
+_memo_jobs: dict[str, "asyncio.Task"] = {}
+
+
+class _QuietEmitter:
+    """Stands in for runs.Emitter when there is no run to put feed events on."""
+    def __getattr__(self, name):
+        return lambda *a, **kw: None
+
+    def __call__(self, *a, **kw):
+        return None
+
+
+@app.post("/api/funds/{fund_id}/memos")
+async def write_top_memos(fund_id: str, top: int = Query(5, ge=1, le=10)) -> dict:
+    """Write the missing memos for the fund's current top deals, in the background (feed events on the last run)."""
+    run = store.latest_run(fund_id)
+    if not config.live_ready():
+        raise HTTPException(503, "The live agents aren't available right now.")
+    job = _memo_jobs.get(fund_id)
+    if job is None or job.done():
+        from .agents.runner import write_top_memos as _write
+        # Feed events go on the fund's last run; a seeded fund with no run gets a quiet emitter.
+        emit = runs.Emitter(run["id"]) if run else _QuietEmitter()
+        _memo_jobs[fund_id] = asyncio.ensure_future(_write(run["id"] if run else "", fund_id, emit, top=top))
+    return {"fund_id": fund_id, "top": top, "status": "writing"}
+
+
+@app.get("/api/funds/{fund_id}/memos/status")
+def top_memos_status(fund_id: str) -> dict:
+    job = _memo_jobs.get(fund_id)
+    return {"fund_id": fund_id, "status": "idle" if job is None else ("done" if job.done() else "writing")}
 
 
 @app.get("/api/runs/{run_id}/memo/{company_id}", response_model=Memo)

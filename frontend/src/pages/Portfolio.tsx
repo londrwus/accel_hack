@@ -1,3 +1,4 @@
+import { SkeletonRows } from "@/components/Skeleton";
 import { MotionConfig } from "motion/react";
 import { Download, FileText } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
@@ -94,7 +95,7 @@ export default function Portfolio() {
         </>
       ) : (
         <div className="min-h-0 flex-1 p-[24px] text-[14px] text-muted">
-          {loading ? "Loading the portfolio…" : `Couldn't load the portfolio. ${error?.message ?? ""}`}
+          {loading ? <SkeletonRows rows={8} label="Loading the portfolio" /> : `Couldn't load the portfolio. ${error?.message ?? ""}`}
         </div>
       )}
     </MotionConfig>

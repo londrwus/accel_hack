@@ -15,6 +15,7 @@ const COLUMN_TONE: Record<Health, { dot: string; count: string; faded?: boolean 
   watch: { dot: "bg-predicted", count: "bg-predicted-soft text-predicted" },
   good: { dot: "bg-accent", count: "bg-accent-soft text-accent" },
   exited: { dot: "bg-muted", count: "bg-chip text-muted", faded: true },
+  unknown: { dot: "bg-muted", count: "bg-chip text-muted" },
 };
 
 /** "+ N more" only when it hides at least two companies (a lone "+ 1 more" isn't shown in the design). */

@@ -18,7 +18,7 @@ SignalKind = Literal["timing", "strength", "info", "risk"]
 # timing = gold (e.g. "Raising now"), strength = sage ("Revenue up 3x"),
 # info = grey ("In Sifted this week"), risk = terracotta ("Competes with Cleo")
 
-Health = Literal["good", "watch", "at_risk", "exited"]
+Health = Literal["good", "watch", "at_risk", "exited", "unknown"]
 # Portfolio board columns: at_risk = "Needs attention", watch = "Likely to raise soon",
 # good = "Doing well", exited = "Exited"
 
@@ -473,6 +473,12 @@ class FundingInfo(BaseModel):
 class SimilarCompany(BaseModel):
     company: Company
     score: Optional[float] = None  # 0..1
+
+
+class SimilarResponse(BaseModel):
+    """GET /api/companies/{id}/similar: "Companies like this", loaded after the company page shows."""
+    similar: list[SimilarCompany] = Field(default_factory=list)
+    similar_source: str = ""
 
 
 class CompanyDetail(BaseModel):  # GET /api/companies/{id}/detail
