@@ -78,7 +78,7 @@ Event: Accel AI Innovate London hackathon. The theme is **long-running agents**.
   - Smoke tests: `modal run modal_app.py::smoke` and `modal run modal_app.py::smoke_fit` (from `ml/`)
   - Backtests into `data/cache/backtest_*.json`: `modal run modal_app.py::run_backtests` (from `ml/`)
   - Check the deployed app the way the backend calls it: `python -I ml/check_deployed.py --save-backtests` (repo root)
-- Backend on Modal (public API for the Vercel frontend): `cd backend; $env:PYTHONUTF8=1; .venvScriptsmodal.exe deploy modal_web.py` serves https://hexagonterstretch--bellwether-web-web.modal.run (data in volume `bellwether-web-data` at /data, keys in secret `bellwether-secrets`; one warm container via min_containers=1, so set it to 0 after the event)
+- Backend on Modal (public API for the Vercel frontend): `cd backend; $env:PYTHONUTF8=1; .venv/Scripts/modal.exe deploy modal_web.py` serves https://hexagonterstretch--bellwether-web-web.modal.run (data in volume `bellwether-web-data` at /data, keys in secret `bellwether-secrets`; one warm container via min_containers=1, so set it to 0 after the event)
 
 ## Secrets
 
