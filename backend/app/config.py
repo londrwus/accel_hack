@@ -19,13 +19,17 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 REPO_ROOT = BACKEND_DIR.parent
 ENV_FILE = REPO_ROOT / ".env"
 
-DATA_DIR = REPO_ROOT / "data"
-CACHE_DIR = DATA_DIR / "cache"
+# Overridable for hosted deploys (Modal mounts a volume at /data).
+DATA_DIR = Path(os.environ.get("BELLWETHER_DATA_DIR") or (REPO_ROOT / "data"))
+CACHE_DIR = Path(os.environ.get("BELLWETHER_CACHE_DIR") or (DATA_DIR / "cache"))
 REPLAY_DIR = CACHE_DIR / "replay"
-MOCKS_DIR = REPO_ROOT / "frontend" / "src" / "mocks"
+MOCKS_DIR = Path(os.environ.get("BELLWETHER_MOCKS_DIR") or (REPO_ROOT / "frontend" / "src" / "mocks"))
 
 DEMO_RUN_ID = "run_demo_localglobe"
-CORS_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+CORS_ORIGINS = [o.strip() for o in (os.environ.get("CORS_ORIGINS")
+                or "http://localhost:5173,http://127.0.0.1:5173").split(",") if o.strip()]
+# Regex for extra allowed origins (default: any Vercel deployment).
+CORS_ORIGIN_REGEX = os.environ.get("CORS_ORIGIN_REGEX", r"https://.*\.vercel\.app")
 
 
 def _read_env_file() -> dict[str, str]:

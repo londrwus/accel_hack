@@ -62,7 +62,7 @@ def test_demo_run_stream_and_reconnect(client):
 
 
 def test_new_run_replays_and_finishes(client):
-    r = client.post("/api/runs?speed=100", json={"fund_url": "https://localglobe.vc"})
+    r = client.post("/api/runs?speed=100", json={"fund_url": "https://localglobe.vc", "force": True})
     assert r.status_code == 201
     run_id = r.json()["run_id"]
     assert r.json()["fund_id"] == "localglobe"
@@ -132,3 +132,13 @@ def test_map_views_and_centre(client):
     assert centre["view"] == "center" and centre["center_id"] == "northbeam-health"
     assert all(e["label"] for e in centre["edges"])
     assert client.get("/api/map?view=nope").status_code in (400, 422)
+
+
+def test_post_run_reuses_finished_run_unless_forced(client):
+    r = client.post("/api/runs", json={"fund_url": "www.localglobe.vc/portfolio"})
+    assert r.status_code == 201
+    body = r.json()
+    assert body["reused"] is True and body["fund_id"] == "localglobe"
+    assert client.get(f"/api/runs/{body['run_id']}").json()["status"] == "done"
+    forced = client.post("/api/runs?speed=100", json={"fund_url": "https://localglobe.vc", "force": True}).json()
+    assert forced["reused"] is False and forced["run_id"] != body["run_id"]

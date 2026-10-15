@@ -77,7 +77,8 @@ async def lifespan(_app: FastAPI):
 
 
 app = FastAPI(title="Bellwether API", version="0.1.0", lifespan=lifespan)
-app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_credentials=True,
+app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS,
+                   allow_origin_regex=config.CORS_ORIGIN_REGEX or None, allow_credentials=True,
                    allow_methods=["*"], allow_headers=["*"])
 
 
@@ -283,6 +284,10 @@ def logo_site(file: str) -> FileResponse:
 async def create_run(body: RunCreate, speed: Optional[float] = Query(None, gt=0, le=100)) -> RunCreated:
     if not body.fund_url.strip():
         raise HTTPException(422, "Please paste a fund website address.")
+    if not body.force:  # this fund already has finished results: show them instead of re-running
+        done = store.list_runs(fund_id=data.fund_id_from_url(body.fund_url), status="done", limit=1)
+        if done:
+            return RunCreated(run_id=done[0]["id"], fund_id=done[0]["fund_id"], reused=True)
     run = runs.start_run(body.fund_url, body.task, speed=speed)
     return RunCreated(run_id=run["id"], fund_id=run["fund_id"])
 

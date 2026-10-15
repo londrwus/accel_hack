@@ -377,11 +377,13 @@ class FundsResponse(BaseModel):  # GET /api/funds
 class RunCreate(BaseModel):  # POST /api/runs body
     fund_url: str
     task: Optional[str] = None
+    force: bool = False  # True = always start a fresh run; otherwise reuse the latest finished one
 
 
 class RunCreated(BaseModel):  # POST /api/runs response
     run_id: str
     fund_id: str
+    reused: bool = False  # True when an earlier finished run was returned instead of starting one
 
 
 class RunState(BaseModel):  # GET /api/runs/{id}

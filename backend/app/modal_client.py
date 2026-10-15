@@ -109,6 +109,8 @@ def configured() -> bool:
     """A Modal token is available (env/.env, or the profile `modal token new` writes)."""
     if disabled():
         return False
+    if os.environ.get("MODAL_TASK_ID") or os.environ.get("BELLWETHER_IN_MODAL"):  # running inside a Modal container: same-workspace from_name works
+        return True
     if config.setting("MODAL_TOKEN_ID") and config.setting("MODAL_TOKEN_SECRET"):
         return True
     return (Path.home() / ".modal.toml").exists()
