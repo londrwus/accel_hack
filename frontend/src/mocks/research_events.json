@@ -1,0 +1,647 @@
+[
+  {
+    "seq": 1,
+    "ts": "2026-10-15T09:00:00Z",
+    "elapsed_s": 0.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Partner",
+    "type": "step",
+    "message": "Starting a run on localglobe.vc.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 2,
+    "ts": "2026-10-15T09:00:05Z",
+    "elapsed_s": 5.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Partner",
+    "type": "plan",
+    "message": "Made a 7-step plan. Starting with the fund’s website.",
+    "tag": "Plan",
+    "data": {
+      "steps": [
+        "Read the website",
+        "Write the fund’s thesis",
+        "Check the news",
+        "Map portfolio & competitors",
+        "Find the next 10 deals",
+        "Write the memo",
+        "Fact-check it"
+      ]
+    }
+  },
+  {
+    "seq": 3,
+    "ts": "2026-10-15T09:00:07Z",
+    "elapsed_s": 7.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Partner",
+    "type": "handoff",
+    "message": "Asked Reader to read localglobe.vc.",
+    "tag": "Hand-off",
+    "data": {
+      "from": "Partner",
+      "to": "Reader",
+      "payload_summary": "Fund website: localglobe.vc"
+    }
+  },
+  {
+    "seq": 4,
+    "ts": "2026-10-15T09:00:11Z",
+    "elapsed_s": 11.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "tool",
+    "message": "Opening localglobe.vc.",
+    "tag": null,
+    "data": {
+      "tool": "fetch_page",
+      "url": "https://localglobe.vc"
+    }
+  },
+  {
+    "seq": 5,
+    "ts": "2026-10-15T09:00:17Z",
+    "elapsed_s": 17.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "step",
+    "message": "Read the home page and the team page.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 6,
+    "ts": "2026-10-15T09:00:24Z",
+    "elapsed_s": 24.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "tool",
+    "message": "Opening the portfolio page.",
+    "tag": null,
+    "data": {
+      "tool": "fetch_page",
+      "url": "https://localglobe.vc/portfolio"
+    }
+  },
+  {
+    "seq": 7,
+    "ts": "2026-10-15T09:00:36Z",
+    "elapsed_s": 36.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "step",
+    "message": "The portfolio page lists 42 companies, from Cleo to Wise.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 8,
+    "ts": "2026-10-15T09:00:47Z",
+    "elapsed_s": 47.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "handoff",
+    "message": "Found 42 portfolio companies and handed them to Thesis.",
+    "tag": "Hand-off",
+    "data": {
+      "from": "Reader",
+      "to": "Thesis",
+      "payload_summary": "42 portfolio companies",
+      "plan_step": 1,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 9,
+    "ts": "2026-10-15T09:00:50Z",
+    "elapsed_s": 50.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Partner",
+    "type": "handoff",
+    "message": "Asked Market to check the news on LocalGlobe.",
+    "tag": "Hand-off",
+    "data": {
+      "from": "Partner",
+      "to": "Market",
+      "payload_summary": "Last 90 days of news"
+    }
+  },
+  {
+    "seq": 10,
+    "ts": "2026-10-15T09:00:53Z",
+    "elapsed_s": 53.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Thesis",
+    "type": "step",
+    "message": "Reading what LocalGlobe has backed so far.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 11,
+    "ts": "2026-10-15T09:00:58Z",
+    "elapsed_s": 58.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Market",
+    "type": "tool",
+    "message": "Searching the news for LocalGlobe from the last 90 days.",
+    "tag": null,
+    "data": {
+      "tool": "web_search",
+      "query": "LocalGlobe seed round"
+    }
+  },
+  {
+    "seq": 12,
+    "ts": "2026-10-15T09:01:04Z",
+    "elapsed_s": 64.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "step",
+    "message": "Reading each portfolio company’s own website. 42 to go.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 13,
+    "ts": "2026-10-15T09:01:12Z",
+    "elapsed_s": 72.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Market",
+    "type": "finding",
+    "message": "Read 14 news articles. LocalGlobe led 3 seed rounds in the last 90 days.",
+    "tag": null,
+    "data": {
+      "articles": 14
+    }
+  },
+  {
+    "seq": 14,
+    "ts": "2026-10-15T09:01:20Z",
+    "elapsed_s": 80.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Market",
+    "type": "step",
+    "message": "A LocalGlobe partner wrote about AI in healthcare last month.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 15,
+    "ts": "2026-10-15T09:01:28Z",
+    "elapsed_s": 88.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Thesis",
+    "type": "step",
+    "message": "Grouped the portfolio by sector. Fintech is the biggest group, with 14 companies.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 16,
+    "ts": "2026-10-15T09:01:34Z",
+    "elapsed_s": 94.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Thesis",
+    "type": "step",
+    "message": "Most first cheques are pre-seed or seed, between £0.5M and £2M.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 17,
+    "ts": "2026-10-15T09:01:37Z",
+    "elapsed_s": 97.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Market",
+    "type": "done",
+    "message": "Finished checking the news.",
+    "tag": null,
+    "data": {
+      "plan_step": 3,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 18,
+    "ts": "2026-10-15T09:01:40Z",
+    "elapsed_s": 100.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Thesis",
+    "type": "finding",
+    "message": "LocalGlobe backs very early UK and European founders, mostly fintech, health and deep tech.",
+    "tag": null,
+    "data": {
+      "plan_step": 2,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 19,
+    "ts": "2026-10-15T09:01:44Z",
+    "elapsed_s": 104.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Partner",
+    "type": "step",
+    "message": "The fund’s thesis is ready. 3 of 7 steps done.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 20,
+    "ts": "2026-10-15T09:01:47Z",
+    "elapsed_s": 107.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "warning",
+    "message": "The website for Marker took too long to load. Trying again.",
+    "tag": "Retrying",
+    "data": {
+      "url": "https://marker.video",
+      "attempt": 1
+    }
+  },
+  {
+    "seq": 21,
+    "ts": "2026-10-15T09:01:51Z",
+    "elapsed_s": 111.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Thesis",
+    "type": "handoff",
+    "message": "Handed the fund’s thesis to Deal Finder and Mapper.",
+    "tag": "Hand-off",
+    "data": {
+      "from": "Thesis",
+      "to": [
+        "Deal Finder",
+        "Mapper"
+      ],
+      "payload_summary": "Fund DNA",
+      "plan_step": 4,
+      "plan_status": "working"
+    }
+  },
+  {
+    "seq": 22,
+    "ts": "2026-10-15T09:01:53Z",
+    "elapsed_s": 113.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Mapper",
+    "type": "step",
+    "message": "Looking up competitors for each portfolio company.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 23,
+    "ts": "2026-10-15T09:01:54Z",
+    "elapsed_s": 114.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "warning",
+    "message": "The second try was blocked too.",
+    "tag": "Retrying",
+    "data": {
+      "url": "https://marker.video",
+      "attempt": 2
+    }
+  },
+  {
+    "seq": 24,
+    "ts": "2026-10-15T09:01:55Z",
+    "elapsed_s": 115.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "tool",
+    "message": "Scoring 10,412 startups against the fund’s thesis.",
+    "tag": null,
+    "data": {
+      "tool": "score_fit",
+      "plan_step": 5,
+      "plan_status": "working"
+    }
+  },
+  {
+    "seq": 25,
+    "ts": "2026-10-15T09:01:58Z",
+    "elapsed_s": 118.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Reader",
+    "type": "recovered",
+    "message": "A portfolio page was blocked, so I used search results instead.",
+    "tag": "Recovered",
+    "data": {
+      "url": "https://marker.video",
+      "fallback": "search results"
+    }
+  },
+  {
+    "seq": 26,
+    "ts": "2026-10-15T09:02:00Z",
+    "elapsed_s": 120.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "step",
+    "message": "Scored all 10,412 startups in 3.2 seconds. 50 look promising.",
+    "tag": null,
+    "data": {
+      "scored": 10412,
+      "seconds": 3.2
+    }
+  },
+  {
+    "seq": 27,
+    "ts": "2026-10-15T09:02:02Z",
+    "elapsed_s": 122.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Mapper",
+    "type": "tool",
+    "message": "Asking the model for companies like BioOrbit.",
+    "tag": null,
+    "data": {
+      "tool": "similar_companies",
+      "company_id": "bioorbit"
+    }
+  },
+  {
+    "seq": 28,
+    "ts": "2026-10-15T09:02:05Z",
+    "elapsed_s": 125.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Mapper",
+    "type": "step",
+    "message": "BioOrbit has 3 competitors, including Orbex.",
+    "tag": null,
+    "data": {
+      "company_id": "bioorbit"
+    }
+  },
+  {
+    "seq": 29,
+    "ts": "2026-10-15T09:02:09Z",
+    "elapsed_s": 129.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Mapper",
+    "type": "finding",
+    "message": "Marker has 6 competitors. 2 of them raised money this year.",
+    "tag": null,
+    "data": {
+      "company_id": "marker"
+    }
+  },
+  {
+    "seq": 30,
+    "ts": "2026-10-15T09:02:11Z",
+    "elapsed_s": 131.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "step",
+    "message": "Reading the top 50 closely to pick the best 10.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 31,
+    "ts": "2026-10-15T09:02:14Z",
+    "elapsed_s": 134.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "finding",
+    "message": "Strong match: Northbeam Health. It looks like 3 companies LocalGlobe already owns.",
+    "tag": "New match",
+    "data": {
+      "company_id": "northbeam-health",
+      "fit": 94
+    }
+  },
+  {
+    "seq": 32,
+    "ts": "2026-10-15T09:02:20Z",
+    "elapsed_s": 140.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Mapper",
+    "type": "finding",
+    "message": "Cleo has 2 close rivals: Plum and Ledgerly.",
+    "tag": null,
+    "data": {
+      "company_id": "cleo"
+    }
+  },
+  {
+    "seq": 33,
+    "ts": "2026-10-15T09:02:26Z",
+    "elapsed_s": 146.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "warning",
+    "message": "Ledgerly fits at 88%, but it competes with Cleo. Flagged as a clash.",
+    "tag": "Clash",
+    "data": {
+      "company_id": "ledgerly",
+      "conflict_with": "cleo",
+      "fit": 88
+    }
+  },
+  {
+    "seq": 34,
+    "ts": "2026-10-15T09:02:31Z",
+    "elapsed_s": 151.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Mapper",
+    "type": "done",
+    "message": "Market map ready: 6 portfolio companies, 9 competitors and 3 picks.",
+    "tag": null,
+    "data": {
+      "plan_step": 4,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 35,
+    "ts": "2026-10-15T09:02:35Z",
+    "elapsed_s": 155.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "finding",
+    "message": "New match: Gridwise, home battery software from ex-Octopus founders.",
+    "tag": "New match",
+    "data": {
+      "company_id": "gridwise",
+      "fit": 81
+    }
+  },
+  {
+    "seq": 36,
+    "ts": "2026-10-15T09:02:40Z",
+    "elapsed_s": 160.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "done",
+    "message": "Shortlist ready: 10 startups ranked by fit. Mix: 6 UK, 3 EU, 1 US.",
+    "tag": null,
+    "data": {
+      "plan_step": 5,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 37,
+    "ts": "2026-10-15T09:02:42Z",
+    "elapsed_s": 162.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Deal Finder",
+    "type": "handoff",
+    "message": "Handed Northbeam Health to Analyst for a memo.",
+    "tag": "Hand-off",
+    "data": {
+      "from": "Deal Finder",
+      "to": "Analyst",
+      "payload_summary": "Top pick: Northbeam Health",
+      "plan_step": 6,
+      "plan_status": "working"
+    }
+  },
+  {
+    "seq": 38,
+    "ts": "2026-10-15T09:02:46Z",
+    "elapsed_s": 166.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Analyst",
+    "type": "tool",
+    "message": "Reading northbeam.health and 4 news articles.",
+    "tag": null,
+    "data": {
+      "tool": "fetch_page",
+      "url": "https://northbeam.health"
+    }
+  },
+  {
+    "seq": 39,
+    "ts": "2026-10-15T09:02:54Z",
+    "elapsed_s": 174.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Analyst",
+    "type": "finding",
+    "message": "38 GP practices use Northbeam today, according to its website.",
+    "tag": null,
+    "data": {}
+  },
+  {
+    "seq": 40,
+    "ts": "2026-10-15T09:03:01Z",
+    "elapsed_s": 181.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Analyst",
+    "type": "tool",
+    "message": "Checking how the NHS buys software, on nhs.uk.",
+    "tag": null,
+    "data": {
+      "tool": "fetch_page",
+      "url": "https://www.nhs.uk"
+    }
+  },
+  {
+    "seq": 41,
+    "ts": "2026-10-15T09:03:08Z",
+    "elapsed_s": 188.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Analyst",
+    "type": "finding",
+    "message": "Found 2 funded competitors in the dataset: Klinik and eConsult.",
+    "tag": null,
+    "data": {
+      "row_id": 1170
+    }
+  },
+  {
+    "seq": 42,
+    "ts": "2026-10-15T09:03:15Z",
+    "elapsed_s": 195.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Analyst",
+    "type": "handoff",
+    "message": "Wrote the memo with 14 claims. Handed it to Critic to check.",
+    "tag": "Hand-off",
+    "data": {
+      "from": "Analyst",
+      "to": "Critic",
+      "payload_summary": "Memo: Northbeam Health",
+      "memo_id": "northbeam-health",
+      "plan_step": 6,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 43,
+    "ts": "2026-10-15T09:03:20Z",
+    "elapsed_s": 200.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Critic",
+    "type": "tool",
+    "message": "Checking each claim against its source.",
+    "tag": null,
+    "data": {
+      "tool": "fetch_page",
+      "plan_step": 7,
+      "plan_status": "working"
+    }
+  },
+  {
+    "seq": 44,
+    "ts": "2026-10-15T09:03:28Z",
+    "elapsed_s": 208.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Critic",
+    "type": "warning",
+    "message": "Could not confirm the 30% faster waiting times. Marked it as not verified.",
+    "tag": "Not verified",
+    "data": {
+      "memo_id": "northbeam-health"
+    }
+  },
+  {
+    "seq": 45,
+    "ts": "2026-10-15T09:03:34Z",
+    "elapsed_s": 214.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Critic",
+    "type": "finding",
+    "message": "Checked the memo: 13 of 14 claims have a source. 1 marked as not verified.",
+    "tag": null,
+    "data": {
+      "memo_id": "northbeam-health",
+      "claims_with_source": 13,
+      "claims_total": 14
+    }
+  },
+  {
+    "seq": 46,
+    "ts": "2026-10-15T09:03:38Z",
+    "elapsed_s": 218.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Critic",
+    "type": "done",
+    "message": "No clashes with the portfolio. Founder traits were not used.",
+    "tag": null,
+    "data": {
+      "plan_step": 7,
+      "plan_status": "done"
+    }
+  },
+  {
+    "seq": 47,
+    "ts": "2026-10-15T09:03:44Z",
+    "elapsed_s": 224.0,
+    "run_id": "run_demo_localglobe",
+    "agent": "Partner",
+    "type": "done",
+    "message": "Done. I’ll check again tomorrow at 7am and tell you what changed.",
+    "tag": "Done",
+    "data": {
+      "run_done": true,
+      "memo_id": "northbeam-health"
+    }
+  }
+]

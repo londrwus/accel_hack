@@ -1,0 +1,2533 @@
+{
+ "fund": "Balderton Capital",
+ "url": "https://www.balderton.com/",
+ "how_served": "WordPress. /companies/ is a FacetWP grid showing 24 of 205 (total_rows) with a JS Load more button (FacetWP REST refresh fails without browser context; URL pager params ignored). Full list reachable via server-rendered taxonomy archives /status/live/page/N/ and /status/exited/page/N/ (15/page, name + profile URL only). No company sitemap (company CPT not in sitemap or wp-json). Websites only on the 24 grid cards.",
+ "gt_count": 204,
+ "site_stated_total": 205,
+ "live": 128,
+ "exited": 76,
+ "team_size": 48,
+ "team_source": "team_member-sitemap.xml",
+ "thesis": "European early-stage and growth VC (London, plus Paris and Berlin investors); invests Seed to IPO; $5.7bn raised; 300+ companies backed since 2000; helps European founders build global businesses. Sectors tagged: fintech, AI/ML, enterprise, consumer, digital health, sustainable tech, cyber security, resilience.",
+ "stages": [
+  "Seed",
+  "Series A",
+  "Growth"
+ ],
+ "geos": [
+  "Europe",
+  "UK",
+  "France",
+  "Germany",
+  "Nordics",
+  "Turkey"
+ ],
+ "companies": [
+  {
+   "name": "Conveo",
+   "profile_url": "https://www.balderton.com/company/conveo/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "enterprise"
+   ],
+   "location": [
+    "belgium"
+   ]
+  },
+  {
+   "name": "ItoFlow",
+   "profile_url": "https://www.balderton.com/company/itoflow/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Lovable",
+   "profile_url": "https://www.balderton.com/company/lovable/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "dash0",
+   "profile_url": "https://www.balderton.com/company/dash0/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": []
+  },
+  {
+   "name": "Geordie AI",
+   "profile_url": "https://www.balderton.com/company/geordie-ai/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Davis",
+   "profile_url": "https://www.balderton.com/company/davis/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Reson8",
+   "profile_url": "https://www.balderton.com/company/reson8/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "netherlands"
+   ]
+  },
+  {
+   "name": "Escape",
+   "profile_url": "https://www.balderton.com/company/escape/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "cyber-security"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Voize",
+   "profile_url": "https://www.balderton.com/company/voize/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "digital-health"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "DeepIP",
+   "profile_url": "https://www.balderton.com/company/deepip/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Taptap Send",
+   "profile_url": "https://www.balderton.com/company/taptap-send/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Light",
+   "profile_url": "https://www.balderton.com/company/light/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "fintech"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Exein",
+   "profile_url": "https://www.balderton.com/company/exein/",
+   "status": "live",
+   "website": "http://www.exein.io/",
+   "sectors": [
+    "cyber-security",
+    "resilience"
+   ],
+   "location": [
+    "italy"
+   ],
+   "first_round": "Series C in 2025"
+  },
+  {
+   "name": "Proxima Fusion",
+   "profile_url": "https://www.balderton.com/company/proxima-fusion/",
+   "status": "live",
+   "website": "https://www.proximafusion.com/",
+   "sectors": [
+    "resilience",
+    "sustainable-tech"
+   ],
+   "location": [
+    "germany"
+   ],
+   "first_round": "Series A in 2025"
+  },
+  {
+   "name": "Quantum Systems",
+   "profile_url": "https://www.balderton.com/company/quantum-systems/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "resilience"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Cino",
+   "profile_url": "https://www.balderton.com/company/cino/",
+   "status": "live",
+   "website": "https://www.getcino.com/",
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "netherlands"
+   ],
+   "first_round": "Seed round in 2025"
+  },
+  {
+   "name": "Taktile",
+   "profile_url": "https://www.balderton.com/company/taktile/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "fintech"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Prior Labs",
+   "profile_url": "https://www.balderton.com/company/prior-labs/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Lindus Health",
+   "profile_url": "https://www.balderton.com/company/lindus-health/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Lawhive",
+   "profile_url": "https://www.balderton.com/company/lawhive/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Grand Games",
+   "profile_url": "https://www.balderton.com/company/grand-games/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "turkey"
+   ]
+  },
+  {
+   "name": "Kong",
+   "profile_url": "https://www.balderton.com/company/kong/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise",
+    "other"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "The Exploration Company",
+   "profile_url": "https://www.balderton.com/company/the-exploration-company/",
+   "status": "live",
+   "website": "https://www.exploration.space/",
+   "sectors": [
+    "resilience",
+    "other"
+   ],
+   "location": [
+    "germany"
+   ],
+   "first_round": "Series B in 2024"
+  },
+  {
+   "name": "Convergence",
+   "profile_url": "https://www.balderton.com/company/convergence/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Checkly",
+   "profile_url": "https://www.balderton.com/company/checkly/",
+   "status": "live",
+   "website": "https://www.checklyhq.com/",
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "germany"
+   ],
+   "first_round": "Series B in 2024"
+  },
+  {
+   "name": "Sava",
+   "profile_url": "https://www.balderton.com/company/sava/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Tinybird",
+   "profile_url": "https://www.balderton.com/company/tinybird/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "spain"
+   ]
+  },
+  {
+   "name": "Qargo",
+   "profile_url": "https://www.balderton.com/company/qargo/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Huspy",
+   "profile_url": "https://www.balderton.com/company/huspy/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "spain"
+   ]
+  },
+  {
+   "name": "trawa",
+   "profile_url": "https://www.balderton.com/company/trawa/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "sustainable-tech"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Payflows",
+   "profile_url": "https://www.balderton.com/company/payflows/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Scalable Capital",
+   "profile_url": "https://www.balderton.com/company/scalable-capital/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Odyssey Therapeutics",
+   "profile_url": "https://www.balderton.com/company/odyssey-therapeutics/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Writer",
+   "profile_url": "https://www.balderton.com/company/writer/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Uncommon",
+   "profile_url": "https://www.balderton.com/company/uncommon/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "sustainable-tech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "TreasurySpring",
+   "profile_url": "https://www.balderton.com/company/treasuryspring/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Lassie",
+   "profile_url": "https://www.balderton.com/company/lassie/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "fintech"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Sylvera",
+   "profile_url": "https://www.balderton.com/company/sylvera/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "sustainable-tech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Grasp",
+   "profile_url": "https://www.balderton.com/company/grasp/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Deepset",
+   "profile_url": "https://www.balderton.com/company/deepset/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Anytype",
+   "profile_url": "https://www.balderton.com/company/anytype/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "01Health",
+   "profile_url": "https://www.balderton.com/company/32co/",
+   "status": "live",
+   "website": "https://01health.ai/",
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Seed, 2023"
+  },
+  {
+   "name": "Violet",
+   "profile_url": "https://www.balderton.com/company/violet/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Brigad",
+   "profile_url": "https://www.balderton.com/company/brigad/",
+   "status": "live",
+   "website": "https://www.brigad.co/",
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ],
+   "first_round": "Series B in 2023"
+  },
+  {
+   "name": "Supernormal",
+   "profile_url": "https://www.balderton.com/company/supernormal/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "enterprise"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "PhotoRoom",
+   "profile_url": "https://www.balderton.com/company/photoroom/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "consumer"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Levity",
+   "profile_url": "https://www.balderton.com/company/levity/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "enterprise"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Fuse Energy",
+   "profile_url": "https://www.balderton.com/company/tesseract/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "resilience",
+    "sustainable-tech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Delli",
+   "profile_url": "https://www.balderton.com/company/delli/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Agave Games",
+   "profile_url": "https://www.balderton.com/company/agave-games/",
+   "status": "live",
+   "website": "https://www.agavegames.com/",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "turkey"
+   ],
+   "first_round": "Seed in 2022"
+  },
+  {
+   "name": "TestGorilla",
+   "profile_url": "https://www.balderton.com/company/testgorilla/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "netherlands"
+   ]
+  },
+  {
+   "name": "Request Finance",
+   "profile_url": "https://www.balderton.com/company/request-finance/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Avi Medical",
+   "profile_url": "https://www.balderton.com/company/avi-medical/",
+   "status": "live",
+   "website": "https://avimedical.com/",
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "germany"
+   ],
+   "first_round": "Series B in 2022"
+  },
+  {
+   "name": "Coro",
+   "profile_url": "https://www.balderton.com/company/coro/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "cyber-security",
+    "enterprise"
+   ],
+   "location": [
+    "israel"
+   ]
+  },
+  {
+   "name": "MiiM",
+   "profile_url": "https://www.balderton.com/company/miim/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "cyber-security"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Ramp",
+   "profile_url": "https://www.balderton.com/company/ramp/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "poland"
+   ]
+  },
+  {
+   "name": "ZOE",
+   "profile_url": "https://www.balderton.com/company/zoe/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Clue",
+   "profile_url": "https://www.balderton.com/company/clue/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "digital-health"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Sweep",
+   "profile_url": "https://www.balderton.com/company/sweep/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise",
+    "sustainable-tech"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Attio",
+   "profile_url": "https://www.balderton.com/company/7972-2/",
+   "status": "live",
+   "website": "https://attio.com/",
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Seed in 2021"
+  },
+  {
+   "name": "arive",
+   "profile_url": "https://www.balderton.com/company/arive/",
+   "status": "live",
+   "website": "https://www.getarive.com/",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "germany"
+   ],
+   "first_round": "Seed in 2021"
+  },
+  {
+   "name": "Kili Technology",
+   "profile_url": "https://www.balderton.com/company/kili-technology/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "JOKR",
+   "profile_url": "https://www.balderton.com/company/jokr/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Ory",
+   "profile_url": "https://www.balderton.com/company/ory/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "cyber-security",
+    "enterprise"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Forecast",
+   "profile_url": "https://www.balderton.com/company/forecast/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Matillion",
+   "profile_url": "https://www.balderton.com/company/matillion/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Finoa",
+   "profile_url": "https://www.balderton.com/company/finoa/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Merama",
+   "profile_url": "https://www.balderton.com/company/merama/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "outside-europe"
+   ]
+  },
+  {
+   "name": "Premialab",
+   "profile_url": "https://www.balderton.com/company/premialab/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Omio",
+   "profile_url": "https://www.balderton.com/company/omio/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Housecall Pro",
+   "profile_url": "https://www.balderton.com/company/housecall-pro/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Beauty Pie",
+   "profile_url": "https://www.balderton.com/company/beauty-pie/",
+   "status": "live",
+   "website": "https://www.beautypie.com/",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2020"
+  },
+  {
+   "name": "Lendable",
+   "profile_url": "https://www.balderton.com/company/lendable/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Vivenu",
+   "profile_url": "https://www.balderton.com/company/vivenu/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Tibber",
+   "profile_url": "https://www.balderton.com/company/tibber/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "sustainable-tech"
+   ],
+   "location": [
+    "norway"
+   ]
+  },
+  {
+   "name": "Kbox Global",
+   "profile_url": "https://www.balderton.com/company/kbox-global/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Demodesk",
+   "profile_url": "https://www.balderton.com/company/demodesk/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "riff",
+   "profile_url": "https://www.balderton.com/company/riff/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "smol",
+   "profile_url": "https://www.balderton.com/company/smol/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Defined.ai",
+   "profile_url": "https://www.balderton.com/company/definedcrowd/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "PlayPlay",
+   "profile_url": "https://www.balderton.com/company/playplay/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Primer",
+   "profile_url": "https://www.balderton.com/company/primer/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "The Org",
+   "profile_url": "https://www.balderton.com/company/the-org/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Traefik Labs",
+   "profile_url": "https://www.balderton.com/company/containous/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "GitGuardian",
+   "profile_url": "https://www.balderton.com/company/gitguardian/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "cyber-security",
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Toucan Toco",
+   "profile_url": "https://www.balderton.com/company/toucan-toco/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Detectify",
+   "profile_url": "https://www.balderton.com/company/detectify/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "cyber-security",
+    "enterprise"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Dream Games",
+   "profile_url": "https://www.balderton.com/company/dream-games/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "turkey"
+   ]
+  },
+  {
+   "name": "Wayve",
+   "profile_url": "https://www.balderton.com/company/wayve/",
+   "status": "live",
+   "website": "https://wayve.ai/",
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2019"
+  },
+  {
+   "name": "McMakler",
+   "profile_url": "https://www.balderton.com/company/mcmakler/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Stream",
+   "profile_url": "https://www.balderton.com/company/wagestream/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Nested",
+   "profile_url": "https://www.balderton.com/company/nested/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Lifesum",
+   "profile_url": "https://www.balderton.com/company/4630-2/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Kaia Health",
+   "profile_url": "https://www.balderton.com/company/kaia-health/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "VOI",
+   "profile_url": "https://www.balderton.com/company/voi/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Cleo",
+   "profile_url": "https://www.balderton.com/company/cleo/",
+   "status": "live",
+   "website": "https://www.meetcleo.com/",
+   "sectors": [
+    "ai-machine-learning",
+    "consumer",
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2018"
+  },
+  {
+   "name": "Healx",
+   "profile_url": "https://www.balderton.com/company/healx/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Zego",
+   "profile_url": "https://www.balderton.com/company/zego/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Workable",
+   "profile_url": "https://www.balderton.com/company/workable/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Vivino",
+   "profile_url": "https://www.balderton.com/company/vivino/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Virtuo",
+   "profile_url": "https://www.balderton.com/company/virtuo/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Vestiaire Collective",
+   "profile_url": "https://www.balderton.com/company/vestiaire-collective/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "THG (The Hut Group)",
+   "profile_url": "https://www.balderton.com/company/the-hut/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Sophia Genetics",
+   "profile_url": "https://www.balderton.com/company/sophia-genetics/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning",
+    "digital-health"
+   ],
+   "location": [
+    "switzerland"
+   ]
+  },
+  {
+   "name": "Scytl",
+   "profile_url": "https://www.balderton.com/company/scytl/",
+   "status": "live",
+   "website": null,
+   "sectors": [],
+   "location": [
+    "spain"
+   ]
+  },
+  {
+   "name": "Revolut",
+   "profile_url": "https://www.balderton.com/company/revolut/",
+   "status": "live",
+   "website": "https://www.revolut.com/",
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Seed in 2015"
+  },
+  {
+   "name": "Prodigy Finance",
+   "profile_url": "https://www.balderton.com/company/prodigy-finance/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Pay With My Bank",
+   "profile_url": "https://www.balderton.com/company/pay-with-my-bank/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Oncimmune",
+   "profile_url": "https://www.balderton.com/company/oncimmune/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "MyTomorrows",
+   "profile_url": "https://www.balderton.com/company/mytomorrows/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "netherlands"
+   ]
+  },
+  {
+   "name": "Mojiworks",
+   "profile_url": "https://www.balderton.com/company/mojiworks/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Memrise",
+   "profile_url": "https://www.balderton.com/company/memrise/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Lyst",
+   "profile_url": "https://www.balderton.com/company/lyst/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Labster",
+   "profile_url": "https://www.balderton.com/company/labster/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Infarm",
+   "profile_url": "https://www.balderton.com/company/infarm/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "sustainable-tech"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Hiya",
+   "profile_url": "https://www.balderton.com/company/hiya/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "GoCardless",
+   "profile_url": "https://www.balderton.com/company/gocardless/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Furhat Robotics",
+   "profile_url": "https://www.balderton.com/company/furhat-robotics/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Funnel",
+   "profile_url": "https://www.balderton.com/company/funnel/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Ezoic",
+   "profile_url": "https://www.balderton.com/company/ezoic/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Latana",
+   "profile_url": "https://www.balderton.com/company/dalia-research/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Crowdcube",
+   "profile_url": "https://www.balderton.com/company/crowdcube/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Credit Benchmark",
+   "profile_url": "https://www.balderton.com/company/credit-benchmark/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "ComplyAdvantage",
+   "profile_url": "https://www.balderton.com/company/comply-advantage/",
+   "status": "live",
+   "website": null,
+   "sectors": [
+    "enterprise",
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Carwow",
+   "profile_url": "https://www.balderton.com/company/carwow/",
+   "status": "live",
+   "website": "https://www.carwow.co.uk/",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2014"
+  },
+  {
+   "name": "Appear Here",
+   "profile_url": "https://www.balderton.com/company/appear-here/",
+   "status": "live",
+   "website": "https://www.appearhere.co.uk",
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2014"
+  },
+  {
+   "name": "Aircall",
+   "profile_url": "https://www.balderton.com/company/aircall/",
+   "status": "live",
+   "website": "https://aircall.io/",
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ],
+   "first_round": "Series A in 2016"
+  },
+  {
+   "name": "Adludio",
+   "profile_url": "https://www.balderton.com/company/adludio/",
+   "status": "live",
+   "website": "https://adludio.com/",
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Seed in 2013"
+  },
+  {
+   "name": "Better Origin",
+   "profile_url": "https://www.balderton.com/company/better-origin/",
+   "status": "exited",
+   "website": "https://betterorigin.co.uk/",
+   "sectors": [
+    "sustainable-tech"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2022"
+  },
+  {
+   "name": "Numeral",
+   "profile_url": "https://www.balderton.com/company/numeral/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Yokoy",
+   "profile_url": "https://www.balderton.com/company/yokoy/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise",
+    "fintech"
+   ],
+   "location": [
+    "switzerland"
+   ]
+  },
+  {
+   "name": "Cobee",
+   "profile_url": "https://www.balderton.com/company/cobee/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "spain"
+   ]
+  },
+  {
+   "name": "Hubilo",
+   "profile_url": "https://www.balderton.com/company/hubilo/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Graphcore",
+   "profile_url": "https://www.balderton.com/company/graphcore/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Flywire",
+   "profile_url": "https://www.balderton.com/company/flywire/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Jumbo Privacy",
+   "profile_url": "https://www.balderton.com/company/jumbo-privacy/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "cyber-security"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "VanMoof",
+   "profile_url": "https://www.balderton.com/company/vanmoof/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "netherlands"
+   ]
+  },
+  {
+   "name": "Jolt",
+   "profile_url": "https://www.balderton.com/company/jolt/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Truecaller",
+   "profile_url": "https://www.balderton.com/company/truecaller/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "GCL",
+   "profile_url": "https://www.balderton.com/company/gcl-2/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "outside-europe"
+   ]
+  },
+  {
+   "name": "Rahko",
+   "profile_url": "https://www.balderton.com/company/rahko/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "LoveFilm",
+   "profile_url": "https://www.balderton.com/company/lovefilm/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Darktrace",
+   "profile_url": "https://www.balderton.com/company/darktrace/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "cyber-security",
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Simple Feast",
+   "profile_url": "https://www.balderton.com/company/simple-feast/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Tessian",
+   "profile_url": "https://www.balderton.com/company/tessian/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Tempow",
+   "profile_url": "https://www.balderton.com/company/tempow/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Zopa",
+   "profile_url": "https://www.balderton.com/company/zopa/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Yingli Solar",
+   "profile_url": "https://www.balderton.com/company/yingli-solar/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "outside-europe"
+   ]
+  },
+  {
+   "name": "Yoox Group",
+   "profile_url": "https://www.balderton.com/company/yoox-group/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "italy"
+   ]
+  },
+  {
+   "name": "Wooga",
+   "profile_url": "https://www.balderton.com/company/wooga/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Trademark Now",
+   "profile_url": "https://www.balderton.com/company/trademark-now/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "finland"
+   ]
+  },
+  {
+   "name": "Digital Surgery",
+   "profile_url": "https://www.balderton.com/company/touch-surgery/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Thread",
+   "profile_url": "https://www.balderton.com/company/thread/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "The Tab",
+   "profile_url": "https://www.balderton.com/company/the-tab/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Tictail",
+   "profile_url": "https://www.balderton.com/company/tictail/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Talend",
+   "profile_url": "https://www.balderton.com/company/talend/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Sunrise",
+   "profile_url": "https://www.balderton.com/company/sunrise/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "Soundtrack Your Brand",
+   "profile_url": "https://www.balderton.com/company/soundtrack-your-brand/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Sketchfab",
+   "profile_url": "https://www.balderton.com/company/sketchfab/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "france"
+   ]
+  },
+  {
+   "name": "ROLI",
+   "profile_url": "https://www.balderton.com/company/roli/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Rebtel",
+   "profile_url": "https://www.balderton.com/company/rebtel/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Rentify",
+   "profile_url": "https://www.balderton.com/company/rentify/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Recorded Future",
+   "profile_url": "https://www.balderton.com/company/recorded-future/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Qubit",
+   "profile_url": "https://www.balderton.com/company/qubit/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Pusher",
+   "profile_url": "https://www.balderton.com/company/pusher/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Peakon",
+   "profile_url": "https://www.balderton.com/company/peakon/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Patients Know Best",
+   "profile_url": "https://www.balderton.com/company/patients-know-best/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "digital-health"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Openet",
+   "profile_url": "https://www.balderton.com/company/openet/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "ireland"
+   ]
+  },
+  {
+   "name": "Opbeat",
+   "profile_url": "https://www.balderton.com/company/opbeat/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "denmark"
+   ]
+  },
+  {
+   "name": "Nutmeg",
+   "profile_url": "https://www.balderton.com/company/nutmeg/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Nlyte Software",
+   "profile_url": "https://www.balderton.com/company/nlyte-software/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Newbay",
+   "profile_url": "https://www.balderton.com/company/newbay/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Naturalmotion",
+   "profile_url": "https://www.balderton.com/company/naturalmotion/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "NASN",
+   "profile_url": "https://www.balderton.com/company/nasn/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "MySQL",
+   "profile_url": "https://www.balderton.com/company/mysql/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Mog",
+   "profile_url": "https://www.balderton.com/company/mog/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "MBA Polymers",
+   "profile_url": "https://www.balderton.com/company/mba-polymers/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Magic Pony Technology",
+   "profile_url": "https://www.balderton.com/company/magic-pony-technology/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Luno",
+   "profile_url": "https://www.balderton.com/company/luno/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer",
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Lovecrafts",
+   "profile_url": "https://www.balderton.com/company/lovecrafts/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "LevelUp",
+   "profile_url": "https://www.balderton.com/company/levelup/",
+   "status": "exited",
+   "website": null,
+   "sectors": [],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Kobalt",
+   "profile_url": "https://www.balderton.com/company/kobalt/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Axitech",
+   "profile_url": "https://www.balderton.com/company/interresolve-axitech/",
+   "status": "exited",
+   "website": "https://www.axitech.co/",
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2010"
+  },
+  {
+   "name": "Instabridge",
+   "profile_url": "https://www.balderton.com/company/instabridge/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "sweden"
+   ]
+  },
+  {
+   "name": "Icera",
+   "profile_url": "https://www.balderton.com/company/icera/",
+   "status": "exited",
+   "website": null,
+   "sectors": [],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "HouseTrip",
+   "profile_url": "https://www.balderton.com/company/house-trip/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Workhuman",
+   "profile_url": "https://www.balderton.com/company/globoforce/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "ireland"
+   ]
+  },
+  {
+   "name": "Frontier Car Group",
+   "profile_url": "https://www.balderton.com/company/frontier-car-group/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Dubsmash",
+   "profile_url": "https://www.balderton.com/company/dubsmash/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "DisplayLink",
+   "profile_url": "https://www.balderton.com/company/display-link/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Dinghy",
+   "profile_url": "https://www.balderton.com/company/dinghy/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "fintech"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Depop",
+   "profile_url": "https://www.balderton.com/company/depop/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Curious AI Company",
+   "profile_url": "https://www.balderton.com/company/the-curious-ai-company/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "ai-machine-learning"
+   ],
+   "location": [
+    "finland"
+   ]
+  },
+  {
+   "name": "Contentful",
+   "profile_url": "https://www.balderton.com/company/contentful/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "germany"
+   ]
+  },
+  {
+   "name": "Codemasters",
+   "profile_url": "https://www.balderton.com/company/codemasters/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ]
+  },
+  {
+   "name": "Cloud9",
+   "profile_url": "https://www.balderton.com/company/cloud9/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "usa"
+   ]
+  },
+  {
+   "name": "Circle",
+   "profile_url": "https://www.balderton.com/company/circle/",
+   "status": "exited",
+   "website": "https://www.circlehealth.co.uk/",
+   "sectors": [],
+   "location": [
+    "uk"
+   ],
+   "first_round": "2008"
+  },
+  {
+   "name": "Citymapper",
+   "profile_url": "https://www.balderton.com/company/citymapper/",
+   "status": "exited",
+   "website": "https://citymapper.com/london",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2013"
+  },
+  {
+   "name": "Bookatable",
+   "profile_url": "https://www.balderton.com/company/bookatable/",
+   "status": "exited",
+   "website": "https://www.bookatable.co.uk/",
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2008"
+  },
+  {
+   "name": "Big Fish Games",
+   "profile_url": "https://www.balderton.com/company/big-fish-games/",
+   "status": "exited",
+   "website": "https://www.bigfishgames.com/",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "ireland"
+   ],
+   "first_round": "2008"
+  },
+  {
+   "name": "Betfair",
+   "profile_url": "https://www.balderton.com/company/betfair/",
+   "status": "exited",
+   "website": "https://www.betfair.com/",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series B in 2000"
+  },
+  {
+   "name": "Bebo",
+   "profile_url": "https://www.balderton.com/company/bebo/",
+   "status": "exited",
+   "website": "https://en.wikipedia.org/wiki/Bebo",
+   "sectors": [
+    "consumer"
+   ],
+   "location": [
+    "uk"
+   ],
+   "first_round": "Series A in 2006"
+  },
+  {
+   "name": "Andjaro",
+   "profile_url": "https://www.balderton.com/company/andjaro/",
+   "status": "exited",
+   "website": "https://www.andjaro.com/",
+   "sectors": [
+    "enterprise"
+   ],
+   "location": [
+    "france"
+   ],
+   "first_round": "Series A in 2018"
+  },
+  {
+   "name": "Hubs",
+   "profile_url": "https://www.balderton.com/company/3d-hubs/",
+   "status": "exited",
+   "website": null,
+   "sectors": [
+    "other"
+   ],
+   "location": [
+    "netherlands"
+   ]
+  }
+ ]
+}

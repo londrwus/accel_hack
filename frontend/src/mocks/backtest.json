@@ -1,0 +1,64 @@
+{
+  "fund_id": "localglobe",
+  "enough_history": true,
+  "held_out": 20,
+  "top_percent": 5,
+  "methods": [
+    {
+      "label": "Bellwether model",
+      "found": 16,
+      "total": 20
+    },
+    {
+      "label": "Keyword search",
+      "found": 6,
+      "total": 20
+    },
+    {
+      "label": "Random pick",
+      "found": 1,
+      "total": 20
+    }
+  ],
+  "feature_weights": [
+    {
+      "label": "Similar to companies they own",
+      "share": 0.41,
+      "color": "#5C7A63"
+    },
+    {
+      "label": "Right sector",
+      "share": 0.24,
+      "color": "#8FAE96"
+    },
+    {
+      "label": "Right stage",
+      "share": 0.18,
+      "color": "#B9CDBC"
+    },
+    {
+      "label": "Right location",
+      "share": 0.11,
+      "color": "#D3AD5E"
+    },
+    {
+      "label": "Founded recently",
+      "share": 0.06,
+      "color": "#E6D3A8"
+    }
+  ],
+  "model_card": {
+    "trained_on": "Modal",
+    "data": "10,412 startups",
+    "method": "Text match + scoring model",
+    "retrains": "Every night",
+    "never_used": [
+      "Gender",
+      "Age",
+      "Ethnicity"
+    ]
+  },
+  "score_seconds": 3.2,
+  "trained_at": "2026-10-15T07:00:00Z",
+  "trained_label": "2h ago"
+}

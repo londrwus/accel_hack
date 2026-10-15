@@ -1,0 +1,50 @@
+/* Research page motion that is easier in CSS than in motion/react. */
+
+/* Soft shimmer on the name of an agent that is working (DESIGN.md · Motion). */
+.research-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    currentColor 0%,
+    currentColor 40%,
+    var(--color-gold) 50%,
+    currentColor 60%,
+    currentColor 100%
+  );
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: research-shimmer 2.6s linear infinite;
+}
+
+@keyframes research-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -150% 0;
+  }
+}
+
+/* The "…" after the current working note breathes while the agent works. */
+.research-dots {
+  animation: research-dots 1.4s ease-in-out infinite;
+}
+
+@keyframes research-dots {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-shimmer {
+    animation: none;
+    background-image: none;
+    -webkit-text-fill-color: currentColor;
+  }
+}

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Bellwether pitch</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@350;400;500;600&family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+:root{--bg:#F1EEE8;--shell:#EFEDE8;--panel:#FFFFFF;--surface:#FAF8F4;--ink:#1A1817;--muted:#6B675F;--subtle:#9A958B;--hair:#E7E3DC;--chip:#1A18170D;--track:#1A18170A;--gold:#D8B56A;--gtop:#E6C886;--gbot:#D3AD5E;--gedge:#B8923F;--sage:#A3BBA6;--accent:#5C7A63;--asoft:#E2EAE1;--pred:#B8892E;--psoft:#F4E9CF;--comp:#BDB7AC;--warn:#A85A2A;--wsoft:#F5E6DA;--danger:#B4432A;--avatar:#D9CBB4}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact;letter-spacing:.1px}
+.s{width:1920px;height:1080px;padding:80px 110px 70px;position:relative;overflow:hidden;page-break-after:always;display:flex;flex-direction:column;background:var(--bg)}
+.mono{font-family:'JetBrains Mono',monospace}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:17px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+h1{font-weight:350;font-size:112px;letter-spacing:-.035em;line-height:1}
+h2{font-weight:350;font-size:62px;letter-spacing:-.025em;line-height:1.06;margin-top:16px}
+.sub{font-size:26px;color:var(--muted);margin-top:14px}
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px}
+.pg{position:absolute;right:110px;bottom:34px;font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--subtle)}
+.logo{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:500}
+.mark{width:34px;height:34px;border-radius:50%;background:var(--ink);position:relative}
+.mark:after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--gold)}
+/* app panel */
+.panel{background:var(--panel);border-radius:22px;outline:1px solid var(--hair);outline-offset:-.5px;box-shadow:0 1px 3px #1A18170F,0 30px 70px -40px #1A181740}
+.hair{outline:1px solid var(--hair);outline-offset:-.5px}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;border-bottom:1px solid var(--hair)}
+.ph b{font-weight:400;font-size:24px}
+.ph span.t{font-size:17px;color:var(--muted)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;border-radius:14px;font-size:22px;padding:14px 26px;font-weight:500;color:var(--ink)}
+.btn.gold{background:linear-gradient(180deg,var(--gtop),var(--gbot));outline:1px solid var(--gedge);outline-offset:-.5px;box-shadow:inset 0 1px 0 #ffffff80,0 1px 2px #1A181726,0 4px 10px #B8923F33}
+.btn.white{background:#fff;outline:1px solid var(--hair);outline-offset:-.5px;box-shadow:0 1px 2px #1A181714}
+.btn.ghost{font-weight:400;color:var(--muted)}
+.btn.sm{font-size:17px;padding:8px 16px;border-radius:12px}
+/* badges & chips */
+.badge{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border-radius:999px;font-size:16px;padding:4px 13px}
+.b-gold{background:var(--psoft);color:var(--pred)}.b-sage{background:var(--asoft);color:var(--accent)}.b-grey{background:var(--chip);color:var(--muted)}.b-warn{background:var(--wsoft);color:var(--warn)}.b-danger{background:var(--wsoft);color:var(--danger)}
+.dot{width:9px;height:9px;border-radius:50%;background:currentColor;display:inline-block}
+.count{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:32px;padding:0 9px;border-radius:999px;background:#5C7A63;color:#fff;font-size:16px;font-weight:500;box-shadow:inset 0 0 0 2px #A3BBA6}
+.chip{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;border-radius:999px;background:var(--chip);color:var(--muted);font-size:16px;padding:4px 13px}
+.chip.ink{color:var(--ink);font-size:18px}
+.chip.strike{text-decoration:line-through;text-decoration-color:var(--subtle)}
+.sig{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;border-radius:8px;font-size:16px;padding:4px 11px}
+.seg{display:inline-flex;gap:3px;background:var(--track);border-radius:14px;padding:4px}
+.seg span{padding:8px 16px;border-radius:11px;font-size:17px;color:var(--muted);display:inline-flex;gap:8px}
+.seg span.on{background:#fff;color:var(--ink);outline:1px solid var(--hair);box-shadow:0 1px 2px #1A18170D}
+.seg i{font-style:normal;color:var(--subtle);font-size:15px}
+/* agent chip */
+.ag{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;background:#fff;border-radius:999px;outline:1px solid var(--hair);outline-offset:-.5px;padding:6px 14px 6px 6px;font-size:19px;box-shadow:0 1px 2px #1A18170D}
+.ag .av{width:28px;height:28px;border-radius:50%;background:var(--psoft);color:var(--pred);font-size:14px;display:flex;align-items:center;justify-content:center}
+.ag.done .av{background:var(--asoft);color:var(--accent)}
+.ag.idle{color:var(--subtle)} .ag.idle .av{background:var(--chip);color:var(--subtle)}
+.ag .st{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.ag.dark{background:var(--ink);color:#fff;outline-color:var(--ink)} .ag.dark .av{background:var(--gold);color:var(--ink)}
+/* feed */
+.feed{display:flex;flex-direction:column}
+.fr{display:grid;grid-template-columns:62px 120px 1fr auto;gap:14px;align-items:baseline;padding:15px 22px;border-bottom:1px solid var(--hair);font-size:19px}
+.fr .tm{font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--subtle)}
+.fr .who{color:var(--muted)}
+.fr.live{background:var(--surface)} .fr.live .who{color:var(--pred)}
+/* datacard */
+.dc{border-radius:16px;outline:1px solid var(--hair);outline-offset:-.5px;background:#fff;overflow:hidden}
+.dc .h{display:flex;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--hair);font-size:17px;color:var(--muted)}
+.bar{display:flex;gap:3px;height:14px;border-radius:4px;overflow:hidden}
+.lg{display:flex;align-items:center;gap:12px;font-size:18px;padding:5px 0}
+.lg .sq{width:10px;height:10px;border-radius:3px}
+.lg .v{margin-left:auto;font-weight:500}
+.lg .p{color:var(--subtle);width:64px;text-align:right}
+/* fit */
+.fit{display:flex;align-items:center;gap:12px;color:var(--pred);font-size:19px}
+.fit .tr{width:70px;height:4px;border-radius:2px;background:var(--psoft);position:relative}
+.fit .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:2px;background:var(--pred)}
+.shotwrap{overflow:hidden;border-radius:22px;outline:1px solid var(--hair);outline-offset:-.5px;background:#fff;box-shadow:0 1px 3px #1A18170F,0 30px 70px -40px #1A181740;position:relative}
+.shotwrap img{position:absolute;display:block}
+.big{font-weight:350;letter-spacing:-.04em;line-height:.95}
+.lbl{font-size:18px;color:var(--muted)}
+.flow .panel{flex:1;padding:30px 26px!important;min-height:250px}.flow .panel>div[style*="font-size:26px"]{font-size:36px!important;margin-top:28px!important}.flow .badge{margin-top:18px!important;font-size:18px}
+.ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+</style></head><body>
+
+<!-- 1 TITLE -->
+<section class="s" style="padding-bottom:0">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div class="logo"><span class="mark"></span>Bellwether</div>
+    <span class="badge b-sage" style="font-size:18px;padding:7px 16px"><span class="dot"></span>Accel AI Innovate London · Long-running agents</span>
+  </div>
+  <div style="margin-top:96px">
+    <h1 style="max-width:1500px">The first fully systematic VC analyst.</h1>
+    <p style="font-size:40px;font-weight:350;color:var(--muted);margin-top:30px">It never sleeps, and a human always makes the call.</p>
+  </div>
+  <div class="panel" style="margin-top:60px;width:1180px;padding:14px;display:flex;align-items:center;gap:14px">
+    <div style="flex:1;display:flex;align-items:center;gap:16px;background:var(--track);border-radius:14px;padding:18px 22px;font-size:26px">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9A958B" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      <span style="color:var(--subtle)">Paste a fund URL</span><span style="color:var(--ink)">accel.com</span><span style="width:2px;height:30px;background:var(--ink);margin-left:-10px"></span>
+    </div>
+    <span class="btn gold" style="font-size:24px;padding:18px 30px">Read the fund &nbsp;→</span>
+  </div>
+  <div style="display:flex;gap:10px;margin-top:22px">
+    <span class="chip ink">Reads the fund</span><span class="chip ink">Maps the portfolio</span><span class="chip ink">Ranks 10,000 startups</span><span class="chip ink">Writes the memo</span><span class="chip ink">Keeps watching</span>
+  </div>
+  <img src="img/botanical-band.png" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:230px;object-fit:cover">
+</section>
+
+<!-- 2 PROBLEM -> SOLUTION -->
+<section class="s">
+  <div class="eyebrow">01 · Problem → solution</div>
+  <div style="display:flex;gap:28px;margin-top:30px;align-items:stretch">
+    <div class="panel" style="flex:1;padding:30px 36px"><div class="big" style="font-size:110px">~3,000</div><div class="lbl" style="margin-top:12px;font-size:22px">startups cross a seed fund's desk each year</div></div>
+    <div class="panel" style="flex:1;padding:30px 36px"><div class="big" style="font-size:110px">2</div><div class="lbl" style="margin-top:12px;font-size:22px">analysts to read, map, rank and write it up</div></div>
+    <div class="panel" style="flex:1;padding:30px 36px"><div class="big" style="font-size:110px;color:var(--pred)">Missed</div><div class="lbl" style="margin-top:12px;font-size:22px">deals that fit the thesis. Nobody had time.</div></div>
+  </div>
+  <h2 style="margin-top:56px">Paste a fund's website. An analyst team does the rest.</h2>
+  <div class="flow" style="display:flex;align-items:stretch;gap:0;margin-top:auto;margin-bottom:40px">
+    <!-- step cards -->
+    <div class="panel" style="width:230px;padding:22px"><div class="ico" style="background:var(--chip)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B675F" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div><div style="font-size:26px;margin-top:16px">URL</div><div class="mono" style="font-size:15px;color:var(--muted);margin-top:10px">accel.com</div></div>
+    <div style="width:34px;display:flex;align-items:center;justify-content:center;color:var(--subtle);font-size:26px">→</div>
+    <div class="panel" style="width:230px;padding:22px"><span class="ag"><span class="av">R</span>Reader</span><div style="font-size:26px;margin-top:16px">Read</div><span class="badge b-sage" style="margin-top:12px">782 companies</span></div>
+    <div style="width:34px;display:flex;align-items:center;justify-content:center;color:var(--subtle);font-size:26px">→</div>
+    <div class="panel" style="width:230px;padding:22px"><span class="ag"><span class="av">M</span>Mapper</span><div style="font-size:26px;margin-top:16px">Map</div><span class="badge b-grey" style="margin-top:12px">who competes</span></div>
+    <div style="width:34px;display:flex;align-items:center;justify-content:center;color:var(--subtle);font-size:26px">→</div>
+    <div class="panel" style="width:230px;padding:22px"><span class="ag"><span class="av">D</span>Deal Finder</span><div style="font-size:26px;margin-top:16px">Rank</div><span class="badge b-gold" style="margin-top:12px">10,000 → 10</span></div>
+    <div style="width:34px;display:flex;align-items:center;justify-content:center;color:var(--subtle);font-size:26px">→</div>
+    <div class="panel" style="width:230px;padding:22px"><span class="ag"><span class="av">A</span>Analyst</span><div style="font-size:26px;margin-top:16px">Memo</div><span class="badge b-sage" style="margin-top:12px">every claim cited</span></div>
+    <div style="width:34px;display:flex;align-items:center;justify-content:center;color:var(--subtle);font-size:26px">→</div>
+    <div class="panel" style="width:250px;padding:22px;background:var(--surface)"><span class="btn gold sm">Run now</span><div style="font-size:26px;margin-top:16px">Watch</div><span class="badge b-gold" style="margin-top:12px"><span class="dot"></span>7:00 every day</span></div>
+  </div>
+  <div class="pg">02</div>
+</section>
+
+<!-- 3 LONG-RUNNING AGENTS -->
+<section class="s">
+  <div class="eyebrow">02 · The theme: long-running agents</div>
+  <h2>A team with a plan, hand-offs, retries and a memory.</h2>
+  <div style="display:flex;gap:32px;margin-top:40px;flex:1;min-height:0">
+    <!-- team graph -->
+    <div class="panel" style="width:820px;position:relative;overflow:hidden">
+      <div class="ph"><b>Analyst team</b><span class="badge b-sage"><span class="dot"></span>Working · 1m 44s</span></div>
+      <svg width="820" height="780" style="position:absolute;left:0;top:0" fill="none" stroke="#D9D4CB" stroke-width="2">
+        <path d="M410 174 V220 M110 220 H710 M110 220 V270 M310 220 V270 M510 220 V270 M710 220 V270"/>
+        <path d="M310 312 V410 H410 M510 312 V410 H410 M410 410 V452" stroke="#D8B56A" stroke-width="2.5"/>
+        <path d="M410 494 V550 M250 550 H570 M250 550 V600 M570 550 V600"/>
+        <path d="M710 312 V372" stroke-dasharray="4 5"/>
+      </svg>
+      <div style="position:absolute;top:128px;left:0;right:0;text-align:center"><span class="ag dark" style="font-size:22px"><span class="av">P</span>Partner · plans 7 steps</span></div>
+      <div style="position:absolute;top:270px;left:0;width:220px;text-align:center"><span class="ag done"><span class="av">R</span>Reader ✓</span></div>
+      <div style="position:absolute;top:270px;left:200px;width:220px;text-align:center"><span class="ag done"><span class="av">T</span>Thesis ✓</span></div>
+      <div style="position:absolute;top:270px;left:400px;width:220px;text-align:center"><span class="ag done"><span class="av">M</span>Market ✓</span></div>
+      <div style="position:absolute;top:270px;left:600px;width:220px;text-align:center"><span class="ag"><span class="av">M</span>Mapper<span class="st"></span></span></div>
+      <div style="position:absolute;top:372px;left:600px;width:220px;text-align:center"><span class="ag"><span class="av">E</span>Enricher <span class="chip" style="font-size:14px;padding:1px 8px">×8</span></span></div>
+      <div style="position:absolute;top:452px;left:0;right:0;text-align:center"><span class="ag" style="outline-color:var(--gold)"><span class="av">D</span>Deal Finder<span class="st"></span></span></div>
+      <div class="mono" style="position:absolute;top:418px;left:430px;font-size:14px;color:var(--pred)">hand-off</div>
+      <div style="position:absolute;top:600px;left:140px;width:220px;text-align:center"><span class="ag idle"><span class="av">A</span>Analyst</span></div>
+      <div style="position:absolute;top:600px;left:460px;width:220px;text-align:center"><span class="ag idle"><span class="av">C</span>Critic</span></div>
+      <div class="mono" style="position:absolute;left:26px;bottom:22px;font-size:14px;color:var(--subtle)">parallel workers · Modal scores 10k · Critic checks claims</div>
+    </div>
+    <!-- feed + watch -->
+    <div style="flex:1;display:flex;flex-direction:column;gap:24px;min-width:0">
+      <div class="panel" style="overflow:hidden">
+        <div class="ph"><b>Research log</b><span style="display:flex;gap:10px;align-items:center"><span class="t">Step:</span><span class="chip ink">4 of 7</span></span></div>
+        <div style="height:3px;background:var(--hair)"><div style="width:57%;height:3px;background:var(--accent)"></div></div>
+        <div class="feed">
+          <div class="fr live"><span class="tm">1:37</span><span class="who">Mapper</span><span>Asking the model for companies like Carestack…</span><span></span></div>
+          <div class="fr"><span class="tm">1:36</span><span class="who">Thesis</span><span>Handed the thesis to Deal Finder and Mapper.</span><span class="chip">Hand-off</span></div>
+          <div class="fr"><span class="tm">1:10</span><span class="who">Market</span><span>News check timed out. Retry 2 of 2…</span><span class="chip">Retry</span></div>
+          <div class="fr"><span class="tm">1:12</span><span class="who">Market</span><span>Carried on with the website. News can run later.</span><span class="badge b-warn">Recovered</span></div>
+          <div class="fr" style="border-bottom:0"><span class="tm">0:44</span><span class="who">Reader</span><span>Found 782 portfolio companies.</span><span class="chip">Hand-off</span></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:24px;flex:1">
+        <div class="panel" style="width:340px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
+          <div style="height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+            <span class="btn gold sm">Run now</span></div>
+          <div style="padding:6px 20px 18px">
+            <div style="font-size:20px;font-weight:500">Next update: 7:00 tomorrow</div>
+            <div style="font-size:15px;color:var(--muted);margin-top:4px">Re-checks every morning. Reports only what changed.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+              <span style="display:flex;align-items:center;gap:10px;color:var(--muted);font-size:17px"><svg width="26" height="26" viewBox="0 0 26 26" style="transform:rotate(-90deg)"><circle cx="13" cy="13" r="11" fill="none" stroke="#1A18171A" stroke-width="3.2"/><circle cx="13" cy="13" r="11" fill="none" stroke="#5C7A63" stroke-width="3.2" stroke-dasharray="39.3 69.1"/></svg>4 of 7</span>
+              <span class="btn white sm">Details</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel" style="flex:1;padding:22px 24px;display:flex;flex-direction:column;justify-content:center;gap:14px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:20px"><span class="badge b-sage">✓ Checkpoint</span>Every step saved to SQLite</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:20px"><span class="badge b-gold">Resume</span>A crashed run picks up where it stopped</div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:20px"><span class="badge b-grey">Memory</span>Watch runs diff against last time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg">03</div>
+</section>
+
+<!-- 4 PRODUCT -->
+<section class="s">
+  <div class="eyebrow">03 · The product</div>
+  <h2>10,000 startups, ranked against one fund. Each with a reason.</h2>
+  <div style="display:flex;gap:32px;margin-top:40px;flex:1;min-height:0">
+    <div class="panel" style="width:1030px;overflow:hidden">
+      <div class="ph"><span><b>Deal Flow</b><br><span class="t">Startups that fit LocalGlobe, ranked by fit</span></span><span style="display:flex;gap:12px;align-items:center"><span class="seg"><span class="on">All <i>10</i></span><span>New <i>10</i></span><span>Passed <i>0</i></span></span><span class="btn gold sm">+ Add company</span></span></div>
+      <div style="display:grid;grid-template-columns:1fr 120px 300px;padding:12px 26px;background:#1A181705;border-bottom:1px solid var(--hair);font-size:15px;color:var(--muted)"><span>Company</span><span>Fit</span><span>Signals</span></div>
+      <div id="rows"></div>
+      <div style="padding:14px 26px;font-size:15px;color:var(--muted);">⚖ Scored on public data only. Founder gender, age and ethnicity are never used.</div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:24px;min-width:0">
+      <div class="panel" style="padding:22px 26px">
+        <div class="lbl" style="margin-bottom:14px">From 10,000 to 10</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:14px"><div style="width:100%;height:46px;border-radius:10px;background:var(--chip);display:flex;align-items:center;padding:0 16px;font-size:22px"><b style="font-weight:500">10,000</b><span style="margin-left:auto;font-size:15px;color:var(--muted)">Modal model · 0.02 s</span></div></div>
+          <div style="width:62%;margin:0 auto;height:46px;border-radius:10px;background:var(--asoft);display:flex;align-items:center;padding:0 16px;font-size:22px;color:var(--accent)"><b style="font-weight:500">50</b><span style="margin-left:auto;font-size:15px">Jev re-rank</span></div>
+          <div style="width:34%;margin:0 auto;height:46px;border-radius:10px;background:linear-gradient(180deg,var(--gtop),var(--gbot));outline:1px solid var(--gedge);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:500">10 + why</div>
+        </div>
+      </div>
+      <div class="panel" style="flex:1;position:relative;overflow:hidden">
+        <div class="ph" style="padding:14px 22px"><b style="font-size:20px">Market Map</b><span class="seg" style="transform:scale(.85);transform-origin:right"><span>By theme</span><span class="on">New ground</span><span>Competition</span></span></div>
+        <svg width="560" height="300" viewBox="0 0 560 300" style="display:block;margin:0 auto" font-family="Hanken Grotesk">
+          <g stroke="#E7E3DC" stroke-width="1.5"><path d="M280 150 L190 95 M280 150 L370 95 M280 150 L200 210 M280 150 L365 215"/><path d="M370 95 L470 60" stroke="#B4432A" stroke-width="2"/></g>
+          <circle cx="280" cy="150" r="44" fill="#E2EAE1" stroke="#A3BBA6"/><text x="280" y="148" font-size="13" text-anchor="middle" fill="#1A1817">LocalGlobe</text><text x="280" y="164" font-size="10" text-anchor="middle" fill="#9A958B">the fund</text>
+          <g fill="#5C7A63"><circle cx="190" cy="95" r="12"/><circle cx="370" cy="95" r="12"/><circle cx="200" cy="210" r="12"/><circle cx="365" cy="215" r="12"/></g>
+          <g fill="#BDB7AC"><circle cx="470" cy="60" r="9"/><circle cx="110" cy="150" r="9"/></g>
+          <g fill="#D8B56A"><circle cx="90" cy="60" r="11"/><circle cx="480" cy="160" r="11"/><circle cx="460" cy="250" r="11"/><circle cx="100" cy="250" r="11"/><circle cx="280" cy="40" r="11"/></g>
+          <g font-size="11" fill="#fff" font-weight="600">
+            <rect x="40" y="76" width="100" height="18" rx="9" fill="#B8892E"/><text x="90" y="89" text-anchor="middle">SCROLLDOWN 92%</text>
+            <rect x="430" y="176" width="100" height="18" rx="9" fill="#B8892E"/><text x="480" y="189" text-anchor="middle">LEAZA 91%</text>
+            <rect x="230" y="56" width="100" height="18" rx="9" fill="#B8892E"/><text x="280" y="69" text-anchor="middle">DWELLEASE 92%</text>
+          </g>
+        </svg>
+        <div style="position:absolute;left:18px;right:18px;bottom:16px;display:flex;gap:16px;justify-content:center;font-size:15px;color:var(--muted);background:var(--track);border-radius:999px;padding:8px 14px">
+          <span><span class="dot" style="background:#5C7A63"></span> Already owns</span><span><span class="dot" style="background:#BDB7AC"></span> Competitor</span><span><span class="dot" style="background:#D8B56A"></span> Next pick</span><span style="color:var(--danger)">— Clash</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pg">04</div>
+</section>
+
+<!-- 5 MEMO -->
+<section class="s">
+  <div class="eyebrow">04 · A memo you can trust</div>
+  <h2>One page. Every claim has a source, or says it doesn't.</h2>
+  <div style="display:flex;gap:32px;margin-top:40px;flex:1;min-height:0">
+    <div class="panel" style="flex:1;padding:30px 36px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:36px;font-weight:400">Northbeam Health: first look</span><span class="badge b-gold" style="font-size:18px">94% fit</span></div>
+      <div style="display:flex;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin-top:22px;padding:16px 0">
+        <div style="flex:1"><div style="font-size:40px">5</div><div class="lbl" style="font-size:15px">claims</div></div>
+        <div style="flex:1;border-left:1px solid var(--hair);padding-left:20px"><div style="font-size:40px;color:var(--accent)">4</div><div class="lbl" style="font-size:15px">checked by the Critic</div></div>
+        <div style="flex:1;border-left:1px solid var(--hair);padding-left:20px"><div style="font-size:40px;color:var(--danger)">1</div><div class="lbl" style="font-size:15px">not verified</div></div>
+        <div style="flex:1;border-left:1px solid var(--hair);padding-left:20px"><div style="font-size:40px">3</div><div class="lbl" style="font-size:15px">kinds of source</div></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px"><span class="eyebrow" style="color:var(--muted);font-size:15px">Evidence by source</span><span class="seg"><span class="on">All <i>3</i></span><span>Website <i>1</i></span><span>Dataset <i>1</i></span><span>Unsourced <i>1</i></span></span></div>
+      <div style="margin-top:14px;font-size:20px">
+        <div style="display:flex;align-items:center;gap:12px;padding:10px 0"><span class="chip" style="padding:5px">🌐</span>Company website <span style="color:var(--subtle);font-size:16px">1</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--hair)"><span style="color:var(--accent)">✓</span><span style="flex:1">Sells AI triage software to GP practices. 38 practices use it today.</span><span class="chip">northbeam.health</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:10px 0;margin-top:6px"><span class="chip" style="padding:5px 9px">≡</span>Our dataset <span style="color:var(--subtle);font-size:16px">1</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--hair)"><span style="color:var(--accent)">✓</span><span style="flex:1">Very close to BioOrbit's market: the fund already knows the buyer.</span><span class="chip mono">dataset #4821</span></div>
+        <div style="display:flex;align-items:center;gap:12px;padding:10px 0;margin-top:6px"><span class="badge b-warn" style="padding:4px 9px">!</span>No source yet <span style="color:var(--subtle);font-size:16px">1</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--hair);color:var(--warn)"><span>⚠</span><span style="flex:1">Founders say waiting times fall 30%. We could not confirm this yet.</span><span class="badge b-warn">not verified</span></div>
+        <div class="eyebrow" style="color:var(--muted);font-size:15px;margin-top:22px">Risks · 2</div>
+        <div style="display:flex;gap:14px;padding:12px 0"><span style="color:var(--warn)">⚠</span><span style="flex:1">NHS buying cycles are slow: 9 to 18 months per region.</span><span class="chip">nhs.uk</span></div>
+        <div style="display:flex;gap:14px;padding:4px 0"><span style="color:var(--warn)">⚠</span><span style="flex:1">Two funded competitors: Klinik and eConsult.</span></div>
+      </div>
+    </div>
+    <div style="width:600px;display:flex;flex-direction:column;gap:24px">
+      <div class="panel" style="padding:26px 28px">
+        <div style="font-size:28px">Your decision</div>
+        <div class="lbl" style="margin-top:6px;font-size:17px">Bellwether recommends. You decide.</div>
+        <span class="btn gold" style="width:100%;justify-content:center;margin-top:18px">Move to first meeting</span>
+        <div style="display:flex;gap:12px;margin-top:12px"><span class="btn white" style="flex:1;justify-content:center">Pass</span><span class="btn white" style="flex:1;justify-content:center">Dig deeper</span></div>
+      </div>
+      <div class="panel" style="padding:26px 28px;flex:1">
+        <div style="font-size:28px">Can you trust this memo?</div>
+        <div style="display:flex;justify-content:space-between;font-size:19px;padding:12px 0;border-bottom:1px solid var(--hair);margin-top:8px"><span style="color:var(--muted)">Claims with a source</span><span>4 of 5</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:19px;padding:12px 0;border-bottom:1px solid var(--hair)"><span style="color:var(--muted)">Not verified</span><span style="color:var(--danger)">1 claim</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:19px;padding:12px 0;border-bottom:1px solid var(--hair);margin-bottom:18px"><span style="color:var(--muted)">Clashes with portfolio</span><span>None</span></div>
+        <div style="display:flex;gap:12px;margin-top:16px"><span class="ag done"><span class="av">C</span>Critic</span><span class="ag done"><span class="av">J</span>Jev judge</span></div>
+        <div style="font-size:18px;color:var(--muted);margin-top:12px">Every claim checked. Web pages screened for hidden instructions.</div>
+        <div class="lbl" style="margin-top:24px;font-size:16px">Never used to score</div>
+        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap"><span class="chip strike" style="font-size:18px">Gender</span><span class="chip strike" style="font-size:18px">Age</span><span class="chip strike" style="font-size:18px">Ethnicity</span><span class="chip strike" style="font-size:18px">Photos</span></div>
+        <div style="font-size:15px;color:var(--subtle);margin-top:16px">Never contacts founders. Never commits money.</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg">05</div>
+</section>
+
+<!-- 6 PROOF -->
+<section class="s">
+  <div class="eyebrow">05 · Proof</div>
+  <h2>A real run on accel.com, and an honest backtest.</h2>
+  <div style="display:flex;gap:32px;margin-top:40px;flex:1;min-height:0">
+    <div class="panel" style="width:620px;padding:34px 38px;display:flex;flex-direction:column">
+      <div class="lbl">Accel portfolio companies found</div>
+      <div style="display:flex;align-items:baseline;gap:16px;margin-top:10px"><span class="big" style="font-size:190px">782</span><span style="font-size:40px;color:var(--subtle);font-weight:350">/ 780</span></div>
+      <div style="font-size:20px;color:var(--muted);margin-top:8px">vs. Accel's own sitemap: <b style="color:var(--accent);font-weight:500">99.9% recall</b></div>
+      <div style="margin-top:40px;display:flex;flex-direction:column;gap:14px">
+        <div class="lg"><span style="width:200px">Accel's sitemap</span><div style="flex:1"><div class="bar"><div style="width:99.7%;background:#BDB7AC"></div></div></div><span class="v" style="width:56px;text-align:right">780</span></div>
+        <div class="lg"><span style="width:200px">Bellwether</span><div style="flex:1"><div class="bar"><div style="width:100%;background:#5C7A63"></div></div></div><span class="v" style="width:56px;text-align:right">782</span></div>
+      </div>
+      <div style="display:flex;gap:16px;margin-top:auto">
+        <div style="flex:1;background:var(--surface);border-radius:16px;padding:18px 20px" class="hair"><div style="font-size:52px;font-weight:350">1m 56s</div><div class="lbl" style="font-size:16px">whole run</div></div>
+        <div style="flex:1;background:var(--surface);border-radius:16px;padding:18px 20px" class="hair"><div style="font-size:52px;font-weight:350">~$0.20</div><div class="lbl" style="font-size:16px">model cost</div></div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:24px;min-width:0">
+      <div class="dc" style="box-shadow:0 1px 3px #1A18170F">
+        <div class="h"><span>Hidden real deals found in the top 5% (out of 20)</span><span>⋯</span></div>
+        <div style="display:flex;gap:40px;padding:20px 22px 16px">
+          <div style="flex:1"><div style="font-size:21px;margin-bottom:12px">Y Combinator</div>
+            <div class="lg"><span style="width:96px">Model</span><div style="flex:1;height:14px"><div style="width:25%;height:14px;border-radius:4px;background:#5C7A63"></div></div><span class="v" style="width:30px;text-align:right">5</span></div>
+            <div class="lg"><span style="width:96px">Keyword</span><div style="flex:1;height:14px"><div style="width:60%;height:14px;border-radius:4px;background:#D8B56A"></div></div><span class="v" style="width:30px;text-align:right">12</span></div>
+            <div class="lg"><span style="width:96px">Random</span><div style="flex:1;height:14px"><div style="width:5%;height:14px;border-radius:4px;background:#BDB7AC"></div></div><span class="v" style="width:30px;text-align:right">1</span></div>
+          </div>
+          <div style="flex:1"><div style="font-size:21px;margin-bottom:12px">EU grants</div>
+            <div class="lg"><span style="width:96px">Model</span><div style="flex:1;height:14px"><div style="width:65%;height:14px;border-radius:4px;background:#5C7A63"></div></div><span class="v" style="width:30px;text-align:right">13</span></div>
+            <div class="lg"><span style="width:96px">Keyword</span><div style="flex:1;height:14px"><div style="width:85%;height:14px;border-radius:4px;background:#D8B56A"></div></div><span class="v" style="width:30px;text-align:right">17</span></div>
+            <div class="lg"><span style="width:96px">Random</span><div style="flex:1;height:14px"><div style="width:5%;height:14px;border-radius:4px;background:#BDB7AC"></div></div><span class="v" style="width:30px;text-align:right">1</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;border-top:1px solid var(--hair);padding:12px 18px;font-size:17px;color:var(--muted)"><span class="badge b-sage">5× / 13× random</span><span class="badge b-warn">Keyword still wins today</span><span>We say so. Next: blend both.</span></div>
+      </div>
+      <div class="shotwrap" style="flex:1;min-height:0"><img src="img/accel-research.png" style="width:1300px;left:-246px;top:-6px"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><span class="lbl" style="margin-right:6px">Built with</span><span class="chip ink">Claude Haiku 5.5</span><span class="chip ink">Jev judge</span><span class="chip ink">Modal</span><span class="chip ink">FastAPI</span><span class="chip ink">React</span><span class="chip ink">SQLite</span></div>
+    </div>
+  </div>
+  <div class="pg">06</div>
+</section>
+
+<!-- 7 NEXT + ASK + TEAM -->
+<section class="s" style="padding-bottom:0">
+  <div class="eyebrow">06 · What's next</div>
+  <h2>From hackathon to every fund's morning.</h2>
+  <div style="display:flex;gap:32px;margin-top:44px">
+    <div class="panel" style="flex:1;overflow:hidden">
+      <div class="feed">
+        <div class="fr" style="grid-template-columns:150px 1fr;padding:24px 28px;font-size:24px"><span class="badge b-sage" style="font-size:17px;width:fit-content">Model</span><span>Beat the keyword baseline. Learn from every Approve / Pass.</span></div>
+        <div class="fr" style="grid-template-columns:150px 1fr;padding:24px 28px;font-size:24px"><span class="badge b-gold" style="font-size:17px;width:fit-content">Reader</span><span>Read any fund site: sitemaps, CMS APIs, parallel fetches.</span></div>
+        <div class="fr" style="grid-template-columns:150px 1fr;padding:24px 28px;font-size:24px;border-bottom:0"><span class="badge b-grey" style="font-size:17px;width:fit-content">Watch</span><span>Daily diffs across every fund you cover.</span></div>
+      </div>
+    </div>
+    <div class="panel" style="width:620px;padding:30px 34px;background:var(--surface)">
+      <div class="lbl">The ask</div>
+      <div style="display:flex;align-items:baseline;gap:12px;margin-top:6px"><span class="big" style="font-size:96px">£1–2k</span><span class="lbl">/ fund / month</span></div>
+      <div style="font-size:20px;color:var(--muted);margin-top:6px">Cheaper than one analyst-week.</div>
+      <div style="display:flex;gap:12px;margin-top:22px"><span class="btn gold">Run it on your fund</span><span class="btn white">Give us your URL</span></div>
+    </div>
+  </div>
+  <div style="margin-top:56px">
+    <div class="eyebrow">Team</div>
+    <div style="display:flex;align-items:center;gap:28px;margin-top:14px"><div class="logo" style="font-size:44px"><span class="mark" style="width:48px;height:48px"></span>Bellwether</div><span style="font-size:56px;color:var(--muted);font-weight:350">[Team names]</span></div>
+  </div>
+  <img src="img/botanical-band.png" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:200px;object-fit:cover">
+</section>
+
+<script>
+const rows=[["T","#0B7A5C","TENANT CITY LTD","Software for managing UK tenancies",95,[["danger","Direct Goodlord rival"],["sage","Linked to portfolio"]]],
+["T","#1E3A8A","TENOXHQ LTD","Property management and compliance",94,[["danger","Direct Goodlord rival"],["sage","Linked to portfolio"]]],
+["L","#3B82F6","LETLAUNCH LTD","Automated letting agent platform",94,[["sage","Linked to portfolio"],["grey","Founded 2025"]]],
+["C","#E25D2E","Copperlane","AI assistant that automates mortgages",92,[["gold","Seed stage"],["sage","AI fintech fit"]]],
+["L","#6366F1","LOGIKIT","Rental management software",92,[["sage","Linked to portfolio"],["grey","Founded 2022"]]],
+["S","#1A1817","Sponge","Financial infrastructure for AI agents",92,[["gold","Pre-seed stage"],["sage","AI fintech fit"]]]]; 
+const tone={danger:"b-danger",sage:"b-sage",gold:"b-gold",grey:"b-grey"};
+document.getElementById("rows").innerHTML=rows.map((r,i)=>`<div style="display:grid;grid-template-columns:1fr 120px 300px;align-items:center;padding:14px 26px;border-bottom:1px solid var(--hair);${i==0?'background:var(--surface)':''}">
+<span style="display:flex;gap:14px;align-items:center"><span style="width:40px;height:40px;border-radius:10px;background:${r[1]};color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600">${r[0]}</span><span><div style="font-size:19px">${r[2]}</div><div style="font-size:15px;color:var(--muted)">${r[3]}</div></span></span>
+<span class="fit">${r[4]}%<span class="tr"><i style="width:${(r[4]-80)*5}%"></i></span></span>
+<span style="display:flex;flex-direction:column;gap:5px;align-items:flex-start">${r[5].map(s=>`<span class="sig ${tone[s[0]]}">${s[0]=='danger'?'⚠':'↗'} ${s[1]}</span>`).join("")}</span></div>`).join("");
+</script>
+</body></html>

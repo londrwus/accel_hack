@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      tailwind = { config: { corePlugins: { preflight: false } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk%3Awght%40100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *, ::before, ::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body style="background-color: #F1EEE8">
+    <div
+      data-pencil-name="1 · Landing"
+      class="box-border w-[1440px] h-[1520px] flex flex-col gap-0 justify-start items-start bg-[#F1EEE8] overflow-hidden"
+    >
+      <div
+        data-pencil-name="Nav"
+        class="box-border w-full h-fit shrink-0 flex flex-row gap-0 p-[18px_56px] justify-between items-center"
+      >
+        <div
+          data-pencil-name="Logo"
+          class="box-border w-[220px] shrink-0 h-fit flex flex-row gap-[7px] justify-start items-center"
+        >
+          <svg
+            data-pencil-name="mark"
+            data-icon-name="sprout"
+            data-icon-set="lucide"
+            viewBox="0 0 13.99993896484375 14"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            class="box-border w-[20px] shrink-0 h-[20px]"
+          >
+            <path
+              d="M10.09326 1.20313q-0.96387 0.14014-1.65088 0.82714-0.56055 0.56055-0.76904 1.34327-0.05811 0.22559-0.07178 0.3999-0.01367 0.17432-0.01367 0.74853l-0.01367 0.7417-0.05469 0.04102q-0.11279 0.08545-0.36572 0.33838-0.05469 0.06836-0.07861 0.08203-0.02051 0.01367-0.03418-0.01367l-0.12647-0.18116q-0.0957-0.14014-0.29394-0.34179-0.19482-0.20508-0.33497-0.31787-0.32129-0.26318-0.72802-0.45118-0.40674-0.19141-0.81006-0.27685-0.47852-0.08203-1.02539-0.03076-0.54346 0.04785-0.97754 0.24267-0.23926 0.09912-0.49902 0.25293-0.25635 0.15381-0.35547 0.2666-0.09912 0.10938-0.12647 0.26319-0.02734 0.15381 0 0.44775 0.11279 1.0083 0.71436 1.80811 0.08545 0.10938 0.2666 0.29394 0.18115 0.18115 0.30762 0.28028 0.64258 0.51611 1.44238 0.69726 0.92285 0.21191 1.8457-0.0957 0.1709-0.04443 0.17774-0.03418 0.00684 0.00684 0.04785 0.16064l0.16748 0.50244q0.16748 0.54688 0.20849 0.76563 0.04443 0.21533 0.04444 0.52978 0 0.31445-0.05127 0.54688-0.04785 0.229-0.17432 0.48193l-0.06836 0.15381-3.93408 0-0.08545 0.04102q-0.22217 0.11279-0.30078 0.33838-0.0752 0.22217 0.00684 0.43408 0.05811 0.0957 0.14013 0.18115 0.08545 0.08203 0.18457 0.12646l0.09571 0.02735 8.40136 0 0.09571-0.02735q0.09912-0.04443 0.18115-0.12646 0.08545-0.08545 0.1333-0.18799 0.05127-0.10596 0.05127-0.23242 0-0.12646-0.04102-0.23926-0.09912-0.19482-0.29394-0.29394l-0.08545-0.04102-3.27441 0 0.04101-0.14013q0.09912-0.29395 0.1333-0.64942 0.03418-0.35889 0.02051-0.65283-0.02734-0.33496-0.08545-0.58789-0.05469-0.25293-0.2085-0.72803-0.16748-0.51611-0.22558-0.76221-0.05469-0.24609-0.05469-0.52636 0-0.28027 0.04785-0.46827 0.05127-0.18799 0.16065-0.3999 0.1709-0.32129 0.44091-0.53662 0.27344-0.21875 0.61182-0.31445 0.15381-0.04443 0.42041-0.07178 0.38965-0.01367 0.61865-0.06152 0.23242-0.05127 0.45801-0.1333 0.60156-0.22559 1.06299-0.68702 0.68701-0.70068 0.81348-1.66455 0.02734-0.22559 0.02734-0.78613 0-0.56055-0.02734-0.66992-0.05811-0.21191-0.19825-0.37256-0.14014-0.16064-0.33496-0.24609-0.06836-0.02734-0.17431-0.03418-0.10596-0.00684-0.59473-0.00684-0.67334 0-0.82715 0.02734z m0.98096 1.51416q0 0.38965-0.02735 0.54345-0.11279 0.56055-0.5332 0.93994-0.42041 0.37598-0.99463 0.44776-0.15381 0.02734-0.28027 0.02734-0.12646 0-0.30762 0.02735l-0.18115 0.01367q-0.01367 0 0-0.39649 0.01367-0.3999 0.02734-0.49902 0.07178-0.51611 0.42725-0.90918 0.35889-0.39307 0.86133-0.51953 0.2085-0.05469 0.71435-0.06836l0.29395 0 0 0.39307z m-6.56592 2.57373q0.42041 0.07178 0.79639 0.31103 0.37939 0.23584 0.63232 0.5708 0.16748 0.21191 0.29395 0.50586 0.12646 0.29395 0.15381 0.50244l0 0.1128-0.15381 0.06835q-0.46143 0.21191-0.99463 0.21192-0.76904 0-1.39453-0.46826-0.62207-0.46826-0.83057-1.22705-0.04443-0.14014-0.05811-0.23584l-0.01367-0.09912 0.12647-0.05469q0.32129-0.1709 0.78271-0.22559 0.08545-0.01367 0.31446 0 0.23242 0.01367 0.34521 0.02735z"
+              fill="#1A1817"
+            ></path>
+          </svg>
+          <div
+            data-pencil-name="Wordmark"
+            class="text-[22px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-0.4px] text-left [white-space:nowrap]"
+          >
+            Bellwether
+          </div>
+        </div>
+        <div
+          data-pencil-name="Links"
+          class="box-border w-fit shrink-0 h-fit flex flex-row gap-[36px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="How it works"
+            class="text-[14px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+          >
+            How it works
+          </div>
+          <div
+            data-pencil-name="Trust"
+            class="text-[14px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+          >
+            Trust
+          </div>
+          <div
+            data-pencil-name="FAQ"
+            class="text-[14px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+          >
+            FAQ
+          </div>
+        </div>
+        <div
+          data-pencil-name="Nav Right"
+          class="box-border w-[220px] shrink-0 h-fit flex flex-row gap-[8px] justify-end items-center"
+        >
+          <div
+            data-pencil-name="Sign in"
+            class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[9px_12px] justify-start items-start rounded-[11px]"
+          >
+            <div
+              data-pencil-name="t"
+              class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              Sign in
+            </div>
+          </div>
+          <div
+            data-pencil-name="Button Try Scout"
+            class="box-border w-fit shrink-0 h-fit [box-shadow:0px_2px_5px_#32326926] flex flex-row gap-[10px] p-[12px_20px] justify-start items-center bg-[#D8B56A] rounded-[999px]"
+          >
+            <div
+              data-pencil-name="l"
+              class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              Try Bellwether
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="Hero"
+        class="box-border w-full h-fit shrink-0 flex flex-col gap-[22px] p-[64px_56px_56px_56px] justify-start items-start"
+      >
+        <div
+          data-pencil-name="Headline"
+          class="text-[96px]/[96px] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-1.2px] text-left [white-space:nowrap]"
+        >
+          The first systematic
+          <br />
+          VC operating system.
+        </div>
+        <div
+          data-pencil-name="Problem Line"
+          class="text-[30px]/[normal] box-border text-[#B8892E] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-0.4px] text-left [white-space:nowrap]"
+        >
+          Great deals get missed because nobody had time to look.
+        </div>
+        <div
+          data-pencil-name="Sub"
+          class="text-[21px]/[30px] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+        >
+          Bellwether gives every VC fund a team of AI analysts. Paste the fund’s website:
+          <br />
+          they learn what it invests in, find its next deals and write the diligence, every day.
+        </div>
+        <div
+          data-pencil-name="Problem Numbers"
+          class="box-border w-fit h-fit shrink-0 flex flex-row gap-[56px] p-[8px_0px] justify-start items-start"
+        >
+          <div
+            data-pencil-name="3,000"
+            class="box-border w-fit shrink-0 h-fit flex flex-col gap-[4px] justify-start items-start"
+          >
+            <div
+              data-pencil-name="n"
+              class="text-[44px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-0.8px] text-left [white-space:nowrap]"
+            >
+              3,000
+            </div>
+            <div
+              data-pencil-name="l"
+              class="text-[15px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              startups a seed fund sees each year
+            </div>
+          </div>
+          <div
+            data-pencil-name="10"
+            class="box-border w-fit shrink-0 h-fit flex flex-col gap-[4px] justify-start items-start"
+          >
+            <div
+              data-pencil-name="n"
+              class="text-[44px]/[normal] box-border text-[#B8892E] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-0.8px] text-left [white-space:nowrap]"
+            >
+              10
+            </div>
+            <div
+              data-pencil-name="l"
+              class="text-[15px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              it actually backs
+            </div>
+          </div>
+          <div
+            data-pencil-name="2"
+            class="box-border w-fit shrink-0 h-fit flex flex-col gap-[4px] justify-start items-start"
+          >
+            <div
+              data-pencil-name="n"
+              class="text-[44px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-0.8px] text-left [white-space:nowrap]"
+            >
+              2
+            </div>
+            <div
+              data-pencil-name="l"
+              class="text-[15px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              analysts to read them all
+            </div>
+          </div>
+        </div>
+        <div
+          data-pencil-name="CTAs"
+          class="box-border w-fit h-fit shrink-0 flex flex-row gap-[12px] p-[10px_0px_0px_0px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="Button Run Scout on a fund"
+            class="box-border w-fit shrink-0 h-fit [box-shadow:0px_2px_5px_#32326926] flex flex-row gap-[10px] p-[10px_10px_10px_20px] justify-start items-center bg-[#D8B56A] rounded-[999px]"
+          >
+            <div
+              data-pencil-name="l"
+              class="text-[16px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              Run Bellwether on a fund
+            </div>
+            <div
+              data-pencil-name="arrow"
+              class="box-border w-[24px] shrink-0 h-[24px] flex flex-row gap-0 justify-center items-center bg-[#1A181714] rounded-[12px]"
+            >
+              <svg
+                data-pencil-name="i"
+                data-icon-name="arrow-right"
+                data-icon-set="lucide"
+                viewBox="0 0 13.99993896484375 14"
+                preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg"
+                class="box-border w-[13px] shrink-0 h-[13px]"
+              >
+                <path
+                  d="M6.90088 2.35156q-0.18115 0.02734-0.32129 0.16748-0.11279 0.11279-0.14697 0.28028-0.03418 0.16748 0.02051 0.32129 0.02734 0.08545 0.25976 0.3247 0.23242 0.23584 1.36377 1.37061 1.58252 1.58252 1.58252 1.59619 0 0.01367-3.45557 0.01367l-3.44531 0-0.08545 0.04102q-0.22217 0.11279-0.30078 0.33838-0.0752 0.22217 0.00684 0.43408 0.05811 0.0957 0.14013 0.18115 0.08545 0.08203 0.16748 0.11963 0.08545 0.03418 0.53321 0.03418l3.01123 0q3.42822 0 3.42822 0.01367 0 0.01367-1.58252 1.59619-1.13135 1.13477-1.36377 1.37402-0.23242 0.23584-0.25976 0.3213-0.05469 0.15381-0.02051 0.32128 0.03418 0.16748 0.14697 0.28028 0.18115 0.18115 0.42041 0.18115l0.04102 0q0.11279 0 0.19824-0.05469 0.14014-0.09912 0.51611-0.46484l1.68164-1.67822q2.1123-2.10205 2.15332-2.18409 0.07178-0.12646 0.07178-0.28027 0-0.15381-0.07178-0.28027-0.04102-0.08203-2.1499-2.18067-2.10547-2.10205-2.17725-2.13623-0.06836-0.0376-0.23584-0.06494-0.04102 0-0.12646 0.01367z"
+                  fill="#1A1817"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div
+            data-pencil-name="Button Watch a 3-minute run"
+            class="box-border w-fit shrink-0 h-fit [box-shadow:0px_2px_5px_#32326926] flex flex-row gap-[10px] p-[12px_20px] justify-start items-center bg-[#A3BBA6] rounded-[999px]"
+          >
+            <div
+              data-pencil-name="l"
+              class="text-[16px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+            >
+              Watch a 3-minute run
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="Painted Band"
+        class="box-border w-full [flex:1_1_0] flex flex-col gap-0 p-[72px_0px_0px_0px] justify-start items-center bg-[url('generated.png')] bg-no-repeat bg-cover bg-center overflow-hidden"
+      >
+        <div
+          data-pencil-name="Product Window"
+          class="box-border w-[1240px] h-[820px] shrink-0 [box-shadow:0px_30px_80px_#1A181740] flex flex-col gap-0 justify-start items-start bg-[#FAF8F4] [outline:1px_solid_#1A181714] [outline-offset:-0.5px] rounded-[16px] overflow-hidden"
+        >
+          <div
+            data-pencil-name="Window Bar"
+            class="[box-sizing:content-box] w-[1240px] h-[51.5px] shrink-0 flex flex-row gap-0 p-[12px_16px] justify-between items-center [border-width:0px_0px_1px_0px] [border-style:solid] [border-color:#E0DBD1] [margin:0px_0px_-0.5px_0px]"
+          >
+            <div
+              data-pencil-name="dots"
+              class="box-border w-[120px] shrink-0 h-fit flex flex-row gap-[6px] justify-start items-start"
+            >
+              <div
+                data-pencil-name="d"
+                class="box-border w-[10px] shrink-0 h-[10px] bg-[#1A18171F] rounded-full"
+              ></div>
+              <div
+                data-pencil-name="d"
+                class="box-border w-[10px] shrink-0 h-[10px] bg-[#1A18171F] rounded-full"
+              ></div>
+              <div
+                data-pencil-name="d"
+                class="box-border w-[10px] shrink-0 h-[10px] bg-[#1A18171F] rounded-full"
+              ></div>
+            </div>
+            <div
+              data-pencil-name="address"
+              class="box-border w-[420px] shrink-0 h-fit flex flex-row gap-0 p-[6px_0px] justify-center items-start bg-[#1A18170D] rounded-[8px]"
+            >
+              <div
+                data-pencil-name="t"
+                class="text-[12px]/[normal] box-border text-[#6B675F] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+              >
+                bellwether.vc
+              </div>
+            </div>
+            <div
+              data-pencil-name="icons"
+              class="box-border w-[120px] shrink-0 h-fit flex flex-row gap-[8px] justify-end items-start"
+            >
+              <div
+                data-pencil-name="avatar"
+                class="box-border w-[24px] shrink-0 h-[24px] flex flex-row gap-0 justify-start items-start bg-[#A3BBA6] rounded-[12px]"
+              ></div>
+            </div>
+          </div>
+          <div
+            data-pencil-name="Window Body"
+            class="box-border w-full [flex:1_1_0] flex flex-row gap-0 justify-start items-start"
+          >
+            <div
+              data-pencil-name="Mini Feed"
+              class="box-border [flex:1_1_0] h-full flex flex-col gap-[18px] p-[24px_28px] justify-start items-start"
+            >
+              <div
+                data-pencil-name="Fund:"
+                class="box-border w-fit h-fit shrink-0 flex flex-row gap-[10px] justify-start items-center"
+              >
+                <div
+                  data-pencil-name="k"
+                  class="text-[14px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  Fund:
+                </div>
+                <div
+                  data-pencil-name="chip"
+                  class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[4px_10px] justify-start items-start bg-[#1A18170D] rounded-[999px]"
+                >
+                  <div
+                    data-pencil-name="t"
+                    class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    localglobe.vc
+                  </div>
+                </div>
+              </div>
+              <div
+                data-pencil-name="Task:"
+                class="box-border w-fit h-fit shrink-0 flex flex-row gap-[10px] justify-start items-center"
+              >
+                <div
+                  data-pencil-name="k"
+                  class="text-[14px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  Task:
+                </div>
+                <div
+                  data-pencil-name="v"
+                  class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  Find our next 10 deals and write the memo for #1
+                </div>
+              </div>
+              <div
+                data-pencil-name="rule"
+                class="box-border w-full h-[1px] shrink-0 bg-[#E0DBD1]"
+              ></div>
+              <div
+                data-pencil-name="Line Partner"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Partner
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Made a 7-step plan. Starting with the website.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Reader"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Reader
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Found 42 portfolio companies. Handing them to Thesis.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Thesis"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Thesis
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  LocalGlobe backs very early UK and European founders, mostly fintech, health and
+                  deep tech.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Reader"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Reader
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  A page was blocked, so I used search results instead.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Deal Finder"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#B8892E] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Deal Finder
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-medium tracking-[0.2px] text-left"
+                >
+                  Strong match: Northbeam Health. It looks like 3 companies LocalGlobe already owns.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Mapper"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Mapper
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Marker has 6 competitors. 2 of them raised money this year.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Critic"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Critic
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Checked the memo: 13 of 14 claims have a source. 1 marked as not verified.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Line Partner"
+                class="box-border w-full h-fit shrink-0 flex flex-row gap-[14px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="a"
+                  class="text-[15px]/[normal] box-border w-[110px] shrink-0 text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Partner
+                </div>
+                <div
+                  data-pencil-name="m"
+                  class="text-[15px]/[23px] box-border [flex:1_1_0] text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  Done. I’ll check again tomorrow at 7am and tell you what changed.
+                </div>
+              </div>
+              <div
+                data-pencil-name="Status"
+                class="box-border w-fit h-fit shrink-0 flex flex-row gap-[8px] p-[6px_12px] justify-start items-center bg-[#E2EAE1] rounded-[999px]"
+              >
+                <div
+                  data-pencil-name="d"
+                  class="box-border w-[7px] shrink-0 h-[7px] bg-[#5C7A63] rounded-full"
+                ></div>
+                <div
+                  data-pencil-name="t"
+                  class="text-[13px]/[normal] box-border text-[#5C7A63] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  8 agents · 3 min · watching daily
+                </div>
+              </div>
+            </div>
+            <div
+              data-pencil-name="Mini DNA"
+              class="[box-sizing:content-box] w-[379.5px] shrink-0 h-[768px] flex flex-col gap-[14px] p-[24px] justify-start items-start [border-width:0px_0px_0px_1px] [border-style:solid] [border-color:#E0DBD1] [margin:0px_0px_0px_-0.5px]"
+            >
+              <div
+                data-pencil-name="h"
+                class="text-[13px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+              >
+                Fund DNA
+              </div>
+              <div
+                data-pencil-name="s"
+                class="text-[20px]/[27px] box-border w-full text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[-0.2px] text-left"
+              >
+                Backs very early founders in the UK and Europe, mostly fintech, health and deep
+                tech.
+              </div>
+              <div
+                data-pencil-name="Stage:"
+                class="box-border w-fit h-fit shrink-0 flex flex-row gap-[10px] justify-start items-center"
+              >
+                <div
+                  data-pencil-name="k"
+                  class="text-[14px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  Stage:
+                </div>
+                <div
+                  data-pencil-name="chip"
+                  class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[4px_10px] justify-start items-start bg-[#1A18170D] rounded-[999px]"
+                >
+                  <div
+                    data-pencil-name="t"
+                    class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    Pre-seed &amp; Seed
+                  </div>
+                </div>
+              </div>
+              <div
+                data-pencil-name="Where:"
+                class="box-border w-fit h-fit shrink-0 flex flex-row gap-[10px] justify-start items-center"
+              >
+                <div
+                  data-pencil-name="k"
+                  class="text-[14px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  Where:
+                </div>
+                <div
+                  data-pencil-name="chip"
+                  class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[4px_10px] justify-start items-start bg-[#1A18170D] rounded-[999px]"
+                >
+                  <div
+                    data-pencil-name="t"
+                    class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    UK &amp; Europe
+                  </div>
+                </div>
+              </div>
+              <div
+                data-pencil-name="Cheque:"
+                class="box-border w-fit h-fit shrink-0 flex flex-row gap-[10px] justify-start items-center"
+              >
+                <div
+                  data-pencil-name="k"
+                  class="text-[14px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                >
+                  Cheque:
+                </div>
+                <div
+                  data-pencil-name="chip"
+                  class="box-border w-fit shrink-0 h-fit flex flex-row gap-0 p-[4px_10px] justify-start items-start bg-[#1A18170D] rounded-[999px]"
+                >
+                  <div
+                    data-pencil-name="t"
+                    class="text-[14px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    £0.5M – £2M
+                  </div>
+                </div>
+              </div>
+              <div
+                data-pencil-name="rule"
+                class="box-border w-full h-[1px] shrink-0 bg-[#E0DBD1]"
+              ></div>
+              <div
+                data-pencil-name="nh"
+                class="text-[13px]/[normal] box-border text-[#9A958B] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+              >
+                Bellwether’s #1 pick
+              </div>
+              <div
+                data-pencil-name="Pick Card"
+                class="box-border w-full h-fit shrink-0 flex flex-col gap-[10px] p-[4px_0px] justify-start items-start"
+              >
+                <div
+                  data-pencil-name="row"
+                  class="box-border w-full h-fit shrink-0 flex flex-row gap-0 justify-between items-center"
+                >
+                  <div
+                    data-pencil-name="n"
+                    class="text-[19px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    Northbeam Health
+                  </div>
+                  <div
+                    data-pencil-name="s"
+                    class="text-[14px]/[normal] box-border text-[#B8892E] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    94% fit
+                  </div>
+                </div>
+                <div
+                  data-pencil-name="d"
+                  class="text-[14px]/[21px] box-border w-full text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left"
+                >
+                  AI triage for GP practices. Looks like BioOrbit and 2 other companies LocalGlobe
+                  owns. Raising its seed round now.
+                </div>
+                <div
+                  data-pencil-name="Button Read memo"
+                  class="box-border w-fit h-fit shrink-0 flex flex-row gap-[10px] p-[8px_8px_8px_16px] justify-start items-center bg-[#D8B56A] rounded-[999px]"
+                >
+                  <div
+                    data-pencil-name="l"
+                    class="text-[13px]/[normal] box-border text-[#1A1817] font-['Hanken_Grotesk',system-ui,sans-serif] font-normal tracking-[0.2px] text-left [white-space:nowrap]"
+                  >
+                    Read the memo
+                  </div>
+                  <div
+                    data-pencil-name="arrow"
+                    class="box-border w-[20px] shrink-0 h-[20px] flex flex-row gap-0 justify-center items-center bg-[#D8B56A] rounded-[10px]"
+                  >
+                    <svg
+                      data-pencil-name="i"
+                      data-icon-name="arrow-right"
+                      data-icon-set="lucide"
+                      viewBox="0 0 13.99993896484375 14"
+                      preserveAspectRatio="xMidYMid meet"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="box-border w-[11px] shrink-0 h-[11px]"
+                    >
+                      <path
+                        d="M6.90088 2.35156q-0.18115 0.02734-0.32129 0.16748-0.11279 0.11279-0.14697 0.28028-0.03418 0.16748 0.02051 0.32129 0.02734 0.08545 0.25976 0.3247 0.23242 0.23584 1.36377 1.37061 1.58252 1.58252 1.58252 1.59619 0 0.01367-3.45557 0.01367l-3.44531 0-0.08545 0.04102q-0.22217 0.11279-0.30078 0.33838-0.0752 0.22217 0.00684 0.43408 0.05811 0.0957 0.14013 0.18115 0.08545 0.08203 0.16748 0.11963 0.08545 0.03418 0.53321 0.03418l3.01123 0q3.42822 0 3.42822 0.01367 0 0.01367-1.58252 1.59619-1.13135 1.13477-1.36377 1.37402-0.23242 0.23584-0.25976 0.3213-0.05469 0.15381-0.02051 0.32128 0.03418 0.16748 0.14697 0.28028 0.18115 0.18115 0.42041 0.18115l0.04102 0q0.11279 0 0.19824-0.05469 0.14014-0.09912 0.51611-0.46484l1.68164-1.67822q2.1123-2.10205 2.15332-2.18409 0.07178-0.12646 0.07178-0.28027 0-0.15381-0.07178-0.28027-0.04102-0.08203-2.1499-2.18067-2.10547-2.10205-2.17725-2.13623-0.06836-0.0376-0.23584-0.06494-0.04102 0-0.12646 0.01367z"
+                        fill="#1A1817"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "fund": {
+    "id": "localglobe",
+    "name": "LocalGlobe",
+    "url": "https://localglobe.vc",
+    "logo": "/logos/localglobe.png",
+    "dna": {
+      "summary": "Backs very early founders in the UK and Europe, mostly fintech, health and deep tech.",
+      "stage": "Pre-seed & Seed",
+      "geo": "UK & Europe",
+      "cheque": "£0.5M – £2M",
+      "sectors": [
+        {
+          "name": "Fintech",
+          "count": 14,
+          "share": 0.33,
+          "color": "#D3AD5E"
+        },
+        {
+          "name": "Health",
+          "count": 10,
+          "share": 0.24,
+          "color": "#B4532A"
+        },
+        {
+          "name": "Deep tech",
+          "count": 9,
+          "share": 0.21,
+          "color": "#7FA3C0"
+        },
+        {
+          "name": "Climate",
+          "count": 6,
+          "share": 0.14,
+          "color": "#5C7A63"
+        }
+      ],
+      "themes": [
+        "Very early UK and European founders",
+        "Fintech for everyday money",
+        "Health tools for the NHS",
+        "Deep tech from universities"
+      ],
+      "sources": [
+        {
+          "label": "localglobe.vc",
+          "url": "https://localglobe.vc",
+          "row_id": null
+        }
+      ]
+    }
+  },
+  "covered_funds": [
+    {
+      "id": "localglobe",
+      "name": "LocalGlobe"
+    },
+    {
+      "id": "haatch",
+      "name": "Haatch"
+    }
+  ],
+  "watch": {
+    "enabled": true,
+    "next_run_at": "2026-10-16T07:00:00+01:00",
+    "next_run_label": "7:00 tomorrow",
+    "progress_done": 4,
+    "progress_total": 7
+  },
+  "new_deals": 3,
+  "latest_run_id": "run_demo_localglobe"
+}

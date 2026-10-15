@@ -1,0 +1,138 @@
+{
+  "total": 10412,
+  "dataset_size": 10412,
+  "sectors": 38,
+  "countries": 64,
+  "page": 1,
+  "page_size": 8,
+  "items": [
+    {
+      "company": {
+        "id": "northbeam-health",
+        "row_id": 4821,
+        "name": "Northbeam Health",
+        "one_liner": "AI triage for GP practices",
+        "sector": "Health",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Leeds",
+        "founded": 2023,
+        "website": "northbeam.health",
+        "logo": null
+      },
+      "fit": 94
+    },
+    {
+      "company": {
+        "id": "aster-pay",
+        "row_id": 193,
+        "name": "Aster Pay",
+        "one_liner": "Card payments for clinics",
+        "sector": "Fintech",
+        "stage": "Pre-seed",
+        "country": "UK",
+        "city": null,
+        "founded": 2024,
+        "website": null,
+        "logo": null
+      },
+      "fit": 83
+    },
+    {
+      "company": {
+        "id": "kelp-carbon",
+        "row_id": 2207,
+        "name": "Kelp Carbon",
+        "one_liner": "Seaweed carbon removal",
+        "sector": "Climate",
+        "stage": "Seed",
+        "country": "Norway",
+        "city": null,
+        "founded": 2022,
+        "website": null,
+        "logo": null
+      },
+      "fit": 78
+    },
+    {
+      "company": {
+        "id": "orbitwise",
+        "row_id": 3388,
+        "name": "Orbitwise",
+        "one_liner": "Satellite data for farms",
+        "sector": "Deep tech",
+        "stage": "Seed",
+        "country": "Germany",
+        "city": null,
+        "founded": 2023,
+        "website": null,
+        "logo": null
+      },
+      "fit": 74
+    },
+    {
+      "company": {
+        "id": "nimbus-legal",
+        "row_id": 5012,
+        "name": "Nimbus Legal",
+        "one_liner": "Contract review for SMEs",
+        "sector": "AI",
+        "stage": "Pre-seed",
+        "country": "France",
+        "city": null,
+        "founded": 2024,
+        "website": null,
+        "logo": null
+      },
+      "fit": 66
+    },
+    {
+      "company": {
+        "id": "copperleaf",
+        "row_id": 9054,
+        "name": "Copperleaf",
+        "one_liner": "Savings app for students",
+        "sector": "Fintech",
+        "stage": "Seed",
+        "country": "Spain",
+        "city": null,
+        "founded": 2022,
+        "website": null,
+        "logo": null
+      },
+      "fit": 62
+    },
+    {
+      "company": {
+        "id": "tessel-bio",
+        "row_id": 7781,
+        "name": "Tessel Bio",
+        "one_liner": "At-home blood tests",
+        "sector": "Health",
+        "stage": "Seed",
+        "country": "UK",
+        "city": null,
+        "founded": 2021,
+        "website": null,
+        "logo": null
+      },
+      "fit": 58
+    },
+    {
+      "company": {
+        "id": "brightfold",
+        "row_id": 6640,
+        "name": "Brightfold",
+        "one_liner": "Furniture marketplace",
+        "sector": "Consumer",
+        "stage": "Series A",
+        "country": "US",
+        "city": null,
+        "founded": 2020,
+        "website": null,
+        "logo": null
+      },
+      "fit": 41
+    }
+  ]
+}

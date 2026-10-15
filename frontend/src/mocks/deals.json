@@ -1,0 +1,405 @@
+{
+  "fund_id": "localglobe",
+  "counts": {
+    "all": 61,
+    "new": 3,
+    "under_review": 12,
+    "passed": 46
+  },
+  "items": [
+    {
+      "rank": 1,
+      "company": {
+        "id": "northbeam-health",
+        "row_id": 4821,
+        "name": "Northbeam Health",
+        "one_liner": "AI triage for GP practices",
+        "sector": "Health",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Leeds",
+        "founded": 2023,
+        "website": "northbeam.health",
+        "logo": null
+      },
+      "fit": 94,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.81
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "timing",
+          "label": "Raising now",
+          "icon": "trending-up",
+          "source_url": null
+        },
+        {
+          "kind": "strength",
+          "label": "Like BioOrbit",
+          "icon": "link",
+          "source_url": null
+        },
+        {
+          "kind": "info",
+          "label": "Hiring 3 engineers",
+          "icon": "users",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Like BioOrbit and 2 other health companies they own",
+        "Raising a seed round now: their usual stage",
+        "UK founders, where LocalGlobe invests"
+      ],
+      "seen_label": "2h",
+      "status": "new",
+      "conflict_with": null,
+      "memo_id": "northbeam-health"
+    },
+    {
+      "rank": 2,
+      "company": {
+        "id": "ledgerly",
+        "row_id": null,
+        "name": "Ledgerly",
+        "one_liner": "Cash-flow app for freelancers",
+        "sector": "Fintech",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "London",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 88,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.74
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "strength",
+          "label": "Revenue up 3×",
+          "icon": "chart-line",
+          "source_url": null
+        },
+        {
+          "kind": "risk",
+          "label": "Competes with Cleo",
+          "icon": "triangle-alert",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Fintech for freelancers, LocalGlobe's biggest sector",
+        "Revenue grew 3× this year",
+        "Competes with Cleo, which LocalGlobe owns"
+      ],
+      "seen_label": "5h",
+      "status": "new",
+      "conflict_with": "cleo",
+      "memo_id": null
+    },
+    {
+      "rank": 3,
+      "company": {
+        "id": "gridwise",
+        "row_id": null,
+        "name": "Gridwise",
+        "one_liner": "Home battery software",
+        "sector": "Climate",
+        "stage": "Pre-seed",
+        "country": "UK",
+        "city": "Bristol",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 81,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.62
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "info",
+          "label": "In Sifted this week",
+          "icon": "newspaper",
+          "source_url": "https://sifted.eu"
+        },
+        {
+          "kind": "strength",
+          "label": "Ex-Octopus founders",
+          "icon": "award",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Climate software, like Fernway and Opal Grid",
+        "Pre-seed: LocalGlobe's usual first cheque",
+        "Founders built Octopus Energy's home products"
+      ],
+      "seen_label": "1d",
+      "status": "new",
+      "conflict_with": null,
+      "memo_id": null
+    },
+    {
+      "rank": 4,
+      "company": {
+        "id": "fernbank-bio",
+        "row_id": null,
+        "name": "Fernbank Bio",
+        "one_liner": "Lab automation for biotech",
+        "sector": "Deep tech",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Cambridge",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 77,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.58
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "strength",
+          "label": "Innovate UK grant",
+          "icon": "landmark",
+          "source_url": null
+        },
+        {
+          "kind": "info",
+          "label": "Hiring 5",
+          "icon": "users",
+          "source_url": null
+        }
+      ],
+      "why": [],
+      "seen_label": "2d",
+      "status": "under_review",
+      "conflict_with": null,
+      "memo_id": null
+    },
+    {
+      "rank": 5,
+      "company": {
+        "id": "tally-robotics",
+        "row_id": null,
+        "name": "Tally Robotics",
+        "one_liner": "Warehouse picking robots",
+        "sector": "Deep tech",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Manchester",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 72,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.52
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "strength",
+          "label": "Pilot with Ocado",
+          "icon": "handshake",
+          "source_url": null
+        }
+      ],
+      "why": [],
+      "seen_label": "3d",
+      "status": "under_review",
+      "conflict_with": null,
+      "memo_id": null
+    },
+    {
+      "rank": 6,
+      "company": {
+        "id": "mintlane",
+        "row_id": null,
+        "name": "Mintlane",
+        "one_liner": "Payroll for small shops",
+        "sector": "Fintech",
+        "stage": "Pre-seed",
+        "country": "Ireland",
+        "city": "Dublin",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 69,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.55
+        },
+        {
+          "label": "Right stage",
+          "value": 0.62
+        },
+        {
+          "label": "Right location",
+          "value": 0.66
+        }
+      ],
+      "signals": [
+        {
+          "kind": "timing",
+          "label": "Raising now",
+          "icon": "trending-up",
+          "source_url": null
+        }
+      ],
+      "why": [],
+      "seen_label": "4d",
+      "status": "under_review",
+      "conflict_with": null,
+      "memo_id": null
+    },
+    {
+      "rank": 7,
+      "company": {
+        "id": "lumen-ai",
+        "row_id": null,
+        "name": "Lumen AI",
+        "one_liner": "AI tools for developers",
+        "sector": "AI",
+        "stage": "Seed",
+        "country": "US",
+        "city": "New York",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 64,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.5
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.3
+        }
+      ],
+      "signals": [
+        {
+          "kind": "info",
+          "label": "Crowded market",
+          "icon": "layers",
+          "source_url": null
+        }
+      ],
+      "why": [],
+      "seen_label": "6d",
+      "status": "passed",
+      "conflict_with": null,
+      "memo_id": null
+    },
+    {
+      "rank": 8,
+      "company": {
+        "id": "quay-health",
+        "row_id": null,
+        "name": "Quay Health",
+        "one_liner": "Remote physio app",
+        "sector": "Health",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Glasgow",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 61,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.44
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "risk",
+          "label": "Co-founder left",
+          "icon": "user-minus",
+          "source_url": null
+        }
+      ],
+      "why": [],
+      "seen_label": "1w",
+      "status": "passed",
+      "conflict_with": null,
+      "memo_id": null
+    }
+  ]
+}

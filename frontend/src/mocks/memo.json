@@ -1,0 +1,93 @@
+{
+  "id": "northbeam-health",
+  "company": {
+    "id": "northbeam-health",
+    "row_id": 4821,
+    "name": "Northbeam Health",
+    "one_liner": "AI triage for GP practices",
+    "sector": "Health",
+    "stage": "Seed",
+    "country": "UK",
+    "city": "Leeds",
+    "founded": 2023,
+    "website": "northbeam.health",
+    "logo": null
+  },
+  "title": "Northbeam Health: first look",
+  "fit": 94,
+  "raising": "£1.5M",
+  "where": "Leeds, UK",
+  "sections": [
+    {
+      "title": "Why it fits LocalGlobe",
+      "claims": [
+        {
+          "text": "Northbeam sells AI triage software to GP practices. 38 practices use it today.",
+          "source": {
+            "label": "northbeam.health",
+            "url": null,
+            "row_id": null
+          },
+          "verified": true
+        },
+        {
+          "text": "It is very close to BioOrbit’s market, so LocalGlobe already understands the buyer.",
+          "source": {
+            "label": "dataset #4821",
+            "url": null,
+            "row_id": 4821
+          },
+          "verified": true
+        },
+        {
+          "text": "The founders say waiting times fall by 30%. We could not confirm this yet.",
+          "source": null,
+          "verified": false
+        }
+      ]
+    },
+    {
+      "title": "Risks",
+      "claims": [
+        {
+          "text": "NHS buying cycles are slow: often 9 to 18 months per region.",
+          "source": {
+            "label": "nhs.uk",
+            "url": "https://www.nhs.uk",
+            "row_id": null
+          },
+          "verified": true
+        },
+        {
+          "text": "Two funded competitors: Klinik and eConsult.",
+          "source": {
+            "label": "dataset #1170",
+            "url": null,
+            "row_id": 1170
+          },
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "questions": [
+    "How many practices pay today, and what do they pay?",
+    "Can you show data on the 30% faster waiting times?"
+  ],
+  "trust": {
+    "claims_with_source": 13,
+    "claims_total": 14,
+    "checked_by_critic": true,
+    "not_verified": 1,
+    "conflicts": [],
+    "never_used": [
+      "Gender",
+      "Age",
+      "Ethnicity",
+      "Photos"
+    ],
+    "disclaimer": "Public sources only. Not investment advice."
+  },
+  "decision": null,
+  "created_at": "2026-10-15T09:03:15Z"
+}

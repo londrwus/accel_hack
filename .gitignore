@@ -1,0 +1,36 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# private data (raw pitch2.fund sample + everything derived from it by ml/prepare.py)
+data/raw/
+data/companies.csv
+data/investors.json
+data/investor_index.json
+data/*.parquet
+data/cache/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.sqlite
+*.db
+
+# node
+node_modules/
+dist/
+.vite/
+
+# os / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+*.db-wal
+*.db-shm
+*.log
+.pytest_cache/
+*.tsbuildinfo

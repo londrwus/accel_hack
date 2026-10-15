@@ -1,0 +1,1448 @@
+{
+ "fund": "First Round Capital",
+ "url": "https://www.firstround.com/",
+ "how_served": "Next.js site backed by Sanity CMS (project m6i10uln, public read). /companies HTML renders only 22 featured cards; full list (196 company docs) only via Sanity GROQ API / client JS. sitemap.xml lists only 13 /companies/ pages and 55 /team pages.",
+ "portfolio_count": 196,
+ "featured_html_count": 22,
+ "pct_with_website": 98.0,
+ "initial_stage_counts": {
+  "Seed": 169,
+  "Pre-Seed": 13,
+  "Series A": 13,
+  "null": 1
+ },
+ "team_count": 50,
+ "team_by_dept": {
+  "Investing": 14,
+  "Board partners": 5,
+  "Finance & Administration": 8,
+  "Operating": 23
+ },
+ "team": [
+  "Josh Kopelman",
+  "Richard Alfonsi",
+  "Dana Fetch",
+  "Joe Carlucci",
+  "Locke Luhnow",
+  "Nate Martins",
+  "Julianna Marchant",
+  "Annie Duke",
+  "Simon Zhou",
+  "James Wu",
+  "Liz Wessel",
+  "Khym Brees",
+  "Anisha Gupta",
+  "Hayley Barna",
+  "Justin Samoy",
+  "Cole Helms",
+  "Bill Trenchard",
+  "Steven Aldrich",
+  "Jason Devor",
+  "Ryan Donnon",
+  "Amy Fu",
+  "Lizzy Price",
+  "Bruno Garcia Gonzalez",
+  "Arielle Jackson",
+  "Margarette Jung",
+  "Sid Rajgarhia",
+  "Sofia Mendez-Nuñez",
+  "Bonnie Porter",
+  "Chris Fralic",
+  "Roy Rosin",
+  "An Vu",
+  "Nyle Sykes",
+  "Anne Loeslein",
+  "Nate Springer",
+  "Brett Berson",
+  "Elijah Lewis",
+  "Will Moldow",
+  "Emery Rosansky",
+  "Jessi Craige Shikman",
+  "Caroline Min",
+  "Chris Laughlin",
+  "Nick Rubin",
+  "Tiffany Siu",
+  "Maddi Conlin",
+  "Jeff Donnon",
+  "Rob Hayes",
+  "Whitney Zavilla",
+  "Maggie Basta",
+  "Erica Knowlton Bennett",
+  "Todd Jackson"
+ ],
+ "thesis": "Seed-stage (\"first round\") investor; backs founders who go unreasonably deep on their beginnings, outlier/extreme abilities over well-rounded; 500+ early teams; sector-agnostic (consumer, enterprise, fintech, health, AI); US-focused (SF, NYC). Flagship: Uber, Square, Notion, Roblox, Looker, Clay.",
+ "companies": [
+  {
+   "name": "Remora",
+   "website": "https://remoracarbon.com/",
+   "slug": "remora",
+   "initial": "Seed",
+   "statement": "Imagine if  we could capture the carbon released by every train and truck."
+  },
+  {
+   "name": "Ownwell",
+   "website": "https://www.ownwell.com/",
+   "slug": "ownwell",
+   "initial": "Seed",
+   "statement": "Imagine if  millions of people didn't overspend on property expenses every year."
+  },
+  {
+   "name": "Corner Health",
+   "website": "https://www.cornerhealth.com/",
+   "slug": "corner-health",
+   "initial": "Seed",
+   "statement": "Imagine if  nurse practitioners could start and scale their own local primary care practices."
+  },
+  {
+   "name": "Parallel",
+   "website": "https://parallel.ai/",
+   "slug": "parallel",
+   "initial": "Seed",
+   "statement": "Imagine if  the web was built with, by, and for AIs."
+  },
+  {
+   "name": "Pinwheel",
+   "website": "https://www.pinwheelapi.com/",
+   "slug": "pinwheel",
+   "initial": "Seed",
+   "statement": "Imagine if  unlocking payroll data could help create a fairer financial system."
+  },
+  {
+   "name": "One Safe",
+   "website": "https://www.onesafe.io/",
+   "slug": "one-safe",
+   "initial": "Seed",
+   "statement": "Imagine if  startups could bank in both fiat and cryptocurrencies."
+  },
+  {
+   "name": "Gumroad",
+   "website": "https://gumroad.com/",
+   "slug": "gumroad",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  anyone could sell their digital work directly to others."
+  },
+  {
+   "name": "Ploy",
+   "website": "https://ploy.ai/",
+   "slug": "ploy",
+   "initial": "Seed",
+   "statement": "Imagine if  your website could grow your business while you sleep."
+  },
+  {
+   "name": "Bright",
+   "website": "https://www.thinkbright.mx/",
+   "slug": "bright",
+   "initial": "Seed",
+   "statement": "Imagine if  we could expand solar power to homes and businesses across Mexico."
+  },
+  {
+   "name": "Kindred",
+   "website": "https://ocadointelligentautomation.com/",
+   "slug": "kindred",
+   "initial": "Seed",
+   "statement": "Imagine if  machines had human-like intelligence."
+  },
+  {
+   "name": "nGram",
+   "website": "https://www.ngram.com/",
+   "slug": "ngram",
+   "initial": "Seed",
+   "statement": "Imagine if  life sciences data was connected and conversable."
+  },
+  {
+   "name": "Verkada",
+   "website": "https://www.verkada.com/",
+   "slug": "verkada",
+   "initial": "Seed",
+   "statement": "Imagine if  buildings protected the people inside using consumer technology."
+  },
+  {
+   "name": "Spark Thermionics",
+   "website": "https://www.sparkthermionics.com/",
+   "slug": "spark-thermionics",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  there was a 10x better way to convert heat into electricity."
+  },
+  {
+   "name": "Healthleap",
+   "website": "https://www.healthleap.ai/",
+   "slug": "healthleap",
+   "initial": "Seed",
+   "statement": "Imagine if  you could build a safety net for every patient a hospital might miss."
+  },
+  {
+   "name": "Artemis",
+   "website": "https://artemissecurity.com/",
+   "slug": "artemis",
+   "initial": "Seed",
+   "statement": "Imagine if  security teams could battle AI with AI."
+  },
+  {
+   "name": "Ascend",
+   "website": "https://www.useascend.com/",
+   "slug": "ascend",
+   "initial": "Seed",
+   "statement": "Imagine if  insurance accounting operations caught up with the rest of fintech."
+  },
+  {
+   "name": "Ring",
+   "website": null,
+   "slug": "ring",
+   "initial": "Seed",
+   "statement": "Imagine if  you could see and speak with anyone at your front door from your phone."
+  },
+  {
+   "name": "Rarebird",
+   "website": "https://rarebird.coffee/",
+   "slug": "rarebird",
+   "initial": "Seed",
+   "statement": "Imagine if  coffee could provide all of the alertness without any of the jitters."
+  },
+  {
+   "name": "Koodos",
+   "website": "https://koodos.com/",
+   "slug": "koodos",
+   "initial": "Seed",
+   "statement": "Imagine if  the internet put individuals in control of their digital identities."
+  },
+  {
+   "name": "Flex",
+   "website": "https://www.withflex.com/",
+   "slug": "flex",
+   "initial": "Series A",
+   "statement": "Imagine if  it was incredibly easy for health and wellness brands to accept HSA and FSA payments online."
+  },
+  {
+   "name": "HouseRx",
+   "website": "https://www.houserx.com/",
+   "slug": "houserx",
+   "initial": "Seed",
+   "statement": "Imagine if  specialty medication was more accessible and affordable.\n"
+  },
+  {
+   "name": "GroupMe",
+   "website": "https://groupme.com/",
+   "slug": "groupme",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  group messaging worked on every phone."
+  },
+  {
+   "name": "Gauntlet",
+   "website": "https://gauntlet.xyz",
+   "slug": "gauntlet",
+   "initial": "Seed",
+   "statement": "Imagine if  DeFi’s most complex and novel economic problems were better understood."
+  },
+  {
+   "name": "Reducto",
+   "website": "https://reducto.ai/",
+   "slug": "reducto",
+   "initial": "Seed",
+   "statement": "Imagine if  LLMs could read documents the way humans do."
+  },
+  {
+   "name": "Omnea",
+   "website": "https://www.omnea.co/",
+   "slug": "omnea",
+   "initial": "Seed",
+   "statement": "Imagine if  every company could automate procurement."
+  },
+  {
+   "name": "David AI",
+   "website": "https://withdavid.ai/",
+   "slug": "david-ai",
+   "initial": "Seed",
+   "statement": "Imagine if  audio were as central to human-to-AI interaction as it is to human-to-human interaction."
+  },
+  {
+   "name": "Didero",
+   "website": "https://www.didero.ai/",
+   "slug": "didero",
+   "initial": "Seed",
+   "statement": "Imagine if  trading with companies across the world was as easy as trading across the street."
+  },
+  {
+   "name": "Crossmint",
+   "website": "https://www.crossmint.com/",
+   "slug": "crossmint",
+   "initial": "Series A",
+   "statement": "Imagine if  anyone could mint and distribute digital assets at scale."
+  },
+  {
+   "name": "eero",
+   "website": "https://eero.com/",
+   "slug": "eero",
+   "initial": "Seed",
+   "statement": "Imagine if  people had enterprise-grade wifi at home."
+  },
+  {
+   "name": "Perpay",
+   "website": "https://perpay.com/",
+   "slug": "perpay",
+   "initial": "Seed",
+   "statement": "Imagine if  paychecks could work harder for the people who earn them."
+  },
+  {
+   "name": "Beakon",
+   "website": "https://www.beakon.com/",
+   "slug": "beakon",
+   "initial": "Seed",
+   "statement": "Imagine if  everyone, everywhere could be made aware of and kept safe from all physical threats."
+  },
+  {
+   "name": "Board",
+   "website": "https://board.fun/",
+   "slug": "board",
+   "initial": "Seed",
+   "statement": "Imagine if  you could combine the best of board games and video games into a new experience."
+  },
+  {
+   "name": "ZEFR",
+   "website": "http://zefr.com/",
+   "slug": "zefr",
+   "initial": "Seed",
+   "statement": "Imagine if  advertisers could ensure brand suitability across walled garden platforms."
+  },
+  {
+   "name": "Endurance Energy",
+   "website": "https://www.enduranceenergy.com/",
+   "slug": "endurance-energy",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  we could tap into the infinite power potential at the center of the earth."
+  },
+  {
+   "name": "&AI",
+   "website": "https://www.tryandai.com/",
+   "slug": "and-ai",
+   "initial": "Seed",
+   "statement": "Imagine if  AI transformed how attorneys worked."
+  },
+  {
+   "name": "Daydream",
+   "website": "https://www.withdaydream.com/",
+   "slug": "daydream",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could programmatically create exceptional content that helped them grow."
+  },
+  {
+   "name": "Genera",
+   "website": "https://www.withgenera.com/",
+   "slug": "genera",
+   "initial": "Seed",
+   "statement": "Imagine if  you could run every deployment like it’s your most critical customer."
+  },
+  {
+   "name": "Quartermaster",
+   "website": null,
+   "slug": "quartermaster",
+   "initial": "Seed",
+   "statement": "Imagine if  the world’s oceans were fully visible, mapped in real time by the ships that sail them."
+  },
+  {
+   "name": "Abra",
+   "website": "https://www.goabra.com",
+   "slug": "abra",
+   "initial": "Seed",
+   "statement": "Imagine if  prime and wealth management services applied to digital assets."
+  },
+  {
+   "name": "UrbanSitter",
+   "website": "https://www.urbansitter.com/",
+   "slug": "urbansitter",
+   "initial": "Seed",
+   "statement": "Imagine if  parents could book a trusted babysitter with a simple app."
+  },
+  {
+   "name": "GOAT",
+   "website": "https://www.goat.com/",
+   "slug": "goat",
+   "initial": "Seed",
+   "statement": "Imagine if  sneakerheads never got duped."
+  },
+  {
+   "name": "Actively",
+   "website": "https://www.actively.ai/",
+   "slug": "actively",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could scale the deep reasoning of their best sales reps."
+  },
+  {
+   "name": "Arbor",
+   "website": "https://www.joinarbor.com/",
+   "slug": "arbor",
+   "initial": "Seed",
+   "statement": "Imagine if  we could lower the cost of home energy for people and the planet."
+  },
+  {
+   "name": "Nova Credit",
+   "website": "https://www.novacredit.com/",
+   "slug": "nova-credit",
+   "initial": "Seed",
+   "statement": "Imagine if  millions of people with limited credit history could access the financial system."
+  },
+  {
+   "name": "Amari",
+   "website": "https://amari.ai/",
+   "slug": "amari",
+   "initial": "Seed",
+   "statement": "Imagine if  customs brokers could cut clearance time in half."
+  },
+  {
+   "name": "Thirty Madison",
+   "website": "https://thirtymadison.com/",
+   "slug": "thirty-madison",
+   "initial": "Seed",
+   "statement": "Imagine if  managing chronic conditions felt as seamless, personalized and consumer-friendly as the best modern internet products."
+  },
+  {
+   "name": "Assort Health",
+   "website": "https://www.assorthealth.com/",
+   "slug": "assort-health",
+   "initial": "Series A",
+   "statement": "Imagine if  you could answer every patient's call, without putting anyone on hold."
+  },
+  {
+   "name": "Flai",
+   "website": "https://www.useflai.com",
+   "slug": "flai",
+   "initial": "Seed",
+   "statement": "Imagine if  car dealerships operated seamlessly around the clock."
+  },
+  {
+   "name": "Numerai",
+   "website": "https://numer.ai/",
+   "slug": "numerai",
+   "initial": "Seed",
+   "statement": "Imagine if  a network of data scientists built a hedge fund."
+  },
+  {
+   "name": "Eisen",
+   "website": "https://www.witheisen.com/",
+   "slug": "eisen",
+   "initial": "Seed",
+   "statement": "Imagine if  companies reunited everyday consumers with their money by proactively managing dormant accounts."
+  },
+  {
+   "name": "Looker",
+   "website": "https://www.looker.com",
+   "slug": "looker",
+   "initial": "Seed",
+   "statement": "Imagine if  everyone within a company could easily understand the data that drives the business."
+  },
+  {
+   "name": "Flatiron Health",
+   "website": "https://flatiron.com/",
+   "slug": "flatiron-health",
+   "initial": "Seed",
+   "statement": "Imagine if  data could power smarter care for every person with cancer."
+  },
+  {
+   "name": "Mint",
+   "website": "http://firstround.com/review/Head-Designer-of-Mint-on-Why-Great-Design-isnt-about-Making-Things-Pretty/",
+   "slug": "mint",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  anyone could see a complete picture of their personal finances."
+  },
+  {
+   "name": "Swift Navigation",
+   "website": "https://www.swiftnav.com/",
+   "slug": "swift-navigation",
+   "initial": "Seed",
+   "statement": "Imagine if  positioning solutions had centimeter-level accuracy."
+  },
+  {
+   "name": "Solidroad",
+   "website": "https://www.solidroad.com",
+   "slug": "solidroad",
+   "initial": "Seed",
+   "statement": "Imagine if  every customer interaction was flawlessly executed."
+  },
+  {
+   "name": "Healia Health",
+   "website": "https://www.healiahealth.com/",
+   "slug": "healia-health",
+   "initial": "Seed",
+   "statement": "Imagine if  couples could strategically choose between — or even combine — their employers' health plans to maximize coverage."
+  },
+  {
+   "name": "Upstart",
+   "website": "https://www.upstart.com/",
+   "slug": "upstart",
+   "initial": "Seed",
+   "statement": "Imagine if  twice as many borrowers could qualify for loans with fewer defaults."
+  },
+  {
+   "name": "EvolutionIQ",
+   "website": "https://evolutioniq.com/",
+   "slug": "evolutioniq",
+   "initial": "Seed",
+   "statement": "Imagine if  improving disability insurance claims processing with AI helped more people return to work."
+  },
+  {
+   "name": "Uber",
+   "website": "https://www.uber.com/",
+   "slug": "uber",
+   "initial": "Seed",
+   "statement": "Imagine if  you could get a ride from your phone in minutes."
+  },
+  {
+   "name": "K2 Space",
+   "website": "https://www.k2space.com/",
+   "slug": "k2space",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if   large spacecraft made previously impossible missions possible."
+  },
+  {
+   "name": "Roblox",
+   "website": "https://www.roblox.com/",
+   "slug": "roblox",
+   "initial": "Seed",
+   "statement": "Imagine if  kids learned to code while playing video games."
+  },
+  {
+   "name": "Spur",
+   "website": "https://www.spurtest.com/",
+   "slug": "spur",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could QA any website using natural language."
+  },
+  {
+   "name": "Scotch",
+   "website": "https://scotchpos.com/",
+   "slug": "scotch",
+   "initial": "Seed",
+   "statement": "Imagine if  liquor stores retailers could run their businesses on modern software tailored to their needs."
+  },
+  {
+   "name": "OnDeck Capital",
+   "website": "https://www.ondeck.com/",
+   "slug": "ondeck-capital",
+   "initial": "Seed",
+   "statement": "Imagine if  every small business got the credit they deserved."
+  },
+  {
+   "name": "Kiavi",
+   "website": "https://www.kiavi.com/",
+   "slug": "kiavi",
+   "initial": "Seed",
+   "statement": "Imagine if  every real estate investor could access the capital needed to scale."
+  },
+  {
+   "name": "Mirror",
+   "website": "https://www.mirror.co",
+   "slug": "mirror",
+   "initial": "Seed",
+   "statement": "Imagine if  a mirror could give you a smarter, harder workout from the comfort of your home."
+  },
+  {
+   "name": "Aranya",
+   "website": "https://aranya.tech/",
+   "slug": "aranya",
+   "initial": "Seed",
+   "statement": "Imagine if  you could turn bare metal into production-ready clusters in under 48 hours."
+  },
+  {
+   "name": "Verto Education",
+   "website": "https://vertoeducation.org/",
+   "slug": "verto-education",
+   "initial": "Seed",
+   "statement": "Imagine if  a first year abroad was the path of least resistance to a great college education."
+  },
+  {
+   "name": "Square",
+   "website": "https://squareup.com/",
+   "slug": "square",
+   "initial": "Series A",
+   "statement": "Imagine if  any phone could accept credit cards anywhere."
+  },
+  {
+   "name": "Spline",
+   "website": "https://spline.design/",
+   "slug": "spline",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could design and collaborate in 3D."
+  },
+  {
+   "name": "HotelTonight",
+   "website": "https://www.hoteltonight.com/",
+   "slug": "hoteltonight",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could book incredible last-minute deals on hotels."
+  },
+  {
+   "name": "Together AI",
+   "website": "https://www.together.ai/",
+   "slug": "together-ai",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could build or fine-tune their own generative AI models."
+  },
+  {
+   "name": "Town",
+   "website": "https://town.com/",
+   "slug": "town",
+   "initial": "Seed",
+   "statement": "Imagine if  everyone had an AI assistant that actually worked the way they do.\n"
+  },
+  {
+   "name": "Brellium",
+   "website": "https://brellium.com/",
+   "slug": "brellium",
+   "initial": "Seed",
+   "statement": "Imagine if  we could improve the standard of care in the US healthcare system by automatically reviewing every chart."
+  },
+  {
+   "name": "KiwiCo",
+   "website": "https://www.kiwico.com/",
+   "slug": "kiwico",
+   "initial": "Seed",
+   "statement": "Imagine if  the next generation of innovators were inspired by creative, hands-on projects."
+  },
+  {
+   "name": "Fal",
+   "website": "https://fal.ai/",
+   "slug": "fal",
+   "initial": "Seed",
+   "statement": "Imagine if  generative media had an infrastructure partner capable of supporting exponential growth."
+  },
+  {
+   "name": "Rillet",
+   "website": "https://www.rillet.com/",
+   "slug": "rillet",
+   "initial": "Seed",
+   "statement": "Imagine if  high-growth companies could automate accounting and make zero day close a reality."
+  },
+  {
+   "name": "Planet",
+   "website": "https://www.planet.com/",
+   "slug": "planet",
+   "initial": "Series A",
+   "statement": "Imagine if  we could use space to help life on Earth by imaging the entire globe every day."
+  },
+  {
+   "name": "Manifest Law",
+   "website": "https://manifestlaw.com/",
+   "slug": "manifest-law",
+   "initial": "Series A",
+   "statement": "Imagine if  high-quality legal representation was more accessible. "
+  },
+  {
+   "name": "Ellis",
+   "website": "https://www.ellis.ai/",
+   "slug": "ellis",
+   "initial": "Seed",
+   "statement": "Imagine if  institutional-grade operations were available to every private credit manager."
+  },
+  {
+   "name": "Warby Parker",
+   "website": "https://www.warbyparker.com/",
+   "slug": "warby-parker",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could buy high-quality, stylish prescription glasses at a fraction of the price."
+  },
+  {
+   "name": "Dyna",
+   "website": "https://www.dyna.co/",
+   "slug": "dyna",
+   "initial": "Seed",
+   "statement": "Imagine if  robots could perform any task you wanted them to."
+  },
+  {
+   "name": "Petual",
+   "website": "https://petual.ai/",
+   "slug": "petual",
+   "initial": "Seed",
+   "statement": "Imagine if  you could automate SOX testing, generating auditor-ready work papers in minutes instead of hours."
+  },
+  {
+   "name": "Alt",
+   "website": "https://www.alt.xyz/",
+   "slug": "alt",
+   "initial": "Seed",
+   "statement": "Imagine if  people could manage trading cards and other alternative assets the way they manage traditional assets like stocks and bonds."
+  },
+  {
+   "name": "Cache",
+   "website": "https://usecache.com/",
+   "slug": "cache",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  advanced financial products used by the ultraweathy were available to everyone with large stock positions."
+  },
+  {
+   "name": "Proception",
+   "website": "https://www.proception.ai/",
+   "slug": "proception",
+   "initial": "Seed",
+   "statement": "Imagine if  robotic hands were dexterous enough to thread a needle with human-like precision and control."
+  },
+  {
+   "name": "Snackpass",
+   "website": "https://www.snackpass.co",
+   "slug": "snackpass",
+   "initial": "Seed",
+   "statement": "Imagine if  college students could order ahead and skip lines when getting takeout with friends."
+  },
+  {
+   "name": "RenoFi",
+   "website": "https://www.renofi.com/",
+   "slug": "renofi",
+   "initial": "Seed",
+   "statement": "Imagine if  homeowners had the borrowing power they needed to transform a house into a dream home."
+  },
+  {
+   "name": "Blaxel",
+   "website": "https://blaxel.ai/",
+   "slug": "blaxel",
+   "initial": "Seed",
+   "statement": "Imagine if  the cloud was built for AI-native startups and agents."
+  },
+  {
+   "name": "The Black Tux",
+   "website": "https://theblacktux.com/",
+   "slug": "the-black-tux",
+   "initial": "Seed",
+   "statement": "Imagine if  you could rent designer-quality tuxedos online."
+  },
+  {
+   "name": "Andrenam",
+   "website": "https://www.andrenam.com/",
+   "slug": "/andrenam",
+   "initial": "Seed",
+   "statement": "Imagine if  we could secure the ocean with an AI-powered, distributed maritime sensing network."
+  },
+  {
+   "name": "Studs",
+   "website": "https://studs.com/",
+   "slug": "studs",
+   "initial": "Seed",
+   "statement": "Imagine if  getting your ears pierced was a shopping experience to remember."
+  },
+  {
+   "name": "Discourse",
+   "website": "https://www.discourse.org",
+   "slug": "discourse",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  open source community software raised the standard for civilized discourse on the Internet."
+  },
+  {
+   "name": "Crunched",
+   "website": "https://www.usecrunched.com/",
+   "slug": "crunched",
+   "initial": "Seed",
+   "statement": "Imagine if  building, auditing and editing financial models was as easy as writing a sentence."
+  },
+  {
+   "name": "Ourself",
+   "website": "https://www.ourself.com/",
+   "slug": "ourself",
+   "initial": "Series A",
+   "statement": "Imagine if  we could maximize skincare delivery for results that run deep."
+  },
+  {
+   "name": "9GAG",
+   "website": "http://9gag.com/",
+   "slug": "9gag",
+   "initial": "Seed",
+   "statement": "Imagine if  a global cross-platform media community could make the world happier."
+  },
+  {
+   "name": "Noon",
+   "website": "https://noon.design/",
+   "slug": "noon",
+   "initial": "Seed",
+   "statement": "Imagine if  beautiful and useful product experiences could be crafted with no gap between design and code."
+  },
+  {
+   "name": "Collate",
+   "website": "https://collate.com/",
+   "slug": "collate",
+   "initial": "Seed",
+   "statement": "Imagine if  life sciences companies could reduce the time it takes to complete regulatory paperwork."
+  },
+  {
+   "name": "Xclaim",
+   "website": "https://www.x-claim.com/",
+   "slug": "xclaim",
+   "initial": "Seed",
+   "statement": "Imagine if  there was a transparent marketplace for buying and selling bankruptcy claims."
+  },
+  {
+   "name": "Maven",
+   "website": "https://maven.com/",
+   "slug": "maven",
+   "initial": "Seed",
+   "statement": "Imagine if  the university of the future was made up of cohort-based courses from industry experts."
+  },
+  {
+   "name": "Woolf",
+   "website": "https://woolf.university/",
+   "slug": "woolf",
+   "initial": null,
+   "statement": "Imagine if  world-class, globally recognized higher education was accessible to everyone."
+  },
+  {
+   "name": "Seneca",
+   "website": "https://seneca.com/",
+   "slug": "seneca",
+   "initial": "Seed",
+   "statement": "Imagine if  we could stop wildfires before they spread."
+  },
+  {
+   "name": "Assured",
+   "website": "https://www.withassured.com/",
+   "slug": "assured",
+   "initial": "Seed",
+   "statement": "Imagine if  healthcare organizations could easily onboard providers and seamlessly scale across states and payors."
+  },
+  {
+   "name": "Clover Health",
+   "website": "https://www.cloverhealth.com/",
+   "slug": "clover-health",
+   "initial": "Series A",
+   "statement": "Imagine if  affordable, easy-to-understand healthcare plans improved quality of life for seniors."
+  },
+  {
+   "name": "FleetWorks",
+   "website": "https://www.fleetworks.ai/",
+   "slug": "fleetworks",
+   "initial": "Series A",
+   "statement": "Imagine if  AI could keep freight moving for truckers and the communities they serve."
+  },
+  {
+   "name": "Prepared",
+   "website": "https://www.prepared911.com/",
+   "slug": "prepared",
+   "initial": "Seed",
+   "statement": "Imagine if  new technology could ensure every emergency gets the perfect response."
+  },
+  {
+   "name": "Theseus",
+   "website": "https://theseus.us/",
+   "slug": "theseus",
+   "initial": "Seed",
+   "statement": "Imagine if  drones could complete missions without relying on GPS.\n"
+  },
+  {
+   "name": "Stensul",
+   "website": "https://stensul.com",
+   "slug": "stensul",
+   "initial": "Seed",
+   "statement": "Imagine if  enterprise marketing teams could create emails and landing pages without all the back-and-forth."
+  },
+  {
+   "name": "Stedi",
+   "website": "https://www.stedi.com/",
+   "slug": "stedi",
+   "initial": "Seed",
+   "statement": "Imagine if  eligibility checks and claims processing could all be done via API."
+  },
+  {
+   "name": "SingleStore",
+   "website": "https://www.singlestore.com/",
+   "slug": "singlestore",
+   "initial": "Seed",
+   "statement": "Imagine if  a database could store and process large amounts of data entirely in RAM."
+  },
+  {
+   "name": "GumGum",
+   "website": "http://gumgum.com/",
+   "slug": "gumgum",
+   "initial": "Seed",
+   "statement": "Imagine if  advertisers could deliver relevant, contextual ads without using personal data."
+  },
+  {
+   "name": "Serval",
+   "website": "https://www.serval.com/",
+   "slug": "serval",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  companies could automate their IT help desks."
+  },
+  {
+   "name": "Notion",
+   "website": "https://www.notion.so",
+   "slug": "notion",
+   "initial": "Seed",
+   "statement": "Imagine if  documents worked more like software."
+  },
+  {
+   "name": "Pantheon",
+   "website": "https://pantheon.io/",
+   "slug": "pantheon",
+   "initial": "Seed",
+   "statement": "Imagine if  organizations could manage all of their websites from a single dashboard."
+  },
+  {
+   "name": "Merlin",
+   "website": "https://www.merlinlabs.com/",
+   "slug": "merlin",
+   "initial": "Seed",
+   "statement": "Imagine if  software had all the skills of a human pilot."
+  },
+  {
+   "name": "Aisera",
+   "website": "https://aisera.com",
+   "slug": "aisera",
+   "initial": "Series A",
+   "statement": "Imagine if  your IT and customer service needs were instantly solved, anytime."
+  },
+  {
+   "name": "Pomelo",
+   "website": "https://www.pomelocare.com/",
+   "slug": "pomelo",
+   "initial": "Seed",
+   "statement": "Imagine if  we could build a continuous layer of care around families to catch small health changes before complications happen."
+  },
+  {
+   "name": "Clearbit",
+   "website": "https://clearbit.com/",
+   "slug": "clearbit",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  businesses had total intelligence on every contact and company."
+  },
+  {
+   "name": "64x",
+   "website": "https://www.64-x.com",
+   "slug": "64x",
+   "initial": "Seed",
+   "statement": "Imagine if  previously unattainable cell lines could help more gene therapies get to market faster."
+  },
+  {
+   "name": "Koala",
+   "website": "https://www.koala.health/",
+   "slug": "koala",
+   "initial": "Seed",
+   "statement": "Imagine if  pets could get vet-verified prescriptions, delivered right on schedule."
+  },
+  {
+   "name": "Binti",
+   "website": "http://binti.com",
+   "slug": "binti",
+   "initial": "Seed",
+   "statement": "Imagine if  every child had the care and support of a loving family."
+  },
+  {
+   "name": "Mighty Networks",
+   "website": "https://www.mightynetworks.com/",
+   "slug": "mighty-networks",
+   "initial": "Seed",
+   "statement": "Imagine if  brands and creators could start and grow their own online communities."
+  },
+  {
+   "name": "SiteRx",
+   "website": "https://www.siterx.com/",
+   "slug": "siterx",
+   "initial": "Seed",
+   "statement": "Imagine if  clinical trials were accessible to every doctor and patient."
+  },
+  {
+   "name": "Montra",
+   "website": "https://montra.com",
+   "slug": "montra",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  anyone could make professional quality videos in minutes."
+  },
+  {
+   "name": "Tesorio",
+   "website": "https://www.tesorio.com",
+   "slug": "tesorio",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could turn more revenue into cash by automating accounts receivable."
+  },
+  {
+   "name": "Anomalo",
+   "website": "https://www.anomalo.com/",
+   "slug": "anomalo",
+   "initial": "Seed",
+   "statement": "Imagine if  you could trust your data was always accurate, reliable and error-free."
+  },
+  {
+   "name": "Legl",
+   "website": "https://www.legl.com/",
+   "slug": "legl",
+   "initial": "Seed",
+   "statement": "Imagine if  law firms could automate their non-core workflows — from payments to compliance."
+  },
+  {
+   "name": "Instrumental",
+   "website": "http://www.instrumental.com",
+   "slug": "instrumental",
+   "initial": "Seed",
+   "statement": "Imagine if  we cut electronics manufacturing waste in half."
+  },
+  {
+   "name": "TetraScience",
+   "website": "http://www.tetrascience.com/",
+   "slug": "tetrascience",
+   "initial": "Seed",
+   "statement": "Imagine if  life scientists had their own R&D data cloud."
+  },
+  {
+   "name": "Highlight",
+   "website": "https://www.letshighlight.com/",
+   "slug": "highlight",
+   "initial": "Seed",
+   "statement": "Imagine if  we could build better physical products by collecting exceptional product data on impossible timelines,"
+  },
+  {
+   "name": "Flexport",
+   "website": "https://www.flexport.com",
+   "slug": "flexport",
+   "initial": "Seed",
+   "statement": "Imagine if  we could simplify global trade by connecting everyone in the supply chain."
+  },
+  {
+   "name": "Ossium Health",
+   "website": "https://www.ossiumhealth.com/",
+   "slug": "ossium-health",
+   "initial": "Seed",
+   "statement": "Imagine if  every patient who needed a bone marrow transplant could get one."
+  },
+  {
+   "name": "Gregor Diagnostics",
+   "website": "http://www.gregordiagnostics.com",
+   "slug": "gregor-diagnostics",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  prostate cancer could be detected and differentiated at the earliest stages."
+  },
+  {
+   "name": "Legion",
+   "website": "https://legion.co/",
+   "slug": "legion",
+   "initial": "Seed",
+   "statement": "Imagine if  it were easier to manage your hourly workforce and keep them engaged."
+  },
+  {
+   "name": "Adaptly",
+   "website": null,
+   "slug": "adaptly",
+   "initial": "Seed",
+   "statement": "Imagine if  brands could easily scale campaigns across ad platforms."
+  },
+  {
+   "name": "Smartling",
+   "website": "https://www.smartling.com/",
+   "slug": "smartling",
+   "initial": "Seed",
+   "statement": "Imagine if  every global brand could speak to every customer in their native language."
+  },
+  {
+   "name": "Promise",
+   "website": "https://www.promise-pay.com/",
+   "slug": "promise",
+   "initial": "Seed",
+   "statement": "Imagine if  government and utilities could easily provide payment assistance and relief to eligible households."
+  },
+  {
+   "name": "Clay",
+   "website": "https://clay.run/",
+   "slug": "clay",
+   "initial": "Seed",
+   "statement": "Imagine if  go-to-market tools were as malleable as clay."
+  },
+  {
+   "name": "Eigen Therapeutics",
+   "website": "https://www.eigentx.com/",
+   "slug": "eigen-therapeutics",
+   "initial": "Seed",
+   "statement": "Imagine if  cancer cells were more vulnerable to treatment and healthy cells were more resilient."
+  },
+  {
+   "name": "Pine Park Health",
+   "website": "https://www.pineparkhealth.com/",
+   "slug": "pine-park-health",
+   "initial": "Seed",
+   "statement": "Imagine if  seniors could access high-quality medical care from the comfort of home."
+  },
+  {
+   "name": "Augury",
+   "website": "http://augury.com",
+   "slug": "augury",
+   "initial": "Seed",
+   "statement": "Imagine if  manufacturers could always rely on the machines that matter."
+  },
+  {
+   "name": "DoubleVerify",
+   "website": "https://doubleverify.com/",
+   "slug": "doubleverify",
+   "initial": "Seed",
+   "statement": "Imagine if  advertisers could trust that every dollar they spent on digital ads was well used."
+  },
+  {
+   "name": "Cocoon",
+   "website": "https://www.meetcocoon.com/",
+   "slug": "cocoon",
+   "initial": "Seed",
+   "statement": "Imagine if  every working person could take the time away they need to care for what matters most."
+  },
+  {
+   "name": "AppNexus",
+   "website": "http://firstround.com/review/appnexus-first-pitch-before-it-steered-around-the-cloud-to-win-big-in-adtech/",
+   "slug": "appnexus",
+   "initial": "Seed",
+   "statement": "Imagine if  real-time media buying could all happen in one place."
+  },
+  {
+   "name": "Goose",
+   "website": "https://www.goose.pet/",
+   "slug": "goose",
+   "initial": "Seed",
+   "statement": "Imagine if  booking pet care was more like booking a hotel."
+  },
+  {
+   "name": "Vitable Health",
+   "website": "https://vitablehealth.com/",
+   "slug": "vitable-health",
+   "initial": "Seed",
+   "statement": "Imagine if  healthcare worked better for 80 million uninsured and under-insured Americans."
+  },
+  {
+   "name": "Gritt Robotics",
+   "website": "https://gritt.ai/",
+   "slug": "gritt-robotics",
+   "initial": "Pre-Seed",
+   "statement": "Imagine if  AI robots could automate solar farm construction."
+  },
+  {
+   "name": "Unblocked",
+   "website": "https://getunblocked.com/",
+   "slug": "unblocked",
+   "initial": "Seed",
+   "statement": "Imagine if  any developer could instantly answer any question about their codebase."
+  },
+  {
+   "name": "Labelbox",
+   "website": "https://labelbox.com/",
+   "slug": "labelbox",
+   "initial": "Seed",
+   "statement": "Imagine if  AI companies could easily create and manage training data."
+  },
+  {
+   "name": "Gumloop",
+   "website": "https://www.gumloop.com/",
+   "slug": "gumloop",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could automate their work without needing to be an AI expert or an engineer."
+  },
+  {
+   "name": "Lob",
+   "website": "https://lob.com",
+   "slug": "lob",
+   "initial": "Series A",
+   "statement": "Imagine if  there were a digital-first approach to the analog industry of direct mail."
+  },
+  {
+   "name": "Siteline",
+   "website": "https://siteline.com/",
+   "slug": "siteline",
+   "initial": "Seed",
+   "statement": "Imagine if  subcontractors got paid faster and had a better financial foundation to build on."
+  },
+  {
+   "name": "Glide",
+   "website": "https://www.glideapps.com/",
+   "slug": "glide",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could turn their spreadsheet into a beautiful app in minutes."
+  },
+  {
+   "name": "Alma",
+   "website": "https://helloalma.com/",
+   "slug": "alma",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could access high-quality, affordable mental health care."
+  },
+  {
+   "name": "Manifest",
+   "website": "https://www.manifestcyber.com/",
+   "slug": "manifest",
+   "initial": "Seed",
+   "statement": "Imagine if  the software supply chain could automatically be secured."
+  },
+  {
+   "name": "RebelMouse",
+   "website": "https://www.rebelmouse.com/",
+   "slug": "rebelmouse",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could optimize distribution across social media platforms."
+  },
+  {
+   "name": "SafetyKit",
+   "website": "https://www.safetykit.com/",
+   "slug": "safetykit",
+   "initial": "Seed",
+   "statement": "Imagine if  AI agents could do big tech’s dirty work."
+  },
+  {
+   "name": "Ansible Health",
+   "website": "http://www.ansiblehealth.com",
+   "slug": "ansible-health",
+   "initial": "Series A",
+   "statement": "Imagine if  patients with COPD got the care they needed from the comfort of home."
+  },
+  {
+   "name": "M7 Health",
+   "website": "https://www.m7health.com/",
+   "slug": "m7-health",
+   "initial": "Seed",
+   "statement": "Imagine if  health systems could attract and retain nurses by fostering flexible and predictable work environments."
+  },
+  {
+   "name": "PatientPing",
+   "website": "https://bamboohealth.com/",
+   "slug": "patientping",
+   "initial": "Seed",
+   "statement": "Imagine if  real-time intelligence could improve care coordination and patient outcomes."
+  },
+  {
+   "name": "Boulder",
+   "website": "https://boulder.care/",
+   "slug": "boulder",
+   "initial": "Seed",
+   "statement": "Imagine if  people struggling with addiction could succeed on their own terms, wherever they are."
+  },
+  {
+   "name": "Diversio",
+   "website": "https://diversio.com/",
+   "slug": "diversio",
+   "initial": "Seed",
+   "statement": "Imagine if  every workplace was more inclusive."
+  },
+  {
+   "name": "Last Energy",
+   "website": "https://www.lastenergy.com/",
+   "slug": "last-energy",
+   "initial": "Seed",
+   "statement": "Imagine if  modular nuclear power plants could decouple energy access from climate change."
+  },
+  {
+   "name": "Suki",
+   "website": "https://www.suki.ai",
+   "slug": "suki",
+   "initial": "Seed",
+   "statement": "Imagine if  doctors could focus on patients instead of paperwork."
+  },
+  {
+   "name": "Iru",
+   "website": "https://www.iru.com",
+   "slug": "iru",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could easily secure their users, apps and devices."
+  },
+  {
+   "name": "The Climate Corporation",
+   "website": "https://climate.com/",
+   "slug": "the-climate-corporation",
+   "initial": "Seed",
+   "statement": "Imagine if  every farmer could use data to sustainably increase their productivity and profitability."
+  },
+  {
+   "name": "Crossbeam",
+   "website": "https://www.crossbeam.com/",
+   "slug": "crossbeam",
+   "initial": "Seed",
+   "statement": "Imagine if  every business could use the power of their partner ecosystem to grow."
+  },
+  {
+   "name": "Castle",
+   "website": "https://castle.io/",
+   "slug": "castle",
+   "initial": "Seed",
+   "statement": "Imagine if  businesses could protect their user communities with ease."
+  },
+  {
+   "name": "Conduit Commerce",
+   "website": "https://www.conduitcommerce.com/",
+   "slug": "conduit-commerce",
+   "initial": "Seed",
+   "statement": "Imagine if  any retailer could start selling your products in minutes."
+  },
+  {
+   "name": "Vital",
+   "website": "https://vital.io/",
+   "slug": "vital",
+   "initial": "Seed",
+   "statement": "Imagine if  busy hospitals could turn clinical documentation into patient-friendly communication."
+  },
+  {
+   "name": "Steno",
+   "website": "https://steno.com/",
+   "slug": "steno",
+   "initial": "Seed",
+   "statement": "Imagine if  court reporting just worked so lawyers could focus on the case."
+  },
+  {
+   "name": "Sprig",
+   "website": "https://sprig.com/",
+   "slug": "sprig",
+   "initial": "Seed",
+   "statement": "Imagine if  every company captured the insights they needed to create products people love."
+  },
+  {
+   "name": "Axial",
+   "website": "http://www.axial.net/",
+   "slug": "axial",
+   "initial": "Seed",
+   "statement": "Imagine if  we simplified the deal-making process for great small and medium-sized businesses and buyers."
+  },
+  {
+   "name": "Sift",
+   "website": "http://www.sift.com",
+   "slug": "sift",
+   "initial": "Seed",
+   "statement": "Imagine if  AI could prevent and detect online fraud."
+  },
+  {
+   "name": "Candid",
+   "website": "https://www.joincandidhealth.com/",
+   "slug": "candid",
+   "initial": "Seed",
+   "statement": "Imagine if  modern tools managed the complexity of medical billing."
+  },
+  {
+   "name": "Persona",
+   "website": "https://withpersona.com/",
+   "slug": "persona",
+   "initial": "Seed",
+   "statement": " Imagine if  every company could verify that its users are who they say they are."
+  },
+  {
+   "name": "ODIN",
+   "website": "https://www.useodin.com/",
+   "slug": "odin",
+   "initial": "Seed",
+   "statement": "Imagine if  data generated on the job site could make construction safer."
+  },
+  {
+   "name": "Nomad Health",
+   "website": "https://nomadhealth.com/",
+   "slug": "nomad-health",
+   "initial": "Seed",
+   "statement": "Imagine if  we closed the gap between travel clinicians and the hospitals that need them."
+  },
+  {
+   "name": "Airbase",
+   "website": "https://www.airbase.com/",
+   "slug": "airbase",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could be smarter about how they spent money."
+  },
+  {
+   "name": "Guide",
+   "website": "https://guide.co/",
+   "slug": "guide",
+   "initial": "Seed",
+   "statement": "Imagine if  more   people could find work they love."
+  },
+  {
+   "name": "Moat",
+   "website": null,
+   "slug": "moat",
+   "initial": "Seed",
+   "statement": "Imagine if  there were a standard metric that served as the currency for buying and selling digital ads."
+  },
+  {
+   "name": "Wonderschool",
+   "website": "https://www.wonderschool.com",
+   "slug": "wonderschool",
+   "initial": "Seed",
+   "statement": "Imagine if  every child had access to quality early childcare close to home, no matter where they lived."
+  },
+  {
+   "name": "Loyal",
+   "website": "https://loyal.com/",
+   "slug": "loyal",
+   "initial": "Seed",
+   "statement": "Imagine if  we had more time with the dogs we love."
+  },
+  {
+   "name": "Woodrow",
+   "website": "https://www.woodrow.ai/",
+   "slug": "woodrow",
+   "initial": "Seed",
+   "statement": "Imagine if  agents could accurately take on repetitive finance and operations work across systems."
+  },
+  {
+   "name": "Superhuman",
+   "website": "https://superhuman.com/",
+   "slug": "superhuman",
+   "initial": "Seed",
+   "statement": "Imagine if  we could speed through our inboxes twice as fast."
+  },
+  {
+   "name": "Arlyn AI",
+   "website": "https://arlynaccess.ai/",
+   "slug": "arlyn-ai",
+   "initial": "Seed",
+   "statement": "Imagine if  every patient had easier and more affordable access to the lifesaving treatments they deserve."
+  },
+  {
+   "name": "Grokker",
+   "website": "https://grokker.com/",
+   "slug": "grokker",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could provide award-winning video content to improve employee health and wellness."
+  },
+  {
+   "name": "&Open",
+   "website": "https://andopen.co/",
+   "slug": "open",
+   "initial": "Seed",
+   "statement": "Imagine if  companies could build loyalty with thoughtful gifting done at scale."
+  },
+  {
+   "name": "JetInsight",
+   "website": "https://www.jetinsight.com/",
+   "slug": "jetinsight",
+   "initial": "Seed",
+   "statement": "Imagine if  aircraft charter operators could run safer and more efficient businesses."
+  },
+  {
+   "name": "Odeko",
+   "website": "https://www.odeko.com/",
+   "slug": "odeko",
+   "initial": "Series A",
+   "statement": "Imagine if  every local cafe’s shelves were always stocked."
+  },
+  {
+   "name": "Rupa Health",
+   "website": "https://www.rupahealth.com/",
+   "slug": "rupa-health",
+   "initial": "Seed",
+   "statement": "Imagine if  every doctor could practice root cause medicine."
+  },
+  {
+   "name": "Beautiful AI",
+   "website": "http://www.beautiful.ai",
+   "slug": "beautiful-ai",
+   "initial": "Seed",
+   "statement": "Imagine if  anyone could turn their ideas into visual presentations that win."
+  },
+  {
+   "name": "Arketa",
+   "website": "https://arketa.co",
+   "slug": "arketa",
+   "initial": "Seed",
+   "statement": "Imagine if  we could increase access to wellness by helping studios grow beyond classes."
+  },
+  {
+   "name": "Omni",
+   "website": "https://www.exploreomni.com/",
+   "slug": "omni",
+   "initial": "Seed",
+   "statement": "Imagine if  business intelligence combined the consistency of a shared data model with the speed and freedom of SQL."
+  },
+  {
+   "name": "Laurel",
+   "website": "https://www.laurel.ai/",
+   "slug": "laurel",
+   "initial": "Seed",
+   "statement": "Imagine if  automated timekeeping could return time to lawyers, accountants, and other professionals."
+  },
+  {
+   "name": "Etleap",
+   "website": "https://etleap.com/",
+   "slug": "etleap",
+   "initial": "Seed",
+   "statement": "Imagine if  powerful data pipelines could be built with minimal engineering effort."
+  }
+ ]
+}

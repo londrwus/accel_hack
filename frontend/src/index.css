@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Bellwether design tokens (from accel.pen / docs/NEXT_SESSION.md).
+ * Use them as Tailwind classes: bg-shell, bg-panel, text-ink, text-muted, text-subtle,
+ * bg-chip, bg-predicted-soft, text-predicted, text-accent, bg-accent-soft, text-danger ...
+ * Sizes in the Pencil export are px: prefer text-[14px] etc. (body line-height is "normal", like the export).
+ */
+@theme {
+  --color-bg: #f1eee8;
+  --color-shell: #efede8;
+  --color-panel: #ffffff;
+  --color-surface: #faf8f4;
+  --color-ink: #1a1817;
+  --color-muted: #6b675f;
+  --color-subtle: #9a958b;
+  --color-hair: #e7e3dc;
+  --color-chip: #1a18170d;
+  --color-track: #1a18170a; /* segmented track, search field */
+  --color-row: #1a181705; /* table head row tint */
+  --color-cta: #d8b56a;
+  --color-gold: #d8b56a;
+  --color-gold-top: #e6c886;
+  --color-gold-bottom: #d3ad5e;
+  --color-gold-edge: #b8923f;
+  --color-sage: #a3bba6;
+  --color-accent: #5c7a63;
+  --color-accent-soft: #e2eae1;
+  --color-predicted: #b8892e;
+  --color-predicted-soft: #f4e9cf;
+  --color-competitor: #bdb7ac;
+  --color-warning: #a85a2a;
+  --color-warning-soft: #f5e6da;
+  --color-danger: #b4432a;
+  --color-avatar: #d9cbb4;
+
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-weight-display: 350;
+
+  --radius-window: 16px;
+  --radius-btn: 12px;
+
+  --shadow-window: 0 30px 80px #1a181740;
+  --shadow-btn: 0 1px 2px #1a181714;
+  --shadow-nav: 0 1px 2px #1a18170d;
+  --shadow-card: 0 1px 3px #1a18170f;
+  --shadow-gold: inset 0 1px 0 #ffffff80, 0 1px 2px #1a181726, 0 4px 10px #b8923f33;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* shadcn/ui semantic colours mapped onto our palette, so `npx shadcn add <x>` output fits in. */
+@theme inline {
+  --color-background: var(--color-panel);
+  --color-foreground: var(--color-ink);
+  --color-card: var(--color-panel);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: var(--color-panel);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-cta);
+  --color-primary-foreground: var(--color-ink);
+  --color-secondary: var(--color-chip);
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted-foreground: var(--color-muted);
+  --color-accent-foreground: #ffffff;
+  --color-destructive: var(--color-danger);
+  --color-border: var(--color-hair);
+  --color-input: var(--color-hair);
+  --color-ring: var(--color-sage);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* Pencil draws hairlines as a 1px outline inset by half a pixel (doesn't change box size). */
+@utility hairline {
+  outline: 1px solid var(--color-hair);
+  outline-offset: -0.5px;
+}
+
+/* Glossy gold surface (Button/Gold, Run now, Send). */
+@utility gold-surface {
+  background-image: linear-gradient(180deg, var(--color-gold-top) 0%, var(--color-gold-bottom) 100%);
+  outline: 1px solid var(--color-gold-edge);
+  outline-offset: -0.5px;
+  box-shadow: var(--shadow-gold);
+}
+
+/* Glossy sage badge (Deal Flow count). */
+@utility sage-surface {
+  background-image: linear-gradient(180deg, #7e9c85 0%, #5c7a63 100%);
+  outline: 1px solid #4c6853;
+  outline-offset: -0.5px;
+  box-shadow: inset 0 1px 0 #ffffff59, 0 2px 5px #4c685340;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-shell);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Export PDF (window.print() on the memo page): the memo only, on white, no app chrome. Elements opt out with
+   Tailwind's print: variant (print:hidden on the sidebar, header actions and decision rail). */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+  html,
+  body,
+  #root {
+    height: auto !important;
+    background: #fff !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

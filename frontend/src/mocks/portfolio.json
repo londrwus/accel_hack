@@ -1,0 +1,285 @@
+{
+  "fund_id": "localglobe",
+  "kpis": {
+    "companies_backed": 42,
+    "invested": "£38M",
+    "likely_to_raise": 5,
+    "need_attention": 3,
+    "new_signals_this_week": 14
+  },
+  "columns": [
+    {
+      "health": "at_risk",
+      "title": "Needs attention",
+      "blurb": "Something changed that a partner should look at",
+      "count": 3,
+      "more": 1,
+      "items": [
+        {
+          "company": {
+            "id": "harbor-labs",
+            "row_id": null,
+            "name": "Harbor Labs",
+            "one_liner": "Freight software",
+            "sector": "Logistics",
+            "stage": "Seed",
+            "country": null,
+            "city": null,
+            "founded": null,
+            "website": null,
+            "logo": null
+          },
+          "health": "at_risk",
+          "signals": [
+            {
+              "kind": "risk",
+              "label": "CTO left",
+              "icon": "user-minus",
+              "source_url": null
+            },
+            {
+              "kind": "risk",
+              "label": "No update in 4 months",
+              "icon": "timer",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 2d ago"
+        },
+        {
+          "company": {
+            "id": "cleo",
+            "row_id": null,
+            "name": "Cleo",
+            "one_liner": "AI money assistant",
+            "sector": "Fintech",
+            "stage": "Series C",
+            "country": "UK",
+            "city": "London",
+            "founded": null,
+            "website": "meetcleo.com",
+            "logo": "/logos/cleo.png"
+          },
+          "health": "at_risk",
+          "signals": [
+            {
+              "kind": "timing",
+              "label": "Ledgerly targets the same users",
+              "icon": "eye",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 5h ago"
+        }
+      ]
+    },
+    {
+      "health": "watch",
+      "title": "Likely to raise soon",
+      "blurb": "Signals that a new round is coming: plan your follow-on",
+      "count": 5,
+      "more": 2,
+      "items": [
+        {
+          "company": {
+            "id": "bioorbit",
+            "row_id": null,
+            "name": "BioOrbit",
+            "one_liner": "Medicine made in orbit",
+            "sector": "Health",
+            "stage": "Seed",
+            "country": "UK",
+            "city": "London",
+            "founded": null,
+            "website": "bioorbit.space",
+            "logo": "/logos/bioorbit.jpg"
+          },
+          "health": "watch",
+          "signals": [
+            {
+              "kind": "timing",
+              "label": "Likely to raise in ~3 months",
+              "icon": "trending-up",
+              "source_url": null
+            },
+            {
+              "kind": "strength",
+              "label": "New space-agency partner",
+              "icon": "handshake",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 1d ago"
+        },
+        {
+          "company": {
+            "id": "qureight",
+            "row_id": null,
+            "name": "Qureight",
+            "one_liner": "Lung disease imaging",
+            "sector": "Health",
+            "stage": "Series A",
+            "country": "UK",
+            "city": "Cambridge",
+            "founded": null,
+            "website": "qureight.com",
+            "logo": "/logos/qureight.png"
+          },
+          "health": "watch",
+          "signals": [
+            {
+              "kind": "timing",
+              "label": "Hiring a CFO",
+              "icon": "briefcase",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 3d ago"
+        },
+        {
+          "company": {
+            "id": "marker",
+            "row_id": null,
+            "name": "Marker",
+            "one_liner": "AI video for marketers",
+            "sector": "AI",
+            "stage": "Series A",
+            "country": null,
+            "city": null,
+            "founded": null,
+            "website": null,
+            "logo": null
+          },
+          "health": "watch",
+          "signals": [
+            {
+              "kind": "strength",
+              "label": "Hiring 12 people",
+              "icon": "users",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 4d ago"
+        }
+      ]
+    },
+    {
+      "health": "good",
+      "title": "Doing well",
+      "blurb": "Growing, hiring or in the news for good reasons",
+      "count": 28,
+      "more": 26,
+      "items": [
+        {
+          "company": {
+            "id": "fernway",
+            "row_id": null,
+            "name": "Fernway",
+            "one_liner": "Climate data for insurers",
+            "sector": "Climate",
+            "stage": "Seed",
+            "country": null,
+            "city": null,
+            "founded": null,
+            "website": null,
+            "logo": null
+          },
+          "health": "good",
+          "signals": [
+            {
+              "kind": "strength",
+              "label": "Website traffic up 2×",
+              "icon": "chart-line",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 1d ago"
+        },
+        {
+          "company": {
+            "id": "opal-grid",
+            "row_id": null,
+            "name": "Opal Grid",
+            "one_liner": "Grid storage software",
+            "sector": "Climate",
+            "stage": "Series A",
+            "country": null,
+            "city": null,
+            "founded": null,
+            "website": null,
+            "logo": null
+          },
+          "health": "good",
+          "signals": [
+            {
+              "kind": "info",
+              "label": "Won a national award",
+              "icon": "newspaper",
+              "source_url": null
+            }
+          ],
+          "updated_label": "Updated 6d ago"
+        }
+      ]
+    },
+    {
+      "health": "exited",
+      "title": "Exited",
+      "blurb": "Sold or listed",
+      "count": 6,
+      "more": 4,
+      "items": [
+        {
+          "company": {
+            "id": "citymapper",
+            "row_id": null,
+            "name": "Citymapper",
+            "one_liner": "Transport app",
+            "sector": "Mobility",
+            "stage": "Acquired",
+            "country": "UK",
+            "city": "London",
+            "founded": null,
+            "website": "citymapper.com",
+            "logo": "/logos/citymapper.png"
+          },
+          "health": "exited",
+          "signals": [
+            {
+              "kind": "info",
+              "label": "Exit completed",
+              "icon": "check",
+              "source_url": null
+            }
+          ],
+          "updated_label": null
+        },
+        {
+          "company": {
+            "id": "wise",
+            "row_id": null,
+            "name": "Wise",
+            "one_liner": "Money transfers",
+            "sector": "Fintech",
+            "stage": "Public",
+            "country": "UK",
+            "city": "London",
+            "founded": null,
+            "website": "wise.com",
+            "logo": "/logos/wise.png"
+          },
+          "health": "exited",
+          "signals": [
+            {
+              "kind": "info",
+              "label": "Results published",
+              "icon": "newspaper",
+              "source_url": null
+            }
+          ],
+          "updated_label": null
+        }
+      ]
+    }
+  ]
+}

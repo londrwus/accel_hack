@@ -1,0 +1,496 @@
+{
+  "fund_id": "localglobe",
+  "nodes": [
+    {
+      "id": "localglobe",
+      "kind": "fund",
+      "label": "LocalGlobe",
+      "company_id": null,
+      "logo": "/logos/localglobe.png",
+      "fit": null,
+      "x": 318,
+      "y": 350
+    },
+    {
+      "id": "marker",
+      "kind": "portfolio",
+      "label": "Marker",
+      "company_id": "marker",
+      "logo": null,
+      "fit": null,
+      "x": 148,
+      "y": 247
+    },
+    {
+      "id": "bioorbit",
+      "kind": "portfolio",
+      "label": "BioOrbit",
+      "company_id": "bioorbit",
+      "logo": "/logos/bioorbit.jpg",
+      "fit": null,
+      "x": 424,
+      "y": 217
+    },
+    {
+      "id": "cleo",
+      "kind": "portfolio",
+      "label": "Cleo",
+      "company_id": "cleo",
+      "logo": "/logos/cleo.png",
+      "fit": null,
+      "x": 495,
+      "y": 427
+    },
+    {
+      "id": "citymapper",
+      "kind": "portfolio",
+      "label": "Citymapper",
+      "company_id": "citymapper",
+      "logo": "/logos/citymapper.png",
+      "fit": null,
+      "x": 361,
+      "y": 607
+    },
+    {
+      "id": "wise",
+      "kind": "portfolio",
+      "label": "Wise",
+      "company_id": "wise",
+      "logo": "/logos/wise.png",
+      "fit": null,
+      "x": 156,
+      "y": 587
+    },
+    {
+      "id": "improbable",
+      "kind": "portfolio",
+      "label": "Improbable",
+      "company_id": "improbable",
+      "logo": "/logos/improbable.png",
+      "fit": null,
+      "x": 77,
+      "y": 407
+    },
+    {
+      "id": "synthesia",
+      "kind": "competitor",
+      "label": "Synthesia",
+      "company_id": "synthesia",
+      "logo": "/logos/synthesia.png",
+      "fit": null,
+      "x": 22,
+      "y": 164
+    },
+    {
+      "id": "tavus",
+      "kind": "competitor",
+      "label": "Tavus",
+      "company_id": "tavus",
+      "logo": "/logos/tavus.png",
+      "fit": null,
+      "x": 117,
+      "y": 114
+    },
+    {
+      "id": "orbex",
+      "kind": "competitor",
+      "label": "Orbex",
+      "company_id": "orbex",
+      "logo": "/logos/orbex.png",
+      "fit": null,
+      "x": 361,
+      "y": 84
+    },
+    {
+      "id": "plum",
+      "kind": "competitor",
+      "label": "Plum",
+      "company_id": "plum",
+      "logo": "/logos/plum.png",
+      "fit": null,
+      "x": 613,
+      "y": 364
+    },
+    {
+      "id": "hadean",
+      "kind": "competitor",
+      "label": "Hadean",
+      "company_id": "hadean",
+      "logo": "/logos/hadean.png",
+      "fit": null,
+      "x": 0,
+      "y": 324
+    },
+    {
+      "id": "unity",
+      "kind": "competitor",
+      "label": "Unity",
+      "company_id": "unity",
+      "logo": "/logos/unity.png",
+      "fit": null,
+      "x": 7,
+      "y": 514
+    },
+    {
+      "id": "revolut",
+      "kind": "competitor",
+      "label": "Revolut",
+      "company_id": "revolut",
+      "logo": "/logos/revolut.png",
+      "fit": null,
+      "x": 46,
+      "y": 714
+    },
+    {
+      "id": "transit",
+      "kind": "competitor",
+      "label": "Transit",
+      "company_id": "transit",
+      "logo": "/logos/transit.png",
+      "fit": null,
+      "x": 266,
+      "y": 734
+    },
+    {
+      "id": "moovit",
+      "kind": "competitor",
+      "label": "Moovit",
+      "company_id": "moovit",
+      "logo": "/logos/moovit.png",
+      "fit": null,
+      "x": 432,
+      "y": 734
+    },
+    {
+      "id": "northbeam-health",
+      "kind": "pick",
+      "label": "Northbeam Health",
+      "company_id": "northbeam-health",
+      "logo": null,
+      "fit": 94,
+      "x": 605,
+      "y": 173
+    },
+    {
+      "id": "ledgerly",
+      "kind": "pick",
+      "label": "Ledgerly",
+      "company_id": "ledgerly",
+      "logo": null,
+      "fit": 88,
+      "x": 628,
+      "y": 543
+    },
+    {
+      "id": "gridwise",
+      "kind": "pick",
+      "label": "Gridwise",
+      "company_id": "gridwise",
+      "logo": null,
+      "fit": 81,
+      "x": 7,
+      "y": 603
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "localglobe",
+      "target": "marker",
+      "kind": "owns"
+    },
+    {
+      "id": "e2",
+      "source": "localglobe",
+      "target": "bioorbit",
+      "kind": "owns"
+    },
+    {
+      "id": "e3",
+      "source": "localglobe",
+      "target": "cleo",
+      "kind": "owns"
+    },
+    {
+      "id": "e4",
+      "source": "localglobe",
+      "target": "citymapper",
+      "kind": "owns"
+    },
+    {
+      "id": "e5",
+      "source": "localglobe",
+      "target": "wise",
+      "kind": "owns"
+    },
+    {
+      "id": "e6",
+      "source": "localglobe",
+      "target": "improbable",
+      "kind": "owns"
+    },
+    {
+      "id": "e7",
+      "source": "marker",
+      "target": "synthesia",
+      "kind": "competes"
+    },
+    {
+      "id": "e8",
+      "source": "marker",
+      "target": "tavus",
+      "kind": "competes"
+    },
+    {
+      "id": "e9",
+      "source": "bioorbit",
+      "target": "orbex",
+      "kind": "competes"
+    },
+    {
+      "id": "e10",
+      "source": "cleo",
+      "target": "plum",
+      "kind": "competes"
+    },
+    {
+      "id": "e11",
+      "source": "improbable",
+      "target": "hadean",
+      "kind": "competes"
+    },
+    {
+      "id": "e12",
+      "source": "improbable",
+      "target": "unity",
+      "kind": "competes"
+    },
+    {
+      "id": "e13",
+      "source": "wise",
+      "target": "revolut",
+      "kind": "competes"
+    },
+    {
+      "id": "e14",
+      "source": "citymapper",
+      "target": "transit",
+      "kind": "competes"
+    },
+    {
+      "id": "e15",
+      "source": "citymapper",
+      "target": "moovit",
+      "kind": "competes"
+    },
+    {
+      "id": "e16",
+      "source": "northbeam-health",
+      "target": "bioorbit",
+      "kind": "similar"
+    },
+    {
+      "id": "e17",
+      "source": "gridwise",
+      "target": "wise",
+      "kind": "similar"
+    },
+    {
+      "id": "e18",
+      "source": "localglobe",
+      "target": "northbeam-health",
+      "kind": "candidate"
+    },
+    {
+      "id": "e19",
+      "source": "localglobe",
+      "target": "ledgerly",
+      "kind": "candidate"
+    },
+    {
+      "id": "e20",
+      "source": "localglobe",
+      "target": "gridwise",
+      "kind": "candidate"
+    },
+    {
+      "id": "e21",
+      "source": "ledgerly",
+      "target": "cleo",
+      "kind": "conflict"
+    }
+  ],
+  "shortlist": [
+    {
+      "rank": 1,
+      "company": {
+        "id": "northbeam-health",
+        "row_id": 4821,
+        "name": "Northbeam Health",
+        "one_liner": "AI triage for NHS GP practices",
+        "sector": "Health",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Leeds",
+        "founded": 2023,
+        "website": "northbeam.health",
+        "logo": null
+      },
+      "fit": 94,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.81
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "timing",
+          "label": "Raising now",
+          "icon": "trending-up",
+          "source_url": null
+        },
+        {
+          "kind": "strength",
+          "label": "Like BioOrbit",
+          "icon": "link",
+          "source_url": null
+        },
+        {
+          "kind": "info",
+          "label": "Hiring 3 engineers",
+          "icon": "users",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Like BioOrbit and 2 other health companies they own",
+        "Raising a seed round now: their usual stage",
+        "UK founders, where LocalGlobe invests"
+      ],
+      "seen_label": "2h",
+      "status": "new",
+      "conflict_with": null,
+      "memo_id": "northbeam-health"
+    },
+    {
+      "rank": 2,
+      "company": {
+        "id": "ledgerly",
+        "row_id": null,
+        "name": "Ledgerly",
+        "one_liner": "Cash-flow app for freelancers",
+        "sector": "Fintech",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "London",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 88,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.74
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "strength",
+          "label": "Revenue up 3×",
+          "icon": "chart-line",
+          "source_url": null
+        },
+        {
+          "kind": "risk",
+          "label": "Competes with Cleo",
+          "icon": "triangle-alert",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Fintech for freelancers, LocalGlobe's biggest sector",
+        "Revenue grew 3× this year",
+        "Competes with Cleo, which LocalGlobe owns"
+      ],
+      "seen_label": "5h",
+      "status": "new",
+      "conflict_with": "cleo",
+      "memo_id": null
+    },
+    {
+      "rank": 3,
+      "company": {
+        "id": "gridwise",
+        "row_id": null,
+        "name": "Gridwise",
+        "one_liner": "Home battery software",
+        "sector": "Climate",
+        "stage": "Pre-seed",
+        "country": "UK",
+        "city": "Bristol",
+        "founded": null,
+        "website": null,
+        "logo": null
+      },
+      "fit": 81,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.62
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "info",
+          "label": "In Sifted this week",
+          "icon": "newspaper",
+          "source_url": "https://sifted.eu"
+        },
+        {
+          "kind": "strength",
+          "label": "Ex-Octopus founders",
+          "icon": "award",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Climate software, like Fernway and Opal Grid",
+        "Pre-seed: LocalGlobe's usual first cheque",
+        "Founders built Octopus Energy's home products"
+      ],
+      "seen_label": "1d",
+      "status": "new",
+      "conflict_with": null,
+      "memo_id": null
+    }
+  ],
+  "picked_from": 10000,
+  "updated_label": "updated 2 min ago",
+  "mix_label": "Mix: 6 UK · 3 EU · 1 US · no founder traits used"
+}

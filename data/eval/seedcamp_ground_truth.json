@@ -1,0 +1,2939 @@
+{
+ "fund": "Seedcamp",
+ "url": "https://seedcamp.com/",
+ "how_served": "Static server-rendered HTML on /our-companies/ (WordPress, MixItUp filter classes; all 312 items in one page, no pagination). company-profile-sitemap has only 6 case studies; wp-json exists.",
+ "portfolio_url": "https://seedcamp.com/our-companies/",
+ "gt_count": 312,
+ "with_website": 312,
+ "team_sample": [
+  "Guisela Figueredo",
+  "Felix Martinez",
+  "Will Bennett",
+  "Reshma Sohoni",
+  "Sia Houchangnia",
+  "Carlos Eduardo Espinal",
+  "Antonia Whitecourt",
+  "Joe Tyndall",
+  "Tom Wilson",
+  "Hilary Howe",
+  "Ciaran Lyne",
+  "Devin Hunt",
+  "Sophia Price",
+  "Alexandra Charalambous",
+  "Miguel Pinho",
+  "Katherine Bassett",
+  "Ece Ozer"
+ ],
+ "thesis": "Seedcamp: Europe's seed fund, investing pre-seed/seed in exceptional founders building in Europe (London-based), sector-agnostic incl. AI, fintech, enterprise, health/bio, consumer; ~$/€ cheques up to ~2M; backed Revolut, Wise, UiPath, Hopin.",
+ "companies": [
+  {
+   "name": "Waniwani",
+   "website": "http://waniwani.ai",
+   "year": "2026",
+   "desc": "Revenue infrastructure for AI",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Eversettled",
+   "website": "http://eversettled.com",
+   "year": "2026",
+   "desc": "AI copilot for the legal, financial, and administrative process of settling an estate",
+   "sectors": [
+    "ai",
+    "consumer"
+   ]
+  },
+  {
+   "name": "Resolyst",
+   "website": "http://resolyst.com",
+   "year": "2026",
+   "desc": "AI-enabled management of chronic disease through specialist networks",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Penelope Health",
+   "website": "http://penelope.health",
+   "year": "2026",
+   "desc": "The infrastructure layer for US medical payments",
+   "sectors": [
+    "health-bio",
+    "ai"
+   ]
+  },
+  {
+   "name": "Telemachus",
+   "website": "http://telemachus.io",
+   "year": "2026",
+   "desc": "Telemachus creates AI-native competitors to poorly-run incumbent companies",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Opereit",
+   "website": "http://opereit.ai",
+   "year": "2026",
+   "desc": "AI operating layer for transportation spend",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Depi",
+   "website": "http://depi.security",
+   "year": "2026",
+   "desc": "Offensive security for software supply-chain risk",
+   "sectors": [
+    "security",
+    "ai"
+   ]
+  },
+  {
+   "name": "sherpa",
+   "website": "http://sherpahq.ai",
+   "year": "2026",
+   "desc": "AI operating system for external workforce management",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Pair",
+   "website": "http://pairnow.ai",
+   "year": "2025",
+   "desc": "The AI adoption layer for the enterprise",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Uncovr",
+   "website": "http://uncovr.ai",
+   "year": "2025",
+   "desc": "Transforming surgical video into documentation",
+   "sectors": [
+    "health-bio",
+    "ai"
+   ]
+  },
+  {
+   "name": "Tattvam",
+   "website": "http://tattvamlabs.ai",
+   "year": "2025",
+   "desc": "The AI layer for chip design",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Revox",
+   "website": "http://getrevox.com",
+   "year": "2025",
+   "desc": "Voice AI infrastructure to grow your revenue",
+   "sectors": [
+    "ai",
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Isidor",
+   "website": "http://isidor.ai",
+   "year": "2025",
+   "desc": "Frontier data for frontier AI research, starting in finance",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Porters",
+   "website": "http://withporters.com",
+   "year": "2025",
+   "desc": "Digital back-office for banks, starting with garnishments",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Andel",
+   "website": "http://andel.org",
+   "year": "2025",
+   "desc": "Benefit provider building a fairer way to get life-changing drugs",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Catch",
+   "website": "http://catchagent.ai",
+   "year": "2025",
+   "desc": "AI Executive assistant",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Omniscient",
+   "website": "http://omniscient.so",
+   "year": "2025",
+   "desc": "Understand your reputation, risks and supply chain",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "La Fraise Pro",
+   "website": "http://lafraise.pro",
+   "year": "2025",
+   "desc": "AI agents to simplify dentists' admin, payments and treatment plans",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Opio",
+   "website": "http://opio.fi",
+   "year": "2025",
+   "desc": "Frontier AI for transaction services",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Wexler",
+   "website": "http://wexler.ai",
+   "year": "2025",
+   "desc": "AI agents for litigation document analysis",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "TimeTrace Labs",
+   "website": "http://timetracelabs.com",
+   "year": "2025",
+   "desc": "AI for real-world systems where data is limited and decisions cannot wait",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Function Health",
+   "website": "http://functionhealth.com",
+   "year": "2025",
+   "desc": "Membership-based health platform for clinical testing, diagnostics and MRI scans",
+   "sectors": [
+    "health-bio",
+    "ai"
+   ]
+  },
+  {
+   "name": "Outpost Bio",
+   "website": "http://outpost.bio",
+   "year": "2025",
+   "desc": "The first foundation model for microbiome-drug interactions",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "BioOrbit",
+   "website": "http://bioorbit.space",
+   "year": "2025",
+   "desc": "Pharma factories in microgravity for cancer drugs you can inject at home",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Topograph",
+   "website": "http://topograph.co",
+   "year": "2025",
+   "desc": "Next generation international data and document KYB provider",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Tano",
+   "website": "http://tano.ai",
+   "year": "2025",
+   "desc": "AI-powered engine that recruits, manages and scales influencer campaigns",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Dalton",
+   "website": "http://DaltonTX.com",
+   "year": "2024",
+   "desc": "Transforming AI research into drug discovery impact",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Motley",
+   "website": "http://motley.ai",
+   "year": "2025",
+   "desc": "Automate business reporting and communication for customer success teams",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Massive Dynamic",
+   "website": "http://massive-dynamic.ai",
+   "year": "2025",
+   "desc": "AI-powered copilot for marketing orchestration",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Memories",
+   "website": "http://memories.ai",
+   "year": "2025",
+   "desc": "Visual memory model for rich context video understanding",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Kerys",
+   "website": "http://kerys.software",
+   "year": "2025",
+   "desc": "High performance virtualization to consolidate environments on a single machine",
+   "sectors": [
+    "ai",
+    "enterprise",
+    "security"
+   ]
+  },
+  {
+   "name": "Murphy",
+   "website": "http://getmurphy.ai",
+   "year": "2025",
+   "desc": "AI agent for debt collection services",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Kraka",
+   "website": "http://gokraka.com",
+   "year": "2024",
+   "desc": "Train factory employees in VR to complete any task on the shop floor",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Nopan",
+   "website": "http://nopan.com",
+   "year": "2024",
+   "desc": "Centralised settlement for all major A2A payments",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Plakar",
+   "website": "http://plakar.io",
+   "year": "2024",
+   "desc": "Data protection and backup platform for the cloud",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Zenline AI",
+   "website": "http://tryzenline.ai",
+   "year": "2024",
+   "desc": "AI for category teams in retail to make fast, shopper-centric assortment decisions",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "SE3",
+   "website": "http://se3.ai",
+   "year": "2024",
+   "desc": "Make computers understand the 3D world",
+   "sectors": [
+    "ai",
+    "security"
+   ]
+  },
+  {
+   "name": "Doczen",
+   "website": "http://doczen.com",
+   "year": "2024",
+   "desc": "AI platform for commodity operators and traders",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Volter",
+   "website": "http://getvolter.com",
+   "year": "2024",
+   "desc": "Commercial energy site management and aggregation",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Powernaut",
+   "website": "http://powernaut.io",
+   "year": "2024",
+   "desc": "Virtual power plant for consumers' smart device installations",
+   "sectors": [
+    "ai",
+    "climate"
+   ]
+  },
+  {
+   "name": "Source.dev",
+   "website": "http://source.dev",
+   "year": "2024",
+   "desc": "Platform for smart devices to make simple, bug-free and cost effective software updates",
+   "sectors": [
+    "developer-tools",
+    "ai"
+   ]
+  },
+  {
+   "name": "Linkup",
+   "website": "http://linkup.so",
+   "year": "2024",
+   "desc": "AI search engine optimized for LLMs and agents",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Umony",
+   "website": "http://umony.com",
+   "year": "2024",
+   "desc": "Capturing, archiving and monitoring regulated communications",
+   "sectors": [
+    "fintech",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Miru Labs",
+   "website": "http://miru-labs.com",
+   "year": "2024",
+   "desc": "Miru is an AI-assisted data investigation platform to super-charge threat hunting.",
+   "sectors": [
+    "enterprise",
+    "security",
+    "ai"
+   ]
+  },
+  {
+   "name": "Singulate",
+   "website": "http://singulate.com",
+   "year": "2024",
+   "desc": "The first generative AI personalization email marketing platform",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Ciao",
+   "website": "http://meetciao.com",
+   "year": "2024",
+   "desc": "Helping people live flexibly",
+   "sectors": [
+    "marketplaces",
+    "consumer"
+   ]
+  },
+  {
+   "name": "Stackfix",
+   "website": "http://stackfix.com",
+   "year": "2024",
+   "desc": "AI-powered software comparison platform",
+   "sectors": [
+    "ai",
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Digital Iron",
+   "website": "http://digitaliron.com",
+   "year": "2024",
+   "desc": "Boost parts sales and after-sales revenue for heavy machinery dealerships",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Vaire",
+   "website": "http://vaire.co",
+   "year": "2024",
+   "desc": "Near-zero energy chips",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Freqens",
+   "website": "http://freqens.com",
+   "year": "2024",
+   "desc": "Identify savings and secure the best buying conditions",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Cofide",
+   "website": "http://cofide.io",
+   "year": "2024",
+   "desc": "Workload identity fabric for multi and hybrid cloud environments",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Botika",
+   "website": "http://botika.com",
+   "year": "2023",
+   "desc": "Creative copilot powering apparel e-commerce",
+   "sectors": [
+    "enterprise",
+    "ai"
+   ]
+  },
+  {
+   "name": "Enapi",
+   "website": "http://enapi.com",
+   "year": "2023",
+   "desc": "Building the clearing house for the EV industry",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Kelvin",
+   "website": "http://go-kelvin.com",
+   "year": "2024",
+   "desc": "Scaling up efficient home retrofits across Europe with AI and computer vision",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Nurture",
+   "website": "http://nurture.is",
+   "year": "2023",
+   "desc": "Immersive, story-based learning for families",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Skyflow",
+   "website": "http://flyskyflow.com",
+   "year": "2023",
+   "desc": "Situation reconnaissance by drone",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Streambased",
+   "website": "http://streambased.io",
+   "year": "2023",
+   "desc": "Merge data warehousing and streaming to offer dynamic and rapid data access",
+   "sectors": [
+    "enterprise",
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Sable Bio",
+   "website": "http://sablebio.com",
+   "year": "2023",
+   "desc": "Prevent target safety toxicology failures",
+   "sectors": [
+    "health-bio",
+    "ai"
+   ]
+  },
+  {
+   "name": ".txt",
+   "website": "http://dottxt.ai",
+   "year": "2023",
+   "desc": "Brings reliability to open source LLM output with Guided Generation",
+   "sectors": [
+    "ai",
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Verax",
+   "website": "http://verax.ai",
+   "year": "2023",
+   "desc": "Enterprise-grade trust solutions for Gen AI",
+   "sectors": [
+    "ai",
+    "security"
+   ]
+  },
+  {
+   "name": "Sunrise",
+   "website": "http://sunriserobotics.co",
+   "year": "2023",
+   "desc": "Augmenting humanity through intelligent robotics",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Emma",
+   "website": "http://emma-learn.com",
+   "year": "2023",
+   "desc": "Shaping the future of language education through immersive 3D AI avatars",
+   "sectors": [
+    "ai",
+    "consumer"
+   ]
+  },
+  {
+   "name": "Knostic",
+   "website": "http://knostic.ai",
+   "year": "2023",
+   "desc": "Enabling enterprises to control \ninstitutional knowledge with the power of LLMs",
+   "sectors": [
+    "ai",
+    "security"
+   ]
+  },
+  {
+   "name": "Spektr",
+   "website": "http://spektr.com",
+   "year": "2023",
+   "desc": "Monitor customer behaviour and risks and auto solve KYC/AML alerts",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Apoha",
+   "website": "http://apoha.com",
+   "year": "2023",
+   "desc": "Liquid brain that processes information by mimicking the mechanics of real neurons",
+   "sectors": [
+    "health-bio",
+    "ai"
+   ]
+  },
+  {
+   "name": "Fifth Dimension",
+   "website": "http://fifthdimensionai.com",
+   "year": "2023",
+   "desc": "AI Co-Pilot for real estate deals, data, and documents",
+   "sectors": [
+    "enterprise",
+    "ai"
+   ]
+  },
+  {
+   "name": "Verisian",
+   "website": "http://verisian.com",
+   "year": "2023",
+   "desc": "Accelerate drug time to market through real study traceability and trial integrity",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Flagcat",
+   "website": "http://flagcat.studio",
+   "year": "2023",
+   "desc": "Shaping the future of webtoons",
+   "sectors": [
+    "ai",
+    "consumer"
+   ]
+  },
+  {
+   "name": "Enzai",
+   "website": "http://enz.ai",
+   "year": "2023",
+   "desc": "Governance platform to help organisations adopt best-in-class AI policies",
+   "sectors": [
+    "security",
+    "ai"
+   ]
+  },
+  {
+   "name": "AskUI",
+   "website": "http://askui.com",
+   "year": "2023",
+   "desc": "Agentic Testing for the connected world",
+   "sectors": [
+    "developer-tools",
+    "ai"
+   ]
+  },
+  {
+   "name": "Arcjet",
+   "website": "http://arcjet.com",
+   "year": "2023",
+   "desc": "Arcjet helps developers protect their apps",
+   "sectors": [
+    "security",
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Bookend",
+   "website": "http://bookend.ai",
+   "year": "2023",
+   "desc": "AI autopilot for your Specialty Medical Practice",
+   "sectors": [
+    "health-bio",
+    "ai"
+   ]
+  },
+  {
+   "name": "Embedd",
+   "website": "http://embedd.it",
+   "year": "2023",
+   "desc": "ML generated drivers for embedded software",
+   "sectors": [
+    "developer-tools",
+    "ai"
+   ]
+  },
+  {
+   "name": "Membrane",
+   "website": "http://getmembrane.com",
+   "year": "2023",
+   "desc": "Provides a single flow to integrate with every external application",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Prelude",
+   "website": "http://prelude.so",
+   "year": "2023",
+   "desc": "SMS verification infrastructure for better fraud detection and conversion",
+   "sectors": [
+    "security",
+    "ai"
+   ]
+  },
+  {
+   "name": "Pelikan Mobility",
+   "website": "http://pelikan-mobility.com",
+   "year": "2023",
+   "desc": "Next-generation green fleet lessor",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "MotorMia",
+   "website": "http://motormia.co",
+   "year": "2023",
+   "desc": "Marketplace for automotive enthusiasts to buy and sell speciality equipment",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "RunWhen",
+   "website": "http://runwhen.com",
+   "year": "2023",
+   "desc": "Digital assistant for troubleshooting complex cloud environments",
+   "sectors": [
+    "developer-tools",
+    "ai"
+   ]
+  },
+  {
+   "name": "Ferry",
+   "website": "http://deployferry.io",
+   "year": "2023",
+   "desc": "Factory OS",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Dust",
+   "website": "http://dust.tt",
+   "year": "2023",
+   "desc": "Making and deploying large language model apps",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Trezy",
+   "website": "http://trezy.io",
+   "year": "2023",
+   "desc": "AI-enabled real-time & automated financial performance",
+   "sectors": [
+    "fintech",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Argil",
+   "website": "http://argil.ai",
+   "year": "2023",
+   "desc": "No code automation platform for Generative AI",
+   "sectors": [
+    "developer-tools",
+    "ai"
+   ]
+  },
+  {
+   "name": "Faks",
+   "website": "http://faks.co",
+   "year": "2023",
+   "desc": "All-in-one sales platform connecting labs and pharmacies",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Plumery",
+   "website": "http://plumery.com",
+   "year": "2023",
+   "desc": "Digital engagement platform that helps banks implement digital programs",
+   "sectors": [
+    "developer-tools",
+    "fintech"
+   ]
+  },
+  {
+   "name": "UnifiedCRM",
+   "website": "http://unifiedcrm.ai",
+   "year": "2023",
+   "desc": "A unified sales hub for remote and hybrid teams",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Twig",
+   "website": "http://twig.bio",
+   "year": "2022",
+   "desc": "Producing sustainable molecules through engineered biology",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Mimo",
+   "website": "http://mimohq.com",
+   "year": "2022",
+   "desc": "Helping SMBs manage payments & cashflows",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Cakewalk",
+   "website": "http://cakewalk.security",
+   "year": "2022",
+   "desc": "Easy Identity & Access Management for fast-moving companies",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Kubeark",
+   "website": "http://kubeark.com",
+   "year": "2022",
+   "desc": "Enterprise—grade container and application management",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "DinMo",
+   "website": "http://dinmo.com",
+   "year": "2022",
+   "desc": "Leveraging 1st party data intelligently in marketing tools to improve performance in a cookieless world",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Light",
+   "website": "http://light.inc",
+   "year": "2022",
+   "desc": "Modular, end-to-end solution for corporates to manage their financial setup",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Webstudio",
+   "website": "http://webstudio.is",
+   "year": "2022",
+   "desc": "Open source visual development platform for designers and developers",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Spotlock",
+   "website": "http://spotlock.co",
+   "year": "2022",
+   "desc": "Leveraging commodity exchanges to lock in materials purchase prices",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Inovia Bio",
+   "website": "http://inovia.bio",
+   "year": "2022",
+   "desc": "De-risk and accelerate drug development for pharmaceutical companies",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Rerun",
+   "website": "http://rerun.io",
+   "year": "2022",
+   "desc": "Visual troubleshooting for computer vision in the physical world",
+   "sectors": [
+    "developer-tools",
+    "ai"
+   ]
+  },
+  {
+   "name": "Sidekick",
+   "website": "http://sidekickmoney.com/",
+   "year": "2022",
+   "desc": "Next-gen investment platform for the under-served mass affluent consumer",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Papaya",
+   "website": "http://papayadash.com",
+   "year": "2022",
+   "desc": "The platform to source, run and manage your electric vehicles",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Autone",
+   "website": "http://autone.io",
+   "year": "2022",
+   "desc": "Modular data platform to help retail & CPG businesses make better decisions",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Granular",
+   "website": "http://granular-energy.com",
+   "year": "2022",
+   "desc": "Market solutions for 24/7 clean energy",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Cyscale",
+   "website": "http://cyscale.com",
+   "year": "2022",
+   "desc": "Complete cloud visibility & control platform",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Hubflo",
+   "website": "http://hubflo.com",
+   "year": "2022",
+   "desc": "All-in-one SaaS for SMBs",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Klump",
+   "website": "http://useklump.com",
+   "year": "2022",
+   "desc": "BNPL infrastructure for African banks",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Visibly",
+   "website": "http://visiblyhq.com",
+   "year": "2022",
+   "desc": "Certification platform for regulated training in the infrastructure sector",
+   "sectors": [
+    "enterprise",
+    "climate"
+   ]
+  },
+  {
+   "name": "Rasayel",
+   "website": "http://rasayel.io",
+   "year": "2021",
+   "desc": "Omnichannel communication platform for your business.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Rayon",
+   "website": "http://rayon.design",
+   "year": "2021",
+   "desc": "Collaborative space design at scale",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Paua",
+   "website": "http://pauatech.com",
+   "year": "2021",
+   "desc": "Fleet optimisation platform starting with payments",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Join",
+   "website": "http://join-stories.com",
+   "year": "2021",
+   "desc": "Creating professional stories for brands",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Fabric",
+   "website": "http://fabric.so",
+   "year": "2022",
+   "desc": "A collaboration and productivity layer for the internet",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Those Beyond",
+   "website": "http://thosebeyond.io",
+   "year": "2022",
+   "desc": "Building meaningful worlds, an immersive online games publisher",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Popsink",
+   "website": "http://popsink.com",
+   "year": "2021",
+   "desc": "Orchestration platform for data streams",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Fiat Republic",
+   "website": "http://fiatrepublic.com",
+   "year": "2021",
+   "desc": "Bridging banking & crypto",
+   "sectors": [
+    "fintech",
+    "crypto"
+   ]
+  },
+  {
+   "name": "Figures",
+   "website": "http://figures.hr",
+   "year": "2021",
+   "desc": "Access compensation data coming from employees, start-ups & scale-ups",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Zinc",
+   "website": "http://zincwork.com",
+   "year": "2021",
+   "desc": "Automated background checking software",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Lindus Health",
+   "website": "http://lindushealth.com",
+   "year": "2021",
+   "desc": "From recruitment to delivery, Lindus accelerates clinical trials",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Electric Car Scheme",
+   "website": "http://electriccarscheme.com",
+   "year": "2021",
+   "desc": "Government tax savings on any electric car",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Fullview",
+   "website": "http://fullview.io",
+   "year": "2021",
+   "desc": "Customer experience control centre",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Rodeo",
+   "website": "http://gorodeo.app",
+   "year": "2021",
+   "desc": "The Rider Super-App",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Tilt",
+   "website": "http://tilt.app",
+   "year": "2021",
+   "desc": "Live shopping experiences for digital natives",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Outverse",
+   "website": "http://outverse.com",
+   "year": "2021",
+   "desc": "AI agents for instant customer support",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Sikoia",
+   "website": "http://sikoia.com",
+   "year": "2021",
+   "desc": "Unified data platform for financial services",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Yavin",
+   "website": "http://yavin.com",
+   "year": "2021",
+   "desc": "A one-stop-shop in-store payment solution for European merchants",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "CNC24",
+   "website": "http://cnc24.com",
+   "year": "2021",
+   "desc": "Marketplace for custom metal products",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Rollee",
+   "website": "http://getrollee.com",
+   "year": "2021",
+   "desc": "The gateway for reliable employment and income data.",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Liveblocks",
+   "website": "http://liveblocks.io",
+   "year": "2021",
+   "desc": "Creating performant and reliable collaborative experiences",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Medusa",
+   "website": "http://medusajs.com",
+   "year": "2021",
+   "desc": "API-first commerce engine built for fast-growing businesses",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Foreword Fund",
+   "website": "http://foreword.vc",
+   "year": "2021",
+   "desc": "An early-stage micro fund led by Declan Kelly",
+   "sectors": []
+  },
+  {
+   "name": "Klasha",
+   "website": "http://klasha.com",
+   "year": "2021",
+   "desc": "Simplifying borderless payments for commerce in Africa",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Doorfeed",
+   "website": "http://doorfeed.com",
+   "year": "2021",
+   "desc": "End-to-end acquisition platform for real estate buyers",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Cerbos",
+   "website": "http://cerbos.dev",
+   "year": "2021",
+   "desc": "Authorization as a Service platform",
+   "sectors": [
+    "security",
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "GDevelop",
+   "website": "http://gdevelop.io",
+   "year": "2021",
+   "desc": "Accessible fast no-code 2D game creation for everyone",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Vespucci",
+   "website": "http://vespuccianalytics.com",
+   "year": "2021",
+   "desc": "Automatically transforms customer data into insights",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Vidjet",
+   "website": "http://vidjet.com",
+   "year": "2021",
+   "desc": "Smart pop-up videos for the web",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "HelloFlow",
+   "website": "http://helloflow.io",
+   "year": "2021",
+   "desc": "No-code digital client onboarding solution",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Manara",
+   "website": "http://manara.tech",
+   "year": "2021",
+   "desc": "Connecting companies with the best software engineers in the Middle East",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Julienne Bruno",
+   "website": "http://juliennebruno.com",
+   "year": "2021",
+   "desc": "Original products that are naturally plant-based",
+   "sectors": [
+    "consumer",
+    "climate"
+   ]
+  },
+  {
+   "name": "Buynomics",
+   "website": "http://buynomics.com",
+   "year": "2020",
+   "desc": "Pricing optimisation software powered by large scale simulation",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Yonder",
+   "website": "http://yonder.com",
+   "year": "2020",
+   "desc": "Reimagining the modern credit card",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Vitesse",
+   "website": "http://vitesseautomation.com",
+   "year": "2020",
+   "desc": "Next-generation manufacturing software for industry 4.0",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Treecard",
+   "website": "http://treecard.org",
+   "year": "2021",
+   "desc": "The wooden debit card that plants trees",
+   "sectors": [
+    "climate",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Baserow",
+   "website": "http://baserow.io",
+   "year": "2020",
+   "desc": "Open source no-code database",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Surfboard",
+   "website": "http://teamsurfboard.com",
+   "year": "2020",
+   "desc": "Data-powered tools to help orchestrate customer service teams",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "OneShot",
+   "website": "http://oneshot.ai",
+   "year": "2020",
+   "desc": "Deep learning powered sales prospecting",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "LiveFlow",
+   "website": "http://liveflow.com",
+   "year": "2020",
+   "desc": "Automated financial management",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Blobr",
+   "website": "http://blobr.io",
+   "year": "2020",
+   "desc": "AI Powered Ads expert",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Appwrite",
+   "website": "http://appwrite.io",
+   "year": "2020",
+   "desc": "An open-source end-to-end backend server",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Flow AI",
+   "website": "http://flow-ai.com",
+   "year": "2020",
+   "desc": "Open small language model for evaluation",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Limbo",
+   "website": "http://limborevolution.com",
+   "year": "2020",
+   "desc": "A high end performance coach that monitors key indicative vitals in real time",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Gardin",
+   "website": "http://gardin.ag",
+   "year": "2020",
+   "desc": "Nutritional and food quality analytics",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Picnic",
+   "website": "http://picnic.photos",
+   "year": "2020",
+   "desc": "Revolutionising group chat for close friends",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "loc.tax",
+   "website": "http://loctax.com",
+   "year": "2020",
+   "desc": "Collaborative tax project management based on Git",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Weavr",
+   "website": "http://weavr.io",
+   "year": "2020",
+   "desc": "Cloud-based collaboration platform for building digital payment flows",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Paid",
+   "website": "http://paid.co.uk",
+   "year": "2020",
+   "desc": "Automation and collaboration software to simplify enterprise procurement",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Vanilla Steel",
+   "website": "http://vanillasteel.com",
+   "year": "2020",
+   "desc": "Independent platform for non-prime steels",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Utopia",
+   "website": "http://utopia.app",
+   "year": "2020",
+   "desc": "Online platform for designing, coding and shipping applications",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Gaia",
+   "website": "http://gaiafamily.com",
+   "year": "2020",
+   "desc": "Making IVF accessible, affordable and personal",
+   "sectors": [
+    "health-bio",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Certifaction",
+   "website": "http://certifaction.com",
+   "year": "2020",
+   "desc": "Restoring trust in the digital world by creating instantly verifiable information on the blockchain",
+   "sectors": [
+    "security",
+    "crypto"
+   ]
+  },
+  {
+   "name": "Meilisearch",
+   "website": "http://meilisearch.com",
+   "year": "2020",
+   "desc": "Next generation search API",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Tooth Fairy",
+   "website": "http://toothfairyapp.co.uk",
+   "year": "2020",
+   "desc": "Dentistry on demand",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "tl;dv",
+   "website": "http://tldv.io",
+   "year": "2020",
+   "desc": "Meeting productivity tool for remote-first teams",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Sylvera",
+   "website": "http://sylvera.com",
+   "year": "2020",
+   "desc": "Building the technical infrastructure and verification layer underpinning carbon markets",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Sense Street",
+   "website": "http://sensestreet.com",
+   "year": "2020",
+   "desc": "Reinventing communications in capital markets",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "MedAll",
+   "website": "http://medall.org",
+   "year": "2020",
+   "desc": "The medical career passport",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Jelly",
+   "website": "http://getjelly.co.uk",
+   "year": "2020",
+   "desc": "Simple and accurate food management for chefs in one place",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "QuestDB",
+   "website": "http://questdb.com",
+   "year": "2020",
+   "desc": "Open-source, SQL relational database designed to process time-series data, faster",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Ben",
+   "website": "http://thanksben.com",
+   "year": "2019",
+   "desc": "Flexible workplace benefits platform",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Resistant AI",
+   "website": "http://resistant.ai",
+   "year": "2019",
+   "desc": "Security for machine learning in fintech",
+   "sectors": [
+    "security",
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Humanity",
+   "website": "http://humanity.health",
+   "year": "2019",
+   "desc": "Subscription platform enabling you to live a healthier, longer life",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Primer",
+   "website": "http://primer.io",
+   "year": "2019",
+   "desc": "Supercharging payments through a unified API",
+   "sectors": [
+    "developer-tools",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Tickitto",
+   "website": "http://tickitto.com",
+   "year": "2019",
+   "desc": "The global API for tickets",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Agamon Health",
+   "website": "http://agamonhealth.com",
+   "year": "2019",
+   "desc": "Improving clinical performance by unlocking the value of critical data trapped within unstructured medical reports",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Salv",
+   "website": "http://salv.com",
+   "year": "2019",
+   "desc": "Smart AML platform for banks & fintechs",
+   "sectors": [
+    "security",
+    "fintech"
+   ]
+  },
+  {
+   "name": "vyne",
+   "website": "http://payvyne.com",
+   "year": "2019",
+   "desc": "Open Banking-enabled payments for eCommerce",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Boundless",
+   "website": "http://boundlesshq.com",
+   "year": "2019",
+   "desc": "Making it easy to employ anyone, anywhere",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Martie",
+   "website": "http://martie.com",
+   "year": "2019",
+   "desc": "The smart way to shop foods that are cheap for you and rich for the planet.",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Supercede",
+   "website": "http://supercede.com",
+   "year": "2019",
+   "desc": "Digital marketplace for reinsurance",
+   "sectors": [
+    "marketplaces",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Hopin",
+   "website": "http://hopin.com",
+   "year": "2019",
+   "desc": "First all-in-one live online events platform",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Pento",
+   "website": "http://hibob.com",
+   "year": "2019",
+   "desc": "Fully automated payroll",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "hi.health",
+   "website": "http://hi.health",
+   "year": "2019",
+   "desc": "Your personal concierge for health insurance",
+   "sectors": [
+    "health-bio",
+    "fintech"
+   ]
+  },
+  {
+   "name": "PortalOne",
+   "website": "http://portalone.com",
+   "year": "2019",
+   "desc": "Combining games, live entertainment and Mixed Reality into a completely new interactive experience",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Stotles",
+   "website": "http://stotles.com",
+   "year": "2019",
+   "desc": "B2G sales intelligence for public-sector businesses",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Rossum",
+   "website": "http://rossum.ai",
+   "year": "2019",
+   "desc": "Automating data extraction from documents with AI to create a world without manual data entry",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Graphy",
+   "website": "http://graphy.app",
+   "year": "2019",
+   "desc": "Data collaboration platform allowing teams to reimagine how they work with data",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "StudentFinance",
+   "website": "http://studentfinance.com",
+   "year": "2019",
+   "desc": "Tuition financing via Income-share Agreements",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Uncapped",
+   "website": "http://weareuncapped.com",
+   "year": "2019",
+   "desc": "Fast, flexible loans to help SaaS and e-commerce businesses grow",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Dreamdata",
+   "website": "http://dreamdata.io",
+   "year": "2019",
+   "desc": "Multi-touch attribution and revenue analytics for B2B companies",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Peppy",
+   "website": "http://peppy.health",
+   "year": "2019",
+   "desc": "Employee support in moments that matter, by employers that care",
+   "sectors": [
+    "marketplaces",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "LIV",
+   "website": "http://liv.tv",
+   "year": "2019",
+   "desc": "Powering spectator experiences for VR",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Sorare",
+   "website": "http://sorare.com",
+   "year": "2019",
+   "desc": "Ecosystem for collecting and playing with branded crypto-goods",
+   "sectors": [
+    "crypto"
+   ]
+  },
+  {
+   "name": "Machinations",
+   "website": "http://machinations.io",
+   "year": "2019",
+   "desc": "The browser-based platform to design, balance and simulate game systems",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Synthesia",
+   "website": "http://synthesia.io",
+   "year": "2019",
+   "desc": "AI-driven video editing and production",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Itch",
+   "website": "http://itchpet.com",
+   "year": "2019",
+   "desc": "Personalised, effective treatments for pet wellbeing delivered through your letterbox",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Orbital",
+   "website": "http://orbital.tech",
+   "year": "2019",
+   "desc": "Automating legal diligence for property transactions",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Nodes and Links",
+   "website": "http://nodeslinks.com",
+   "year": "2019",
+   "desc": "Enabling organisations to understand the risks that stem from complex interactions",
+   "sectors": [
+    "security",
+    "ai"
+   ]
+  },
+  {
+   "name": "CLUBZERO",
+   "website": "http://clubzero.co",
+   "year": "2018",
+   "desc": "Reusable food and beverage packaging system that replaces single-use packaging",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Metaview",
+   "website": "http://metaview.ai",
+   "year": "2018",
+   "desc": "Empowering organisations with data to create world-class interview processes at scale",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Taxfix",
+   "website": "http://taxfix.com",
+   "year": "2018",
+   "desc": "Digital tax advisor that offers online tax preparation services",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Spill",
+   "website": "http://spill.chat",
+   "year": "2018",
+   "desc": "Bringing the benefits of talking therapy to your phone",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Gameye",
+   "website": "http://gameye.com",
+   "year": "2018",
+   "desc": "Developing deployment solutions for gameservers, creating matchmaking capabilities across a global network",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Millimetric",
+   "website": "http://millimetric.ai",
+   "year": "2018",
+   "desc": "Anomaly detection software",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Reply.ai",
+   "website": "http://reply.ai",
+   "year": "2018",
+   "desc": "Making customer service faster and smarter via automated ticket deflection",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Ezra",
+   "website": "http://ezra.com",
+   "year": "2018",
+   "desc": "Developing next generation cancer screening technology using AI & MRIs",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Nordigen",
+   "website": "http://nordigen.com",
+   "year": "2018",
+   "desc": "Helping banks analyse account data to approve more creditworthy customers",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Elephant Healthcare",
+   "website": "http://elephant.healthcare",
+   "year": "2018",
+   "desc": "Digitising frontline healthcare, with a focus on emerging markets",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Risk Ledger",
+   "website": "http://riskledger.com",
+   "year": "2018",
+   "desc": "The world’s first scalable security assurance platform",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Back",
+   "website": "http://backhq.com",
+   "year": "2018",
+   "desc": "Automating internal requests and routine processes",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "superscript",
+   "website": "http://gosuperscript.com",
+   "year": "2018",
+   "desc": "Specialist insurance provider for digital native businesses",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Vitrolabs",
+   "website": "http://vitrolabsinc.com",
+   "year": "2018",
+   "desc": "Lab grown leather",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Ramp",
+   "website": "http://rampnetwork.com",
+   "year": "2018",
+   "desc": "The decentralised protocol powering fiat to crypto exchanges",
+   "sectors": [
+    "fintech",
+    "crypto"
+   ]
+  },
+  {
+   "name": "Sano",
+   "website": "http://sanogenetics.com",
+   "year": "2018",
+   "desc": "Providing researchers access to valuable genetic and health data while protecting the individuals who provide it",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Peony",
+   "website": "http://peony.ink",
+   "year": "2018",
+   "desc": "Note taking tools combined with a reliable knowledge database",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Synthesized",
+   "website": "http://synthesized.io",
+   "year": "2018",
+   "desc": "AI-driven software for generating better quality artificial data",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Griffin",
+   "website": "http://griffin.com",
+   "year": "2018",
+   "desc": "Bank-as-a-platform, providing bank accounts and payments for fintechs and other money service businesses",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Harbr",
+   "website": "http://harbrdata.com",
+   "year": "2018",
+   "desc": "Making it easier than ever to find, analyse and distribute data",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Maze",
+   "website": "http://maze.co",
+   "year": "2018",
+   "desc": "Maze empowers product and marketing teams to test, learn, and act rapidly",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "THIS",
+   "website": "http://this.co",
+   "year": "2018",
+   "desc": "Producing realistic, plant-based meat products for the mass-market",
+   "sectors": [
+    "climate"
+   ]
+  },
+  {
+   "name": "Veratrak",
+   "website": "http://veratrak.com",
+   "year": "2018",
+   "desc": "Smarter analytics, collaboration tools and record-keeping for pharmaceutical supply chain companies",
+   "sectors": [
+    "enterprise",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Fluidstack",
+   "website": "http://fluidstack.io",
+   "year": "2018",
+   "desc": "AI cloud platform that aggregates underutilised GPUs from global data centres to deliver high‑performance, scalable GPU compute for AI/ML",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Doctorly",
+   "website": "http://doctorly.de",
+   "year": "2018",
+   "desc": "Manage your medical practice with one simple system",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Sweatcoin",
+   "website": "http://sweatco.in",
+   "year": "2017",
+   "desc": "Digital currency backed by physical movement",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Pace",
+   "website": "http://paceup.com",
+   "year": "2017",
+   "desc": "Intelligent pricing for the hospitality industry. Using machine learning to find the right price",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "StepLadder",
+   "website": "http://joinstepladder.com",
+   "year": "2017",
+   "desc": "Collaborative financing enabling you to get your home deposit 45% faster on average",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "PassFort",
+   "website": "http://passfort.com",
+   "year": "2017",
+   "desc": "Automated AML & KYC onboarding",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "SeedLegals",
+   "website": "http://seedlegals.com",
+   "year": "2017",
+   "desc": "Raise. Invest. Legals. Sorted.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Flow",
+   "website": "http://flowengineering.com",
+   "year": "2016",
+   "desc": "Revolutionising hardware development, starting with the most collaborative requirements management tool in the world",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "9fin",
+   "website": "http://9fin.com",
+   "year": "2017",
+   "desc": "AI powered financial data platform for fixed income",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Nevercode",
+   "website": "http://codemagic.io",
+   "year": "2015",
+   "desc": "Cloud-based continuous integration & delivery for iOS, Android, Cordova, Ionic, React Native & Flutter projects",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Bloomsbury",
+   "website": "http://bloomsbury.ai",
+   "year": "2017",
+   "desc": "Enabling everyone to rapidly create text understanding applications",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Zamna",
+   "website": "http://zamna.com",
+   "year": "2017",
+   "desc": "Strategic data sharing for airlines, enabled through blockchain.",
+   "sectors": [
+    "crypto",
+    "security"
+   ]
+  },
+  {
+   "name": "Labstep",
+   "website": "http://labstep.com",
+   "year": "2017",
+   "desc": "Capturing real-time scientific process data to improve research and enable collaboration.",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Wevat",
+   "website": "http://wevat.com",
+   "year": "2017",
+   "desc": "Digitising tax free shopping by allowing non-EU travellers to confirm their eligibility, record purchases and claim back Value Added Tax.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "CyberSmart",
+   "website": "http://cybersmart.co.uk",
+   "year": "2016",
+   "desc": "Automated compliance to protect your organisation and data",
+   "sectors": [
+    "security"
+   ]
+  },
+  {
+   "name": "Cuvva",
+   "website": "http://cuvva.com",
+   "year": "2016",
+   "desc": "Pay-as-you-drive insurance on your terms.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Telleroo",
+   "website": "http://telleroo.com",
+   "year": "2016",
+   "desc": "Bulk payments simplified",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Fraugster",
+   "website": "http://fraugster.com",
+   "year": "2016",
+   "desc": "Using AI to eliminate e-commerce fraud and increase customers’ profits.",
+   "sectors": [
+    "security",
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Legit Patents",
+   "website": "http://legit.ai",
+   "year": "2016",
+   "desc": "AI-powered Intellectual Property Department",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "viz.ai",
+   "website": "http://viz.ai",
+   "year": "2016",
+   "desc": "Viz.ai alerts multidisciplinary care teams earlier in the workflow, to coordinate care and connect frontline health care professionals (HCPs) to specialists and facilitate efficient communication and care coordination.",
+   "sectors": [
+    "ai",
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Libryo",
+   "website": "http://libryo.com",
+   "year": "2016",
+   "desc": "SaaS for regulatory law. Providing certainty to compliance professionals, by answering their legal questions at their time and place.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "CRU Kafe",
+   "website": "http://crukafe.com",
+   "year": "2016",
+   "desc": "The finest Organic coffee from around the world, in the convenience of a Nespresso® friendly capsule",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Wave",
+   "website": "http://wavexr.com",
+   "year": "2016",
+   "desc": "The platform for creating and sharing virtual concerts",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Reposit",
+   "website": "http://reposit.co.uk",
+   "year": "2016",
+   "desc": "The tenancy deposit alternative.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Vinterior",
+   "website": "http://vinterior.co",
+   "year": "2016",
+   "desc": "A two-sided marketplace connecting professional furniture sellers to buyers of vintage and design furniture.",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "KareInn",
+   "website": "http://kareinn.com",
+   "year": "2016",
+   "desc": "Improving the quality of life for our parents’ generation.",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Trail",
+   "website": "http://trailapp.com",
+   "year": "2016",
+   "desc": "Smart daily checklist for operations management.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Thriva",
+   "website": "http://thriva.co",
+   "year": "2016",
+   "desc": "Thriva offers a personalized at-home finger-prick blood test which enables individuals to easily track and improve health.",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Alterest",
+   "website": "http://alterest.co",
+   "year": "2015",
+   "desc": "Institutional-grade data and tools for private and alternative credit",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Juro",
+   "website": "http://juro.com",
+   "year": "2016",
+   "desc": "The contract collaboration platform: contract management software your whole team will love",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Beeline",
+   "website": "http://beeline.co",
+   "year": "2016",
+   "desc": "A revolutionary navigation system to transform your ride in the city",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Cronofy",
+   "website": "http://cronofy.com",
+   "year": "2014",
+   "desc": "APIs for calendar connectivity and interview scheduling automation",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Kasko",
+   "website": "http://kasko.io",
+   "year": "2015",
+   "desc": "Digital end-to-end platform for bespoke on-demand insurance.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Charlie HR",
+   "website": "http://charliehr.com",
+   "year": "2016",
+   "desc": "The free HR platform for small businesses.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Wefox",
+   "website": "http://wefox.com",
+   "year": "2015",
+   "desc": "wefox is a category-defining insurtech platform that is connecting insurance companies, distributors, and customers, to give the world simple access to digital insurance solutions.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "AI Build",
+   "website": "http://ai-build.com",
+   "year": "2016",
+   "desc": "Developing Artificial Intelligence and 3D printing technologies to make manufacturing easier and smarter",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Much Better Adventures",
+   "website": "http://muchbetteradventures.com",
+   "year": "2015",
+   "desc": "Global marketplace for holidays and experiences from specialist local hosts.",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "SwiftShift",
+   "website": "http://swiftshift.com",
+   "year": "2015",
+   "desc": "SwiftShift is reimagining pediatric home care delivery by creating the first caregiver-managed pediatric home care service.",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "TalkPush",
+   "website": "http://talkpush.com",
+   "year": "2015",
+   "desc": "Building solutions to facilitate conversations with large talent pools via chat, messaging, and voice.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Pleo",
+   "website": "http://pleo.io",
+   "year": "2015",
+   "desc": "The company credit card reimagined.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "WealthKernel",
+   "website": "http://wealthkernel.com",
+   "year": "2015",
+   "desc": "Automated wealth management as a service to institutional clients.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Getagent",
+   "website": "http://getagent.co.uk",
+   "year": "2015",
+   "desc": "Find the best estate agent to sell your home, in just a few clicks.",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Priori Data",
+   "website": "http://prioridata.com",
+   "year": "2015",
+   "desc": "Quantify the app economy.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "JOBDOH",
+   "website": "http://jobdoh.com",
+   "year": "2015",
+   "desc": "A quick location based booking platform to get quality temporary workers for hospitality and exhibitions",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Pollen",
+   "website": "http://pollentechnologies.com",
+   "year": "2015",
+   "desc": "Pay and collect funds around the world quickly, cheaply and efficiently.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Edgefolio",
+   "website": "http://edgefolio.com",
+   "year": "2015",
+   "desc": "The platform connecting Investors and Fund Managers through data.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Traderion",
+   "website": "http://traderion.com",
+   "year": "2015",
+   "desc": "Simulation based assessment and training tool for trading professionals.",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "UiPath",
+   "website": "http://uipath.com",
+   "year": "2015",
+   "desc": "Leaders in Robotic Process Automation",
+   "sectors": [
+    "ai",
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Medefer",
+   "website": "http://medefer.com",
+   "year": "2014",
+   "desc": "Consultant advice at your fingertips",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "Land Insight",
+   "website": "http://land.tech",
+   "year": "2015",
+   "desc": "Find and assess off-market development land.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Curve",
+   "website": "http://curve.com",
+   "year": "2015",
+   "desc": "Building a money hub where you can spend, see, & save your money effortlessly, all in one place.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Branchtrack",
+   "website": "http://branchtrack.com",
+   "year": "2014",
+   "desc": "The effective way to boost sales and customer care skills",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Reinfer",
+   "website": "http://reinfer.io",
+   "year": "2015",
+   "desc": "Re:infer takes the communications streams you receive and turns them into something you can automate a business process against.",
+   "sectors": [
+    "ai"
+   ]
+  },
+  {
+   "name": "Grover",
+   "website": "http://grover.com",
+   "year": "2015",
+   "desc": "Reinventing consumption with a simple, on-demand subscription model for all the products you love.",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Monese",
+   "website": "http://monese.com",
+   "year": "2015",
+   "desc": "Monese is a digital banking option that provides mobile-only, multi-currency accounts in countries across the European Economic Area.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Spoke",
+   "website": "http://spoke-london.com",
+   "year": "2015",
+   "desc": "Properly made clothes that really fit, direct from the workshop.",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Trussle",
+   "website": "http://trussle.com",
+   "year": "2015",
+   "desc": "Simpler way to get a mortgage.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Revolut",
+   "website": "http://revolut.com",
+   "year": "2015",
+   "desc": "Revolut is a financial services company that specializes in mobile banking, card payments, money remittance, and foreign exchange.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Marcopolo Learning",
+   "website": "http://marcopololearning.com",
+   "year": "2015",
+   "desc": "Reimagining children's media",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Hubble",
+   "website": "http://hubblehq.com",
+   "year": "2014",
+   "desc": "Making renting office space easy",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Property Partner",
+   "website": "http://propertypartner.co",
+   "year": "2014",
+   "desc": "Property crowdfunding platform and trading exchange.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Lodgify",
+   "website": "http://lodgify.com",
+   "year": "2014",
+   "desc": "Create your own vacation rental website",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Reedsy",
+   "website": "http://reedsy.com",
+   "year": "2014",
+   "desc": "A community of top publishing professionals to create amazing books.",
+   "sectors": [
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "BridgeU",
+   "website": "http://bridge-u.com",
+   "year": "2014",
+   "desc": "Data-driven university and careers guidance to empower schools",
+   "sectors": [
+    "enterprise",
+    "marketplaces"
+   ]
+  },
+  {
+   "name": "Satago",
+   "website": "http://satago.com",
+   "year": "2013",
+   "desc": "Helping businesses get paid on time.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Oradian",
+   "website": "http://oradian.com",
+   "year": "2014",
+   "desc": "Oradian provides a unique enterprise solution to financial institutions across South East Asia and Africa.",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Elliptic",
+   "website": "http://elliptic.co",
+   "year": "2014",
+   "desc": "Identifying illicit activity on the blockchain",
+   "sectors": [
+    "security",
+    "ai",
+    "crypto"
+   ]
+  },
+  {
+   "name": "Tanaza",
+   "website": "http://tanaza.com",
+   "year": "2014",
+   "desc": "All-in-one software that turns common Wi-Fi routers into cloud-managed Wi-Fi social hotspots.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Fishbrain",
+   "website": "http://fishbrain.com",
+   "year": "2013",
+   "desc": "The fastest growing app & social network for the world's biggest hobby - sport fishing",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Countly",
+   "website": "http://countly.com",
+   "year": "2013",
+   "desc": "Mobile analytics for the enterprise",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Codacy",
+   "website": "http://codacy.com",
+   "year": "2012",
+   "desc": "Automating code reviews and monitors code quality over time.",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "James Finance",
+   "website": "http://james.finance",
+   "year": "2012",
+   "desc": "Predict bad loans with Machine Learning. Based on the best machine learning algorithms, James helps Risk Officers generate highly predictive credit scoring models.",
+   "sectors": [
+    "ai",
+    "fintech"
+   ]
+  },
+  {
+   "name": "Codeship",
+   "website": "http://codeship.com",
+   "year": "2012",
+   "desc": "A fast and secure hosted Continuous Delivery platform that scales with your needs.",
+   "sectors": [
+    "developer-tools"
+   ]
+  },
+  {
+   "name": "Minubo",
+   "website": "http://minubo.com",
+   "year": "2013",
+   "desc": "eCommerce Intelligence in the Cloud. Your online shop’s data hub with all key metrics",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Hole19",
+   "website": "http://hole19golf.com",
+   "year": "2012",
+   "desc": "Building the most amazing user experience for golfers on the course!",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "SimpleTax",
+   "website": "http://gosimpletax.com",
+   "year": "2012",
+   "desc": "The smart self assessment tax return filing software",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "SayDuck",
+   "website": "http://sayduck.com",
+   "year": "2012",
+   "desc": "Add reality to your sales",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Antavo",
+   "website": "http://antavo.com",
+   "year": "2012",
+   "desc": "Contest and loyalty software for e-commerce and retail brands",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "24Symbols",
+   "website": "http://24symbols.com",
+   "year": "2012",
+   "desc": "Read digital books online",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Qminder",
+   "website": "http://qminder.com",
+   "year": "2012",
+   "desc": "Qminder is a cloud-based queue management system.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Wise",
+   "website": "http://wise.com",
+   "year": "2011",
+   "desc": "Send money abroad easily and quickly with low-cost transfers",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Holvi",
+   "website": "http://holvi.com",
+   "year": "2011",
+   "desc": "Banking for makers and doers",
+   "sectors": [
+    "fintech"
+   ]
+  },
+  {
+   "name": "Grabcad",
+   "website": "http://grabcad.com",
+   "year": "2011",
+   "desc": "GrabCAD is an online community network for mechanical engineers to share talent, expand knowledge and collaborate with others.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Profitero",
+   "website": "http://profitero.com",
+   "year": "2010",
+   "desc": "Global Online Insights for Retailers and Brands",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "EDITED",
+   "website": "http://edited.com",
+   "year": "2010",
+   "desc": "The world’s biggest apparel data warehouse.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Scoville",
+   "website": "http://goscoville.com",
+   "year": "2009",
+   "desc": "A location-based recommendation engine that helps users discover at least one new place in their town each week",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Erply",
+   "website": "http://erply.com",
+   "year": "2009",
+   "desc": "Web based affordable point of sale software and inventory system for retailers",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Codility",
+   "website": "http://codility.com",
+   "year": "2009",
+   "desc": "Codility is an automated tool for assessment of programming skills.",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Platogo",
+   "website": "http://platogo.com",
+   "year": "2009",
+   "desc": "Gaming studio",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Patients Know Best",
+   "website": "http://patientsknowbest.com",
+   "year": "2009",
+   "desc": "Patients Know Best provide hospitals with personal health records software so that their patients can better manage their health",
+   "sectors": [
+    "health-bio"
+   ]
+  },
+  {
+   "name": "toksta",
+   "website": "http://toksta.com",
+   "year": "2008",
+   "desc": "Highly scalable instant messenger and chat solutions for online communities",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "stupeflix",
+   "website": "http://stupeflix.com",
+   "year": "2008",
+   "desc": "Make beautiful videos online, easily",
+   "sectors": [
+    "consumer"
+   ]
+  },
+  {
+   "name": "Evercontact",
+   "website": "http://evercontact.com",
+   "year": "2009",
+   "desc": "Your contacts automatically up to date",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Basekit",
+   "website": "http://basekit.com",
+   "year": "2008",
+   "desc": "The most partner friendly site builder",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "Zemanta",
+   "website": "http://zemanta.com",
+   "year": "2007",
+   "desc": "Content Ads, Amplified & Optimized",
+   "sectors": [
+    "enterprise"
+   ]
+  },
+  {
+   "name": "MyBuilder",
+   "website": "http://mybuilder.com",
+   "year": "2007",
+   "desc": "Find trusted builders and tradesmen.",
+   "sectors": [
+    "marketplaces"
+   ]
+  }
+ ],
+ "team_count": 17
+}

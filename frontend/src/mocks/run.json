@@ -1,0 +1,187 @@
+{
+  "run_id": "run_demo_localglobe",
+  "fund": {
+    "id": "localglobe",
+    "name": "LocalGlobe",
+    "url": "https://localglobe.vc",
+    "logo": "/logos/localglobe.png",
+    "dna": {
+      "summary": "Backs very early founders in the UK and Europe, mostly fintech, health and deep tech.",
+      "stage": "Pre-seed & Seed",
+      "geo": "UK & Europe",
+      "cheque": "£0.5M – £2M",
+      "sectors": [
+        {
+          "name": "Fintech",
+          "count": 14,
+          "share": 0.33,
+          "color": "#D3AD5E"
+        },
+        {
+          "name": "Health",
+          "count": 10,
+          "share": 0.24,
+          "color": "#B4532A"
+        },
+        {
+          "name": "Deep tech",
+          "count": 9,
+          "share": 0.21,
+          "color": "#7FA3C0"
+        },
+        {
+          "name": "Climate",
+          "count": 6,
+          "share": 0.14,
+          "color": "#5C7A63"
+        }
+      ],
+      "themes": [
+        "Very early UK and European founders",
+        "Fintech for everyday money",
+        "Health tools for the NHS",
+        "Deep tech from universities"
+      ],
+      "sources": [
+        {
+          "label": "localglobe.vc",
+          "url": "https://localglobe.vc",
+          "row_id": null
+        }
+      ]
+    }
+  },
+  "status": "running",
+  "task": "Find LocalGlobe’s next 10 deals and write a memo for the best one",
+  "started_at": "2026-10-15T09:00:00Z",
+  "elapsed_s": 134,
+  "plan": [
+    {
+      "label": "Read the website",
+      "status": "done"
+    },
+    {
+      "label": "Write the fund’s thesis",
+      "status": "done"
+    },
+    {
+      "label": "Check the news",
+      "status": "done"
+    },
+    {
+      "label": "Map portfolio & competitors",
+      "status": "working"
+    },
+    {
+      "label": "Find the next 10 deals",
+      "status": "working"
+    },
+    {
+      "label": "Write the memo",
+      "status": "waiting"
+    },
+    {
+      "label": "Fact-check it",
+      "status": "waiting"
+    }
+  ],
+  "agents": [
+    {
+      "name": "Partner",
+      "status": "working"
+    },
+    {
+      "name": "Reader",
+      "status": "done"
+    },
+    {
+      "name": "Thesis",
+      "status": "done"
+    },
+    {
+      "name": "Market",
+      "status": "done"
+    },
+    {
+      "name": "Mapper",
+      "status": "working"
+    },
+    {
+      "name": "Deal Finder",
+      "status": "working"
+    },
+    {
+      "name": "Analyst",
+      "status": "waiting"
+    },
+    {
+      "name": "Critic",
+      "status": "waiting"
+    }
+  ],
+  "partner_summary": "So far: LocalGlobe backs very early UK and European founders, mostly in fintech, health and deep tech. I found one strong match already.",
+  "since_last_run": "Since yesterday: 2 new matches, 1 competitor raised",
+  "shortlist": [
+    {
+      "rank": 1,
+      "company": {
+        "id": "northbeam-health",
+        "row_id": 4821,
+        "name": "Northbeam Health",
+        "one_liner": "AI triage for GP practices",
+        "sector": "Health",
+        "stage": "Seed",
+        "country": "UK",
+        "city": "Leeds",
+        "founded": 2023,
+        "website": "northbeam.health",
+        "logo": null
+      },
+      "fit": 94,
+      "fit_parts": [
+        {
+          "label": "Like the portfolio",
+          "value": 0.81
+        },
+        {
+          "label": "Right stage",
+          "value": 0.76
+        },
+        {
+          "label": "Right location",
+          "value": 0.71
+        }
+      ],
+      "signals": [
+        {
+          "kind": "timing",
+          "label": "Raising now",
+          "icon": "trending-up",
+          "source_url": null
+        },
+        {
+          "kind": "strength",
+          "label": "Like BioOrbit",
+          "icon": "link",
+          "source_url": null
+        },
+        {
+          "kind": "info",
+          "label": "Hiring 3 engineers",
+          "icon": "users",
+          "source_url": null
+        }
+      ],
+      "why": [
+        "Like BioOrbit and 2 other health companies they own",
+        "Raising a seed round now: their usual stage",
+        "UK founders, where LocalGlobe invests"
+      ],
+      "seen_label": "2h",
+      "status": "new",
+      "conflict_with": null,
+      "memo_id": "northbeam-health"
+    }
+  ],
+  "memo_ids": []
+}
