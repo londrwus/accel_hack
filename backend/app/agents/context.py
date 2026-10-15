@@ -10,6 +10,8 @@ live run, the run resumes: finished stages are loaded instead of re-run, and the
 
 from __future__ import annotations
 
+import contextvars
+
 import asyncio
 import logging
 from typing import Any, Awaitable, Callable, Optional, TypeVar
@@ -34,8 +36,14 @@ MAX_STAGE_RESUMES = 3  # restarts allowed per stage before it finishes with part
 FETCH_BACKOFF_S = 1.5  # tests set this to 0
 
 
+# Set inside the extra memo workers (deals #2..#5): their events must not tick the checklist again.
+EXTRA_MEMO: "contextvars.ContextVar[bool]" = contextvars.ContextVar("extra_memo", default=False)
+
+
 def plan(stage: str, status: str) -> dict:
     """data fields that tick the Research page checklist: {"plan_step": n, "plan_status": status}."""
+    if EXTRA_MEMO.get():
+        return {}
     return {"plan_step": STAGES.index(stage) + 1, "plan_status": status}
 
 

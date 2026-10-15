@@ -31,7 +31,7 @@ if TYPE_CHECKING:
 
 log = logging.getLogger("bellwether.runner")
 
-__all__ = ["run_live", "write_memo", "ORCHESTRATOR_MODEL", "WORKER_MODEL", "EXTRACT_MODEL", "LLMUnavailable"]
+__all__ = ["run_live", "write_memo", "write_top_memos", "ORCHESTRATOR_MODEL", "WORKER_MODEL", "EXTRACT_MODEL", "LLMUnavailable"]
 
 # Tests (or a future multi-client setup) can swap the model client here.
 _llm_factory = LLM
@@ -75,7 +75,11 @@ async def write_memo(run_id: str, fund_id: str, company_id: str, emit: "Emitter"
 
     pick = data.deal_item(fund_id, company_id)
     raw_dna = store.get_memory(fund_id, "fund_dna")
+    if raw_dna is None:  # seeded funds keep the thesis on the fund page only
+        saved = data.get_fund(fund_id).dna if store.get_memory(fund_id, "page:fund") else None
+        raw_dna = saved.model_dump(mode="json") if saved else None
     if pick is None or raw_dna is None:
+        log.warning("no memo for %s/%s: %s", fund_id, company_id, "no deal row" if pick is None else "no thesis")
         return None
     try:
         if llm is None:
@@ -96,5 +100,46 @@ async def write_memo(run_id: str, fund_id: str, company_id: str, emit: "Emitter"
         from .finder import set_memo_id
         set_memo_id(fund_id, company_id, memo.id)
         return memo
-    except (LLMError, StageFailed):
+    except (LLMError, StageFailed) as exc:
+        log.warning("memo for %s/%s failed: %s", fund_id, company_id, exc)
         return None
+
+
+async def write_top_memos(run_id: str, fund_id: str, emit: "Emitter", top: int = 5,
+                          llm: Optional[Any] = None) -> list["Memo"]:
+    """Memos for the current top `top` deals that don't have one yet: Analyst + Critic per deal, 3 at a time."""
+    import asyncio
+    from ..models import DealsResponse
+    from .context import EXTRA_MEMO
+
+    try:
+        deals = data._page(fund_id, "deals", DealsResponse).items[:max(1, top)]
+    except data.NoData:
+        return []
+    missing = [d for d in deals if data.memo(fund_id, d.company.id) is None]
+    log.info("top memos for %s: writing %s", fund_id, [d.company.id for d in missing])
+    if not missing:
+        return []
+    if llm is None:
+        _require_key()
+        llm = _llm_factory()
+    emit.step("Partner", f"Writing memos for {len(missing)} more of the top deals in parallel: "
+              + ", ".join(d.company.name for d in missing) + ".", parallel=["Analyst", "Critic"])
+    sem = asyncio.Semaphore(3)
+
+    async def one(d) -> Optional["Memo"]:
+        async with sem:
+            EXTRA_MEMO.set(True)
+            try:
+                memo = await write_memo(run_id, fund_id, d.company.id, emit, llm=llm)
+            except Exception as exc:  # one failed memo must never stop the others
+                log.warning("memo for %s failed: %s", d.company.id, type(exc).__name__)
+                memo = None
+            if memo is not None:
+                data.save_memo(fund_id, memo)
+            return memo
+
+    done = [m for m in await asyncio.gather(*(one(d) for d in missing)) if m is not None]
+    emit.step("Partner", f"{len(done)} more {'memo is' if len(done) == 1 else 'memos are'} ready to review "
+              "on the Investment Memos page.")
+    return done

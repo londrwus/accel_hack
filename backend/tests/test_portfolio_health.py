@@ -13,7 +13,8 @@ def _item(stage="Seed", website="x.com", health="good", signals=()):
 
 def test_health_from_real_signals():
     assert classify(_item(stage="Acquired"), None, today=TODAY)[0] == "exited"
-    assert classify(_item(website=None), None, today=TODAY)[0] == "at_risk"
+    assert classify(_item(website=None), None, today=TODAY)[0] == "unknown"  # a scraping gap, not a problem
+    assert classify(_item(), {"site_status": "no_site"}, today=TODAY)[0] == "unknown"
     assert classify(_item(), {"site_status": "unreachable"}, today=TODAY)[0] == "at_risk"
     assert classify(_item(), {"last_funding_date": "2025-01-10"}, today=TODAY)[0] == "watch"
     assert classify(_item(), {"last_funding_date": "2026-05-01"}, today=TODAY)[0] == "good"

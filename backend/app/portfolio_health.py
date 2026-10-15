@@ -1,7 +1,7 @@
 """Portfolio health from real signals, never a default "Doing well".
 
 exited    - the fund's site or the stage says sold / listed
-at_risk   - news flagged a problem, the website is down, or we can't find a website at all
+at_risk   - news flagged a problem, or the website is down (no website found is a scraping gap: unknown)
 watch     - news says a round is coming, or the last round was 12-30 months ago (the usual raise cycle)
 good      - good news, or a round in the last 12 months
 unknown   - no signal either way (said honestly)
@@ -45,10 +45,9 @@ def classify(item: PortfolioItem, rec: Optional[dict], exited: bool = False,
     if news and any(s.kind == "risk" for s in news):
         return "at_risk", news[:2]
     site = (rec or {}).get("site_status", "")
-    if site in ("unreachable", "no_site"):
+    if site == "unreachable":
         return "at_risk", [Signal(kind="risk", label="Website is down", icon="triangle-alert")] + news[:1]
-    if not c.website and not (rec or {}).get("website"):
-        return "at_risk", [Signal(kind="risk", label="No website found", icon="triangle-alert")] + news[:1]
+    no_site = site == "no_site" or (not c.website and not (rec or {}).get("website"))
     last = (rec or {}).get("last_funding_date") or (rec or {}).get("funding_date") or ""
     months = _months_since(last, today) if last else None
     if months is not None and 12 <= months <= 30:
@@ -57,7 +56,7 @@ def classify(item: PortfolioItem, rec: Optional[dict], exited: bool = False,
         return "good", news[:2]
     if months is not None and 0 <= months < 12:
         return "good", [Signal(kind="strength", label=f"Raised {last[:7]}", icon="trending-up")]
-    return "unknown", [Signal(kind="info", label="No recent news", icon="eye")]
+    return "unknown", [Signal(kind="info", label="No website found" if no_site else "No recent news", icon="eye")]
 
 
 def regroup(page: PortfolioResponse, exited_ids: frozenset[str] = frozenset()) -> PortfolioResponse:

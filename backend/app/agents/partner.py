@@ -16,6 +16,7 @@ Humans decide: nothing here contacts founders, sends anything or commits money.
 from __future__ import annotations
 
 import asyncio
+import os
 import logging
 from typing import Optional
 
@@ -169,6 +170,9 @@ async def run_team(ctx: RunContext) -> None:
                 agent="Critic")
             data.save_memo(ctx.fund_id, memo)
             finder.set_memo_id(ctx.fund_id, top.company.id, memo.id)
+            if os.environ.get("EXTRA_MEMOS", "1") != "0":  # memos #2..#5 carry on in the background
+                from .runner import write_top_memos
+                _background(write_top_memos(ctx.run_id, ctx.fund_id, emit, top=5, llm=ctx.llm))
         except LLMUnavailable:
             market_task.cancel()
             raise

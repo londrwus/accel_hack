@@ -444,7 +444,7 @@ class _QuietEmitter:
 
 
 @app.post("/api/funds/{fund_id}/memos")
-async def write_top_memos(fund_id: str, top: int = Query(5, ge=1, le=10)) -> dict:
+async def write_top_memos(fund_id: str, top: int = Query(5, ge=1, le=10), wait: bool = False) -> dict:
     """Write the missing memos for the fund's current top deals, in the background (feed events on the last run)."""
     run = store.latest_run(fund_id)
     if not config.live_ready():
@@ -455,6 +455,9 @@ async def write_top_memos(fund_id: str, top: int = Query(5, ge=1, le=10)) -> dic
         # Feed events go on the fund's last run; a seeded fund with no run gets a quiet emitter.
         emit = runs.Emitter(run["id"]) if run else _QuietEmitter()
         _memo_jobs[fund_id] = asyncio.ensure_future(_write(run["id"] if run else "", fund_id, emit, top=top))
+    if wait:  # hold the request open until they're written (hosted: the container stays up meanwhile)
+        written = await _memo_jobs[fund_id]
+        return {"fund_id": fund_id, "top": top, "status": "done", "written": [m.id for m in written]}
     return {"fund_id": fund_id, "top": top, "status": "writing"}
 
 
