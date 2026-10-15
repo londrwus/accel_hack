@@ -386,11 +386,15 @@ export interface UniverseResponse {
 export interface RunCreate {
   fund_url: string;
   task: string | null;
+  /** true = always start a fresh run; otherwise the backend reuses the fund's latest finished run. */
+  force?: boolean;
 }
 
 export interface RunCreated {
   run_id: string;
   fund_id: string;
+  /** true when the backend returned an earlier finished run instead of starting one. */
+  reused?: boolean;
 }
 
 export interface RunState {

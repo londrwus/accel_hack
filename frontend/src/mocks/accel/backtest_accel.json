@@ -1,0 +1,1 @@
+{"fund_id":"accel","enough_history":false,"held_out":0,"top_percent":5,"methods":[],"feature_weights":[],"model_card":{"trained_on":"Modal","data":"10,000 startups","method":"Text match + scoring model","retrains":"Every night","never_used":["Gender","Age","Ethnicity"]},"score_seconds":0.0,"trained_at":"2026-10-15T13:48:52Z","trained_label":"Not enough history"}

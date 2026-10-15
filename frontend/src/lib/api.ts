@@ -60,17 +60,69 @@ const mockLoaders = {
 };
 type MockName = keyof typeof mockLoaders;
 
+/** Accel seed data (exported from a real run). Each file is its own lazy chunk. */
+const accelLoaders: Record<MockName, () => Promise<{ default: unknown }>> = {
+  fund: () => import("@/mocks/accel/fund.json"),
+  deals: () => import("@/mocks/accel/deals.json"),
+  portfolio: () => import("@/mocks/accel/portfolio.json"),
+  map: () => import("@/mocks/accel/map.json"),
+  memos: () => import("@/mocks/accel/memos.json"),
+  memo: () => import("@/mocks/accel/memo/origins-ai-inc.json"),
+  universe: () => import("@/mocks/accel/universe.json"),
+  backtest: () => import("@/mocks/accel/backtest_accel.json"),
+  run: () => import("@/mocks/accel/run.json"),
+  events: () => import("@/mocks/accel/research_events.json"),
+};
+const accelMapViews: Record<string, () => Promise<{ default: unknown }>> = {
+  theme: () => import("@/mocks/accel/map_theme.json"),
+  new: () => import("@/mocks/accel/map_new.json"),
+  competition: () => import("@/mocks/accel/map_competition.json"),
+};
+const accelMemoFiles = import.meta.glob<{ default: unknown }>("../mocks/accel/memo/*.json");
+const accelDetailFiles = import.meta.glob<{ default: unknown }>("../mocks/accel/detail/*.json");
+const backtestFiles: Record<string, () => Promise<{ default: unknown }>> = {
+  accel: () => import("@/mocks/accel/backtest_accel.json"),
+  "y-combinator": () => import("@/mocks/accel/backtest_y_combinator.json"),
+  "european-commission": () => import("@/mocks/accel/backtest_european_commission.json"),
+};
+
+export const ACCEL_FUND_ID = "accel";
+export const ACCEL_RUN_ID = "run_accel_20261015_141218_a6e2";
+/** Mock mode: the fund shown when nothing else is picked. */
+export const MOCK_DEFAULT_FUND: string = (import.meta.env.VITE_DEFAULT_FUND as string | undefined) || ACCEL_FUND_ID;
+
+/** Mock mode: which fund's seed data to serve (?fund=, then the saved pick, then the default). */
+function mockFundId(fundId?: string | null): string {
+  if (fundId) return fundId;
+  try {
+    const u = new URLSearchParams(window.location.search).get("fund");
+    if (u) return u;
+    const st = window.localStorage.getItem("bellwether.fund");
+    if (st) return st;
+  } catch {
+    /* no window / storage */
+  }
+  return MOCK_DEFAULT_FUND;
+}
+const isAccel = (fundId?: string | null) => mockFundId(fundId) === ACCEL_FUND_ID;
+
+async function load<T>(loader: () => Promise<{ default: unknown }>): Promise<T> {
+  const mod = await loader();
+  return structuredClone(mod.default) as T;
+}
+
 const MOCK_LATENCY_MS = 120;
 const wait = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
-async function mock<T>(name: MockName): Promise<T> {
+async function mock<T>(name: MockName, fundId?: string | null): Promise<T> {
+  if (isAccel(fundId)) return load<T>(accelLoaders[name]);
   const mod = await mockLoaders[name]();
   return structuredClone(mod.default) as unknown as T;
 }
 
-async function mockReply<T>(name: MockName): Promise<T> {
+async function mockReply<T>(name: MockName, fundId?: string | null): Promise<T> {
   await wait(MOCK_LATENCY_MS);
-  return mock<T>(name);
+  return mock<T>(name, fundId);
 }
 
 // ---------------------------------------------------------------------------
@@ -127,13 +179,28 @@ const post = <T>(path: string, body: unknown) => http<T>("POST", path, { body })
 
 /** GET /api/fund: sidebar (fund tile, funds you cover, Deal Flow badge, watch card), landing window. */
 export function getFund(fundId?: string): Promise<FundResponse> {
-  if (USE_MOCKS) return mockReply("fund");
+  if (USE_MOCKS) return mockReply("fund", fundId);
   return get("/api/fund", { fund_id: fundId }, () => mock("fund"));
 }
 
 /** GET /api/funds: every fund the sidebar can switch to. Without a backend: the funds in the mock. */
 export function listFunds(): Promise<FundsResponse> {
   const fromMock = async (): Promise<FundsResponse> => {
+    if (USE_MOCKS) {
+      const [ac, lg] = await Promise.all([mockReply<FundResponse>("fund", ACCEL_FUND_ID), mock<FundResponse>("fund", "localglobe")]);
+      return {
+        items: [ac, lg].map((x) => ({
+          id: x.fund.id,
+          name: x.fund.name,
+          url: x.fund.url,
+          logo: x.fund.logo,
+          initials: x.fund.name.slice(0, 2).toUpperCase(),
+          latest_run_id: x.latest_run_id,
+          last_run_at: null,
+          has_results: true,
+        })),
+      } as FundsResponse;
+    }
     const f = await mockReply<FundResponse>("fund");
     return {
       items: f.covered_funds.map((c) => ({
@@ -162,7 +229,7 @@ export interface DealsQuery {
 /** GET /api/deals. `counts` always holds the totals, whatever the filter. */
 export async function getDeals(q: DealsQuery = {}): Promise<DealsResponse> {
   const fromMock = async () => {
-    const data = await mockReply<DealsResponse>("deals");
+    const data = await mockReply<DealsResponse>("deals", q.fund_id);
     data.items = data.items.filter(
       (d) => (!q.status || d.status === q.status) && (!q.sector || d.company.sector === q.sector),
     );
@@ -174,23 +241,33 @@ export async function getDeals(q: DealsQuery = {}): Promise<DealsResponse> {
 
 /** GET /api/portfolio. */
 export function getPortfolio(fundId?: string): Promise<PortfolioResponse> {
-  if (USE_MOCKS) return mockReply("portfolio");
+  if (USE_MOCKS) return mockReply("portfolio", fundId);
   return get("/api/portfolio", { fund_id: fundId }, () => mock("portfolio"));
 }
 
 /** GET /api/map: nodes + edges for React Flow, plus the Next deals shortlist. */
 export function getMap(fundId?: string, q: MapQuery = {}): Promise<MapResponse> {
-  if (USE_MOCKS) return mockReply("map");
+  if (USE_MOCKS) {
+    const view = q.view && q.view !== "portfolio" ? accelMapViews[q.view] : undefined;
+    if (view && isAccel(fundId)) return wait(MOCK_LATENCY_MS).then(() => load<MapResponse>(view));
+    return mockReply("map", fundId);
+  }
   return get("/api/map", { fund_id: fundId, ...q }, () => mock("map"));
 }
 
 /** GET /api/memos: Investment Memos list. */
 export function getMemos(fundId?: string): Promise<MemosResponse> {
-  if (USE_MOCKS) return mockReply("memos");
+  if (USE_MOCKS) return mockReply("memos", fundId);
   return get("/api/memos", { fund_id: fundId }, () => mock("memos"));
 }
 
-async function mockMemo(id: string): Promise<Memo> {
+async function mockMemo(id: string, fundId?: string | null): Promise<Memo> {
+  if (isAccel(fundId)) {
+    await wait(MOCK_LATENCY_MS);
+    const file = accelMemoFiles[`../mocks/accel/memo/${id}.json`];
+    if (!file) throw new ApiError(404, "No memo yet for this company");
+    return load<Memo>(file);
+  }
   const memo = await mockReply<Memo>("memo");
   if (memo.id !== id && memo.company.id !== id) throw new ApiError(404, "No memo yet for this company");
   return memo;
@@ -198,7 +275,7 @@ async function mockMemo(id: string): Promise<Memo> {
 
 /** GET /api/memos/{id}. `id` is the company id, e.g. "northbeam-health". 404 -> ApiError. */
 export function getMemo(id: string, fundId?: string): Promise<Memo> {
-  if (USE_MOCKS) return mockMemo(id);
+  if (USE_MOCKS) return mockMemo(id, fundId);
   return get(`/api/memos/${encodeURIComponent(id)}`, { fund_id: fundId }, () => mockMemo(id));
 }
 
@@ -218,7 +295,7 @@ export interface UniverseQuery {
 /** GET /api/universe: the dataset table. In mock mode filters the 8 sample rows client-side. */
 export async function getUniverse(q: UniverseQuery = {}): Promise<UniverseResponse> {
   const fromMock = async () => {
-    const data = await mockReply<UniverseResponse>("universe");
+    const data = await mockReply<UniverseResponse>("universe", q.fund_id);
     const needle = q.q?.trim().toLowerCase();
     const filtered = data.items.filter(({ company: c }) => {
       if (needle && !`${c.name} ${c.one_liner}`.toLowerCase().includes(needle)) return false;
@@ -241,6 +318,10 @@ export async function getUniverse(q: UniverseQuery = {}): Promise<UniverseRespon
 export function getBacktest(fundId?: string): Promise<Backtest> {
   // The mock belongs to the demo fund only; any other fund has "no backtest yet".
   const fromMock = async () => {
+    if (USE_MOCKS && fundId && backtestFiles[fundId]) {
+      await wait(MOCK_LATENCY_MS);
+      return load<Backtest>(backtestFiles[fundId]);
+    }
     const bt = await mockReply<Backtest>("backtest");
     if (fundId && fundId !== bt.fund_id) throw new ApiError(404, "No backtest yet for this fund");
     return bt;
@@ -265,8 +346,14 @@ export const DEMO_RUN_ID = "run_demo_localglobe";
 /** POST /api/runs. Then navigate to /research and open the event stream. */
 export async function createRun(body: RunCreate): Promise<RunCreated> {
   if (USE_MOCKS) {
+    // Without a backend every fund URL plays the recorded Accel run, then every page shows Accel.
     await wait(MOCK_LATENCY_MS);
-    return { run_id: DEMO_RUN_ID, fund_id: "localglobe" };
+    try {
+      window.localStorage.setItem("bellwether.fund", ACCEL_FUND_ID);
+    } catch {
+      /* storage blocked */
+    }
+    return { run_id: ACCEL_RUN_ID, fund_id: ACCEL_FUND_ID };
   }
   try {
     return await post<RunCreated>("/api/runs", body);
@@ -280,13 +367,13 @@ export async function createRun(body: RunCreate): Promise<RunCreated> {
 
 /** GET /api/runs/{id}: Research page snapshot (mock is frozen at 2:14, step 4 of 7). */
 export function getRun(runId: string): Promise<RunState> {
-  if (USE_MOCKS) return mockReply("run");
+  if (USE_MOCKS) return mockReply("run", runId.startsWith("run_accel") ? ACCEL_FUND_ID : undefined);
   return get(`/api/runs/${encodeURIComponent(runId)}`, undefined, () => mock("run"));
 }
 
 /** GET /api/runs/{id}/memo/{company_id}: may take ~1 min live if the memo isn't written yet. */
 export function getRunMemo(runId: string, companyId: string): Promise<Memo> {
-  if (USE_MOCKS) return mockMemo(companyId);
+  if (USE_MOCKS) return mockMemo(companyId, runId.startsWith("run_accel") ? ACCEL_FUND_ID : undefined);
   return get(
     `/api/runs/${encodeURIComponent(runId)}/memo/${encodeURIComponent(companyId)}`,
     undefined,
@@ -306,7 +393,7 @@ export async function sendFeedback(runId: string, body: Feedback): Promise<Ok> {
 /** POST /api/funds/{id}/watch. `simulate_next_run: true` starts a re-run and returns its run_id. */
 export async function setWatch(fundId: string, body: WatchRequest): Promise<WatchResponse> {
   if (USE_MOCKS) {
-    const fund = await mockReply<FundResponse>("fund");
+    const fund = await mockReply<FundResponse>("fund", fundId);
     return {
       watch: { ...fund.watch, enabled: body.enabled },
       run_id: body.simulate_next_run ? DEMO_RUN_ID : null,
@@ -339,6 +426,11 @@ async function mockCompany(id: string): Promise<Company> {
 /** GET /api/companies/{id}/detail: everything about a company and how it scored for the fund. */
 export async function getCompanyDetail(id: string, fundId?: string): Promise<CompanyDetail> {
   if (USE_MOCKS) {
+    const file = isAccel(fundId) ? accelDetailFiles[`../mocks/accel/detail/${id.replace(/[^a-zA-Z0-9_-]/g, "_")}.json`] : undefined;
+    if (file) {
+      await wait(MOCK_LATENCY_MS);
+      return load<CompanyDetail>(file);
+    }
     const company = await mockCompany(id);
     return {
       company, fund_id: fundId ?? "localglobe", fund_name: "LocalGlobe", in_dataset: false, summary: null,
@@ -416,7 +508,12 @@ export function streamRunEvents(
     return false;
   };
 
-  if (USE_MOCKS) return replayMockEvents(deliver, () => closed, () => (closed = true), options);
+  if (USE_MOCKS) {
+    // Accel: a run opened from "Run Bellwether" (?run=, startAt 0) plays from the start; otherwise it shows finished.
+    const accel = runId.startsWith("run_accel") || (isAccel() && runId === DEMO_RUN_ID);
+    const opts = accel && (options.startAt ?? 0) > 0 ? { ...options, startAt: Number.MAX_SAFE_INTEGER } : options;
+    return replayMockEvents(deliver, () => closed, () => (closed = true), opts, accel ? ACCEL_FUND_ID : "localglobe");
+  }
 
   const speed = options.liveSpeed && options.liveSpeed !== 1 ? options.liveSpeed : undefined;
   const source = new EventSource(buildUrl(`/api/runs/${encodeURIComponent(runId)}/events`, { speed }));
@@ -435,7 +532,7 @@ export function streamRunEvents(
     if (lastSeq === 0 && (++fails >= LIVE_FAILS_BEFORE_FALLBACK || source.readyState === EventSource.CLOSED)) {
       source.close();
       console.warn("[api] event stream unavailable, replaying the recorded run");
-      stopMock = replayMockEvents(deliver, () => closed, () => (closed = true), { ...options, startAt: Number.MAX_SAFE_INTEGER });
+      stopMock = replayMockEvents(deliver, () => closed, () => (closed = true), { ...options, startAt: Number.MAX_SAFE_INTEGER }, "localglobe");
       return;
     }
     handlers.onError?.(err);
@@ -452,9 +549,10 @@ function replayMockEvents(
   isClosed: () => boolean,
   close: () => void,
   { speed = 1, startAt = 0 }: RunEventOptions,
+  fundId: string,
 ): () => void {
   let timer: ReturnType<typeof setTimeout> | undefined;
-  void mock<AgentEvent[]>("events").then((events) => {
+  void mock<AgentEvent[]>("events", fundId).then((events) => {
     if (isClosed()) return;
     let i = 0;
     // Everything up to startAt arrives at once (like the backend replaying past events on connect).

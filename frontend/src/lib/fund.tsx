@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import type { FundResponse, FundSummary } from "./types";
-import { ApiError, getFund, listFunds } from "./api";
+import { ApiError, getFund, listFunds, MOCK_DEFAULT_FUND, USE_MOCKS } from "./api";
 
 /** The recorded demo fund, used until the person picks another one. */
 export const DEMO_FUND_ID = "localglobe";
@@ -30,7 +30,7 @@ function initialFundId(): string {
   } catch {
     /* no window.location */
   }
-  return readStored() || DEMO_FUND_ID;
+  return readStored() || (USE_MOCKS ? MOCK_DEFAULT_FUND : DEMO_FUND_ID);
 }
 
 interface FundState {

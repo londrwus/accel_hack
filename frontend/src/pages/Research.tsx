@@ -148,7 +148,7 @@ export default function Research() {
   const runAgain = async () => {
     setStarting(true);
     try {
-      const created = await createRun({ fund_url: fund?.url ?? "https://localglobe.vc", task: null });
+      const created = await createRun({ fund_url: fund?.url ?? "https://localglobe.vc", task: null, force: true });
       navigate(`/research?run=${encodeURIComponent(created.run_id)}&fund=${encodeURIComponent(created.fund_id)}`);
       setRestartKey((k) => k + 1);
     } finally {
